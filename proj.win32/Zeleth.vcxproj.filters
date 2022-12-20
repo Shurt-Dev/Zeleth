@@ -4,7 +4,7 @@
     <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="X:\Zeleth\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="..\Classes\MapScene.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
     <ClCompile Include="X:\Zeleth\proj.win32\main.cpp">
@@ -18,7 +18,7 @@
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="X:\Zeleth\Classes\HelloWorldScene.h">
+    <ClInclude Include="..\Classes\MapScene.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="X:\Zeleth\proj.win32\main.h">

@@ -22,23 +22,33 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#include "MapScene.h"
 
-#include "cocos2d.h"
+USING_NS_CC;
 
-class HelloWorld : public cocos2d::Scene
+Scene* MapScene::createScene()
 {
-public:
-    static cocos2d::Scene* createScene();
+    return MapScene::create();
+}
 
-    virtual bool init();
-    
-    // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
-    
-    // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
-};
+// on "init" you need to initialize your instance
+bool MapScene::init()
+{
+    if ( !Scene::init() )
+    {
+        return false;
+    }
 
-#endif // __HELLOWORLD_SCENE_H__
+    //récupération de la taille de l'écran
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    auto label = Label::createWithTTF("Zeleth", "fonts/title.ttf", 200);
+
+    // position the label on the center of the screen
+    label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+
+    // add the label as a child to this layer
+    this->addChild(label, 1);
+
+    return true;
+}
