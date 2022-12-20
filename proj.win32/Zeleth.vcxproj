@@ -117,7 +117,8 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different X:/Zeleth/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll X:/Zeleth/proj.win32/bin/Zeleth/Debug/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -283,7 +284,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different X:/Zeleth/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll X:/Zeleth/proj.win32/bin/Zeleth/Release/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -449,7 +451,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different X:/Zeleth/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll X:/Zeleth/proj.win32/bin/Zeleth/MinSizeRel/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -614,7 +617,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>												</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different X:/Zeleth/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll X:/Zeleth/proj.win32/bin/Zeleth/RelWithDebInfo/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -806,11 +810,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h" />
-    <ClInclude Include="X:\Zeleth\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\MapScene.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h" />
     <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp" />
-    <ClCompile Include="X:\Zeleth\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\MapScene.cpp" />
     <ClCompile Include="X:\Zeleth\proj.win32\main.cpp" />
     <ResourceCompile Include="X:\Zeleth\proj.win32\game.rc" />
     <ClInclude Include="X:\Zeleth\Resources\CloseNormal.png" />

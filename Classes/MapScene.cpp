@@ -22,23 +22,33 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#include "MapScene.h"
 
-#include "cocos2d.h"
+USING_NS_CC;
 
-class HelloWorld : public cocos2d::Scene
+Scene* MapScene::createScene()
 {
-public:
-    static cocos2d::Scene* createScene();
+    return MapScene::create();
+}
 
-    virtual bool init();
-    
-    // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
-    
-    // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
-};
+// on "init" you need to initialize your instance
+bool MapScene::init()
+{
+    if ( !Scene::init() )
+    {
+        return false;
+    }
 
-#endif // __HELLOWORLD_SCENE_H__
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+
+    auto label = Label::createWithTTF("Map Window", "fonts/Marker Felt.ttf", 24);
+
+    // position the label on the center of the screen
+    label->setPosition(Vec2(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
+
+    // add the label as a child to this layer
+    this->addChild(label, 1);
+
+    return true;
+}
