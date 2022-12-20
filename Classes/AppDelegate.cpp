@@ -34,11 +34,6 @@ using namespace cocos2d::experimental;
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
-static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
-static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
-static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
-
 AppDelegate::AppDelegate()
 {
 }
@@ -75,10 +70,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     if (!glview) {
 #if(CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-        glview = cocos2d::GLViewImpl::create("Lemmings");
+        glview = cocos2d::GLViewImpl::create("Zeleth");
 #else
-        glview = cocos2d::GLViewImpl::createWithFullScreen("Lemmings");
-        /*glview = cocos2d::GLViewImpl::create("Lemmings");*/
+        glview = cocos2d::GLViewImpl::createWithFullScreen("Zeleth");
+        /*glview = cocos2d::GLViewImpl::create("Zeleth");*/
 #endif
         director->setOpenGLView(glview);
     }

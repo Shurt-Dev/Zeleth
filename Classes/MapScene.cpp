@@ -39,13 +39,13 @@ bool MapScene::init()
         return false;
     }
 
+    //récupération de la taille de l'écran
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    auto label = Label::createWithTTF("Map Window", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("Zeleth", "fonts/title.ttf", 200);
 
     // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
+    label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
 
     // add the label as a child to this layer
     this->addChild(label, 1);
