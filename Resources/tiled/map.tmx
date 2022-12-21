@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="80" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
- <layer id="1" name="Calque de Tuiles 1" width="80" height="40">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="3">
+ <tileset firstgid="1" source="plains.tsx"/>
+ <tileset firstgid="73" source="grass.tsx"/>
+ <tileset firstgid="74" source="objects.tsx"/>
+ <tileset firstgid="282" source="water.tsx"/>
+ <layer id="1" name="watter" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAB4NjIAAAE=
+   eJxTYmRgUBrFVMNyQKxBJJYnwjxlICYWKI6aN2reCDNPBYhliMSqRJg3iknDAEATKQM=
   </data>
  </layer>
+ <layer id="2" name="grass" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgx14EolHzRs1bySaNwoGDgAAYP8chQ==
+  </data>
+ </layer>
+ <layer id="3" name="tree" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIxV4DbQDSAQHgPggFc27AMQXgXgDEG+kornkgig62LGPyuadI0PPAyB+CMSPqOuUUTAAAABcXwlX
+  </data>
+ </layer>
+ <layer id="4" name="foreground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUUAPMBeJ5QDyfSuatBeJ1QLyeSubthdL7qWTeWSh9nkrmjYKhBwB4fwb9
+  </data>
+ </layer>
+ <objectgroup id="7" name="Objects">
+  <object id="2" name="SpawnPoint" x="128" y="144"/>
+ </objectgroup>
 </map>

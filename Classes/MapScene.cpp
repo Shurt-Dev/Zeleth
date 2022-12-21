@@ -39,16 +39,104 @@ bool MapScene::init()
         return false;
     }
 
-    //récupération de la taille de l'écran
-    auto visibleSize = Director::getInstance()->getVisibleSize();
+    //create a tile map
+    _tileMap = TMXTiledMap::create("testtiled/map.tmx");
+    this->addChild(_tileMap);
 
-    auto label = Label::createWithTTF("Zeleth", "fonts/title.ttf", 200);
+	TMXObjectGroup* objectGroup = _tileMap->getObjectGroup("Objects"); // objectGroupNamed() deprecated
 
-    // position the label on the center of the screen
-    label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+	if (objectGroup == NULL) {
+		// CCLog("tile map has no objects in object layer"); // not working
+		return false;
+	}
 
-    // add the label as a child to this layer
-    this->addChild(label, 1);
+	ValueMap spawnPoint = objectGroup->getObject("SpawnPoint");
+	int x = spawnPoint.at("x").asInt();
+	int y = spawnPoint.at("y").asInt();
+
+	_player = new Sprite();
+	_player->initWithFile("Player.png");
+	_player->setPosition(cocos2d::Vec2(x, y));
+
+	this->addChild(_player);
+	this->setViewPointCenter(_player->getPosition());
+
+    auto eventListener = EventListenerTouchOneByOne::create();
+    eventListener->onTouchBegan = CC_CALLBACK_2(MapScene::onTouchBegan, this);
+    eventListener->onTouchEnded = CC_CALLBACK_2(MapScene::onTouchEnded, this);
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(eventListener, _player);
 
     return true;
+}
+
+void MapScene::setViewPointCenter(Vec2 position) {
+	Size winSize = Director::getInstance()->getWinSize();
+
+	int x = MAX(position.x, winSize.width / 2);
+	int y = MAX(position.y, winSize.height / 2);
+	x = MIN(x, (_tileMap->getMapSize().width * this->_tileMap->getTileSize().width) - winSize.width / 2);
+	y = MIN(y, (_tileMap->getMapSize().height * _tileMap->getTileSize().height) - winSize.height / 2);
+
+	Vec2 actualPosition =Vec2(x, y);
+	Vec2 centerOfView = Vec2(winSize.width / 2, winSize.height / 2);
+	Vec2 viewPoint = centerOfView;
+	viewPoint.subtract(actualPosition);
+
+	this->setPosition(viewPoint);
+}
+
+void MapScene::registerWithTouchDispatcher() {
+	auto touchListener = EventListenerTouchOneByOne::create();
+	touchListener->onTouchBegan = [](Touch* touch, Event* event) {
+		// Traitement de l'événement de toucher
+		return true; // Consomme l'événement de toucher
+	};
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
+}
+
+bool MapScene::onTouchBegan(Touch* touch, Event* event)
+{
+	return true;
+}
+
+void MapScene::setPlayerPosition(Point position) {
+	_player->setPosition(position);
+}
+
+void MapScene::onTouchEnded(Touch* touch, Event* event)
+{
+    Point touchLocation = touch->getLocationInView();
+    touchLocation = Director::getInstance()->convertToGL(touchLocation);
+    touchLocation = this->convertToNodeSpace(touchLocation);
+
+    Point playerPos = _player->getPosition();
+    Point diff = touchLocation - playerPos;
+
+    if (abs(diff.x) > abs(diff.y)) {
+        if (diff.x > 0) {
+            playerPos.x += _tileMap->getTileSize().width;
+        }
+        else {
+            playerPos.x -= _tileMap->getTileSize().width;
+        }
+    }
+    else {
+        if (diff.y > 0) {
+            playerPos.y += _tileMap->getTileSize().height;
+        }
+        else {
+            playerPos.y -= _tileMap->getTileSize().height;
+        }
+    }
+
+    // safety check on the bounds of the map
+    if (playerPos.x <= (_tileMap->getMapSize().width * _tileMap->getTileSize().width) &&
+        playerPos.y <= (_tileMap->getMapSize().height * _tileMap->getTileSize().height) &&
+        playerPos.y >= 0 &&
+        playerPos.x >= 0)
+    {
+        this->setPlayerPosition(playerPos);
+    }
+
+    this->setViewPointCenter(_player->getPosition());
 }

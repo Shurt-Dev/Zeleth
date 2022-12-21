@@ -27,15 +27,38 @@
 
 #include "cocos2d.h"
 
-class MapScene : public cocos2d::Scene
+USING_NS_CC;
+
+class MapScene : public Scene
 {
 public:
-    static cocos2d::Scene* createScene();
+    static Scene* createScene();
 
     virtual bool init();
-    
+
+    // view port follows player
+    void setViewPointCenter(Vec2 position);
+
+    //movements
+    void registerWithTouchDispatcher();
+
+    void setPlayerPosition(Point position);
+
+    bool onTouchBegan(Touch* touch, Event* event);
+
+    void onTouchEnded(Touch* touch, Event* event);
+
+
     // implement the "static create()" method manually
     CREATE_FUNC(MapScene);
+
+private:
+    TMXTiledMap* _tileMap;
+    Sprite* _player;
+    //TMXLayer* _watter;
+    //TMXLayer* _grass;
+    //TMXLayer* _objects;
+    //TMXLayer* _foreground;
 };
 
 #endif // __MAP_SCENE_H__
