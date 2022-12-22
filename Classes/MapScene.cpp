@@ -1,54 +1,114 @@
-/****************************************************************************
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
- 
- http://www.cocos2d-x.org
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
- ****************************************************************************/
-
 #include "MapScene.h"
-
-USING_NS_CC;
+#include "MainCharacter.h"
 
 Scene* MapScene::createScene()
 {
     return MapScene::create();
 }
 
-// on "init" you need to initialize your instance
 bool MapScene::init()
 {
-    if ( !Scene::init() )
+    if (!Scene::init())
     {
         return false;
     }
 
-    //récupération de la taille de l'écran
-    auto visibleSize = Director::getInstance()->getVisibleSize();
+    //create a tile map
+    _tileMap = TMXTiledMap::create("tiled/map.tmx");
+    this->addChild(_tileMap);
 
-    auto label = Label::createWithTTF("Zeleth", "fonts/title.ttf", 200);
+    // instanciez votre objet mainCharacter ici
+    mainCharacter = MainCharacter::create();
+    this->addChild(mainCharacter);
 
-    // position the label on the center of the screen
-    label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    // starting map position
+    _tileMap->setPosition(_tileMap->getPosition() + Vec2(800,400));
 
-    // add the label as a child to this layer
-    this->addChild(label, 1);
+    // set movement speed
+    _movementSpeed = 50;
+
+    // keys
+    auto listener = EventListenerKeyboard::create();
+    listener->onKeyPressed = CC_CALLBACK_2(MapScene::onKeyPressed, this);
+    listener->onKeyReleased = CC_CALLBACK_2(MapScene::onKeyReleased, this);
+
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+
+    this->scheduleUpdate(); // 
+
+    bool _isLeftPressed = false;
+    bool _isRightPressed = false;
+    bool _isUpPressed = false;
+    bool _isDownPressed = false;
 
     return true;
+}
+
+void MapScene::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
+{
+    switch (keyCode)
+    {
+    case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
+        _isLeftPressed = true;
+        break;
+    case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
+        _isRightPressed = true;
+        break;
+    case EventKeyboard::KeyCode::KEY_UP_ARROW:
+        _isUpPressed = true;
+        break;
+    case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+        _isDownPressed = true;
+        break;
+    default:
+        break;
+    }
+}
+
+void MapScene::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
+{
+    switch (keyCode)
+    {
+    case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
+        _isLeftPressed = false;
+        break;
+    case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
+        _isRightPressed = false;
+        break;
+    case EventKeyboard::KeyCode::KEY_UP_ARROW:
+        _isUpPressed = false;
+        break;
+    case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+        _isDownPressed = false;
+        break;
+    }
+}
+
+void MapScene::update(float delta)
+{
+    Vec2 movement = Vec2::ZERO;
+    if (_isLeftPressed)
+    {
+        movement.x = 1;
+    }
+    if (_isRightPressed)
+    {
+        movement.x = -1;
+    }
+    if (_isUpPressed)
+    {
+        movement.y = -1;
+    }
+    if (_isDownPressed)
+    {
+        movement.y = 1;
+    }
+
+    // s'assurer que movement ne contient qu'une seule valeur non nulle
+    if (movement.x != 0 && movement.y != 0)
+    {
+        movement.x = 0;
+    }
+
+    _tileMap->setPosition(_tileMap->getPosition() + movement * _movementSpeed * delta);
 }

@@ -1,41 +1,44 @@
-/****************************************************************************
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
- 
- http://www.cocos2d-x.org
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
- ****************************************************************************/
-
 #ifndef __MAP_SCENE_H__
 #define __MAP_SCENE_H__
 
 #include "cocos2d.h"
+#include "MainCharacter.h"
 
-class MapScene : public cocos2d::Scene
+USING_NS_CC;
+
+class MapScene : public Scene
 {
 public:
-    static cocos2d::Scene* createScene();
+    static Scene* createScene();
 
     virtual bool init();
-    
+
+    void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);
+    void onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event);
+
+    void update(float delta);
+
     // implement the "static create()" method manually
     CREATE_FUNC(MapScene);
+
+private:
+    MainCharacter* mainCharacter;
+
+    TMXTiledMap* _tileMap;
+    //TMXLayer* _watter;
+    //TMXLayer* _grass;
+    //TMXLayer* _objects;
+    //TMXLayer* _foreground;
+
+    //collisions tiles
+    //TMXLayer* _meta;
+
+    bool _isLeftPressed;
+    bool _isRightPressed;
+    bool _isUpPressed;
+    bool _isDownPressed;
+
+    int _movementSpeed;
 };
 
 #endif // __MAP_SCENE_H__

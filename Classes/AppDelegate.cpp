@@ -78,15 +78,17 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-
     // turn on display FPS
     director->setDisplayStats(false);
 
-    // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0f / 60);
+    // set FPS. the default value is 1.0/30 if you don't call this
+    director->setAnimationInterval(1.0 / 60.0);
 
     // create a scene. it's an autorelease object
     auto scene = MapScene::createScene();
+
+    //zoom
+    scene->setScale(5.0);
 
     // run
     director->runWithScene(scene);
