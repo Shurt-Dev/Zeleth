@@ -2,7 +2,9 @@
 
 #include "cocos2d.h"
 
-class MainCharacter : public cocos2d::Sprite
+USING_NS_CC;
+
+class MainCharacter : public Sprite
 {
 public:
     // Crée un nouveau personnage
@@ -13,5 +15,5 @@ public:
 
 private:
     // Sprite du personnage
-    cocos2d::Sprite* _sprite;
+    Sprite* _sprite;
 };

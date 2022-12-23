@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="3">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="3">
  <tileset firstgid="1" source="plains.tsx"/>
  <tileset firstgid="73" source="grass.tsx"/>
  <tileset firstgid="74" source="objects.tsx"/>
  <tileset firstgid="282" source="water.tsx"/>
+ <tileset firstgid="306" source="meta.tsx"/>
  <layer id="1" name="watter" width="20" height="20">
   <data encoding="base64" compression="zlib">
    eJxTYmRgUBrFVMNyQKxBJJYnwjxlICYWKI6aN2reCDNPBYhliMSqRJg3iknDAEATKQM=
@@ -24,7 +25,10 @@
    eJxjYBgFo2AUUAPMBeJ5QDyfSuatBeJ1QLyeSubthdL7qWTeWSh9nkrmjYKhBwB4fwb9
   </data>
  </layer>
- <objectgroup id="7" name="Objects">
-  <object id="2" name="SpawnPoint" x="128" y="144"/>
- </objectgroup>
+ <objectgroup id="7" name="Objects"/>
+ <layer id="9" name="Meta" width="20" height="20" opacity="0.44">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1ARGjKRhYswjxW5S1BBSP9DuwyZHivuJNW8kxQc1w49c84gNb3LMozS/jQLSAADPgQtc
+  </data>
+ </layer>
 </map>
