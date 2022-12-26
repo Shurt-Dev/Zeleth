@@ -1,25 +1,10 @@
 #include "TileMap.h"
 
-cocos2d::Scene* TileMap::createScene()
-{
-    // 'scene' est un autre pointeur vers une Scene
-    auto scene = Scene::create();
+USING_NS_CC;
 
-    // 'layer' est un pointeur vers votre propre classe
-    auto layer = TileMap::create();
-
-    // ajouter la couche à la scène
-    scene->addChild(layer);
-
-    // retourner la scène
-    return scene;
-}
-
-// surcharge de la méthode init
 bool TileMap::init()
 {
-    // appeler la méthode init de la superclasse
-    if (!Scene::init())
+    if (!Node::init())
     {
         return false;
     }
@@ -28,7 +13,7 @@ bool TileMap::init()
     loadTileMap();
 
     // scale tilemap
-    enlargeTileMap(3.0f);
+    enlargeTileMap(4.0f);
 
     return true;
 }
@@ -36,7 +21,7 @@ bool TileMap::init()
 void TileMap::loadTileMap()
 {
     // Chargement de la carte à tuiles à partir d'un fichier .tmx
-    _tileMap = cocos2d::TMXTiledMap::create("tiled/map.tmx");
+    _tileMap = TMXTiledMap::create("tiled/map.tmx");
     // ajout de la carte à tuiles à la scène
     this->addChild(_tileMap);
 }

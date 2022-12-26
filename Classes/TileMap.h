@@ -2,11 +2,9 @@
 
 USING_NS_CC;
 
-class TileMap : public Scene
+class TileMap : public Node
 {
 public:
-    static Scene* createScene();
-
     virtual bool init();
 
     // Chargement de la carte à tuiles
@@ -20,4 +18,3 @@ public:
 private:
     TMXTiledMap* _tileMap;
 };
-

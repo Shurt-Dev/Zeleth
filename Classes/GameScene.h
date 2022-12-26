@@ -1,6 +1,7 @@
 #include "cocos2d.h"
 
 #include "TileMap.h"
+#include "MainCharacter.h"
 
 USING_NS_CC;
 

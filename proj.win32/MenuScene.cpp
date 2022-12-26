@@ -1,5 +1,4 @@
 #include "MenuScene.h"
-#include "ui/CocosGUI.h"
 
 using namespace CocosDenshion;
 
