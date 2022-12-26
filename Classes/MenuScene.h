@@ -14,12 +14,21 @@ public:
 
     virtual bool init();
 
-    void onStartClicked(Ref* sender);
-    void onSettingsClicked(Ref* sender);
-    void onQuitClicked(Ref* sender);
+    void createTitle();
+    void setupAudio();
+    void setupBackground();
+    void setupQuitButton();
+    void setupStartButton();
+    void setupSettingsButton();
 
     // implement the "static create()" method manually
     CREATE_FUNC(MenuScene);
+
+private:
+    Size _visibleSize;
+    Vec2 _origin;
+    Vec2 _center;
+    Vec2 _bottomRight;
 };
 
 #endif // __MENU_SCENE_H__

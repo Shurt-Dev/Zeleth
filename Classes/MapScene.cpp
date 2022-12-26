@@ -17,24 +17,23 @@ bool MapScene::init()
     _tileMap = TMXTiledMap::create("tiled/map.tmx");
     this->addChild(_tileMap);
 
-    //zoom map
-    _tileMap->setScale(5.0);
-
-    _meta = _tileMap->getLayer("Meta");
+    _meta = _tileMap->getLayer("Collisions");
     _meta->setVisible(false);
 
     // instanciez votre objet mainCharacter ici
     mainCharacter = MainCharacter::create();
     this->addChild(mainCharacter);
 
-    //zoom map
-    mainCharacter->setScale(5.0);
-
     // starting map position
-    _tileMap->setPosition(_tileMap->getPosition() + Vec2(800,400));
+    _tileMap->setPosition(_tileMap->getPosition() + Vec2(0,0));
 
     // set movement speed
     _movementSpeed = 50;
+
+    //test
+    _tileMap->setScale(2);
+    mainCharacter->setScale(2);
+
 
     // keys
     auto listener = EventListenerKeyboard::create();

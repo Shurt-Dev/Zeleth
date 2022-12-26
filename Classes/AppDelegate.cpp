@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
+
 #include "IntroScene.h"
 #include "MenuScene.h"
+#include "MapScene.h"
 
 #if USE_AUDIO_ENGINE
 #include "audio/include/AudioEngine.h"
@@ -59,17 +61,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/30 if you don't call this
     director->setAnimationInterval(1.0 / 60.0);
 
-    // create a scene. it's an autorelease object
+    // Test
+    auto scene = MapScene::createScene();
+    director->runWithScene(scene);
+
+    // Starting Scene Game
     //auto introScene = IntroScene::createScene();
 
     // run
     //director->runWithScene(introScene);
-
-    // create a scene. it's an autorelease object
-    auto menuScene = MenuScene::createScene();
-
-    // run
-    director->runWithScene(menuScene);
 
     return true;
 }

@@ -1,4 +1,5 @@
 #include "MenuScene.h"
+#include "ui/CocosGUI.h"
 
 using namespace CocosDenshion;
 
@@ -7,8 +8,8 @@ Scene* MenuScene::createScene()
     // Preload the background music
     SimpleAudioEngine::getInstance()->preloadBackgroundMusic("sound/music/menu.ogg");
     // Preload click sound
+    SimpleAudioEngine::getInstance()->preloadEffect("sound/sfx/start.mp3");
     SimpleAudioEngine::getInstance()->preloadEffect("sound/sfx/click.mp3");
-    SimpleAudioEngine::getInstance()->preloadEffect("sound/sfx/click-error.wav");
 
     return MenuScene::create();
 }
@@ -21,10 +22,43 @@ bool MenuScene::init()
     }
 
     // Determine the center coordinates of the screen
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    Vec2 center = Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2);
+    _visibleSize = Director::getInstance()->getVisibleSize();
+    _origin = Director::getInstance()->getVisibleOrigin();
+    _center = Vec2(_origin.x + _visibleSize.width / 2, _origin.y + _visibleSize.height / 2);
+    _bottomRight = _origin + Vec2(_visibleSize.width, 0);
 
+    setupBackground();
+    setupAudio();
+    createTitle();
+    setupQuitButton();
+    setupStartButton();
+    setupSettingsButton();
+
+    return true;
+}
+
+void MenuScene::createTitle()
+{
+    // Title Game and animation
+    auto title = Label::createWithTTF("Zeleth", "fonts/title-game.ttf", 250);
+
+    title->setPosition(Vec2(_center.x, _origin.y + 3 * _visibleSize.height / 4));
+    title->setColor(Color3B(229, 229, 229)); // couleur blanc (RGB)
+
+    this->addChild(title);
+}
+
+void MenuScene::setupAudio()
+{
+    //Set Audio default
+    SimpleAudioEngine::getInstance()->setEffectsVolume(0.4);
+
+    // Play the background music in a loop
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/music/menu.ogg", true);
+}
+
+void MenuScene::setupBackground()
+{
     // Load the background image
     auto background = Sprite::create("sprites/background/menu.png");
 
@@ -32,8 +66,8 @@ bool MenuScene::init()
     background->setAnchorPoint(Vec2(0, 0));
 
     // Set the scale of the background to fit the screen size
-    background->setScale(visibleSize.width / background->getContentSize().width,
-        visibleSize.height / background->getContentSize().height);
+    background->setScale(_visibleSize.width / background->getContentSize().width,
+        _visibleSize.height / background->getContentSize().height);
 
     // Set the position of the background based on its size and anchor point
     background->setPosition(Vec2(-(background->getContentSize().width * background->getAnchorPoint().x),
@@ -41,89 +75,102 @@ bool MenuScene::init()
 
     // Add the background to the scene
     this->addChild(background);
-
-    // Title Game and animation
-    auto title = Label::createWithTTF("Zeleth", "fonts/title-game.ttf", 200);
-    title->setPosition(Vec2(center.x, origin.y + 3 * visibleSize.height / 4));
-    this->addChild(title);
-
-    //Set Audio default
-    SimpleAudioEngine::getInstance()->setEffectsVolume(0.4);
-
-    // Play the background music in a loop
-    SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/music/menu.ogg", true);
-
-    // Start
-    auto startText = Label::createWithTTF("Start", "fonts/studio.ttf", 50);
-
-    auto start = MenuItemSprite::create(
-        Sprite::create("sprites/ui/menu/normal.png"), // normal state
-        Sprite::create("sprites/ui/menu/hover.png"), // hover state
-        startText, // child node
-        CC_CALLBACK_1(MenuScene::onStartClicked, this)); // callback function
-
-    // Set the position of the button start
-    start->setPosition(Vec2(0, 0));
-
-    // Set the scale of the start button to 2 times its original size
-    start->setScale(2.0f);
-
-    // Settings
-    auto settings = MenuItemSprite::create(
-        Sprite::create("sprites/ui/menu/normal.png"), // normal state
-        Sprite::create("sprites/ui/menu/hover.png"), // hover state
-        CC_CALLBACK_1(MenuScene::onSettingsClicked, this)); // callback function
-
-    // Set the position of the button quit
-    settings->setPosition(Vec2(0, -200));
-    // Set the scale of the start button to 2 times its original size
-    settings->setScale(2.0f);
-
-
-    // Quit
-    auto quit = MenuItemSprite::create(
-        Sprite::create("sprites/ui/menu/normal.png"), // normal state
-        Sprite::create("sprites/ui/menu/hover.png"), // hover state
-        CC_CALLBACK_1(MenuScene::onQuitClicked, this)); // callback function
-
-    // Set the position of the button quit
-    quit->setPosition(Vec2(0, -400));
-    // Set the scale of the start button to 2 times its original size
-    quit->setScale(2.0f);
-
-    // Menu Group
-    auto menu = Menu::create(start, settings, quit, NULL);
-
-    // Add the menu to the scene
-    this->addChild(menu);
-
-    return true;
 }
 
-void MenuScene::onStartClicked(Ref* sender)
+void MenuScene::setupQuitButton()
 {
-    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-    SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
+    // Create the quit button
+    auto quitButton = ui::Button::create("sprites/ui/menu/quit.png");
 
-    // Create the next scene
-    auto mapScene = MapScene::createScene();
+    // Disable scaling when the button is clicked
+    quitButton->setZoomScale(0);
 
-    // Replace the current scene with the next scene
-    Director::getInstance()->replaceScene(TransitionFade::create(2.0f, mapScene));
+    // Set the position of the quit button
+    quitButton->setPosition(_bottomRight - Vec2(60, -50));
+
+    // Disable scaling when the button is clicked
+    quitButton->setZoomScale(0);
+
+    // Add a callback function to the quit button
+    quitButton->addClickEventListener([](Ref* sender) {
+        // Quit the game
+        Director::getInstance()->end();
+        });
+
+    // Add the quit button to the scene
+    this->addChild(quitButton);
 }
 
-
-void MenuScene::onSettingsClicked(Ref* sender)
+void MenuScene::setupStartButton()
 {
-    SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
+    // Create the start button
+    auto startButton = ui::Button::create("sprites/ui/menu/start.png");
 
-    // Handle button 2 click event
+    // Set the position of the start button
+    startButton->setPosition(_center);
+
+    // Disable scaling when the button is clicked
+    startButton->setZoomScale(0);
+
+    // Add a callback function to the start button that will change the scene when the button is clicked
+    startButton->addClickEventListener([](Ref* sender) {
+        // Stop the background music
+        SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+
+        // Play the sound
+        SimpleAudioEngine::getInstance()->playEffect("sound/sfx/start.mp3");
+
+        auto mapScene = MapScene::createScene();
+
+        // Change the scene
+        Director::getInstance()->replaceScene(TransitionFade::create(1.0, mapScene, Color3B(255, 255, 255)));
+        });
+
+    // Create the label
+    auto startButtonText = Label::createWithTTF("COMMENCER", "fonts/ui/normal.ttf", 40);
+    startButtonText->setColor(Color3B(229, 229, 229)); // couleur blanc (RGB)
+
+    // Add the label to the start button
+    startButton->addChild(startButtonText);
+
+    // Position the label within the start button
+    startButtonText->setPosition(Vec2(startButton->getContentSize().width / 2, startButton->getContentSize().height / 2));
+
+    // Add the start button to the scene
+    this->addChild(startButton);
 }
 
-void MenuScene::onQuitClicked(Ref* sender)
+void MenuScene::setupSettingsButton()
 {
-    SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
+    // Create the settings button
+    auto settingsButton = ui::Button::create("sprites/ui/menu/settings.png");
 
-    Director::getInstance()->end();
+    // Disable scaling when the button is clicked
+    settingsButton->setZoomScale(0);
+
+    // Set the position of the settings button
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    settingsButton->setPosition(Vec2(150, 40));
+
+    // Add a callback function to the settings button that will change the scene when the button is clicked
+    settingsButton->addClickEventListener([](Ref* sender)
+    {
+        // Play the sound
+        SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
+
+        // display audio settings 
+    });
+
+    // Create the label
+    auto settingsButtonText = Label::createWithTTF("PARAMETRE", "fonts/ui/normal.ttf", 22);
+    settingsButtonText->setColor(Color3B(229, 229, 229)); // couleur blanc (RGB)
+
+    // Add the label to the settings button
+    settingsButton->addChild(settingsButtonText);
+
+    // Position the label within the settings button
+    settingsButtonText->setPosition(Vec2(settingsButton->getContentSize().width / 2, settingsButton->getContentSize().height / 2));
+
+    // Add the settings button to the scene
+    this->addChild(settingsButton);
 }
-
