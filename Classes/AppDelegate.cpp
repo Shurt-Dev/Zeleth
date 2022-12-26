@@ -62,7 +62,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60.0);
 
     // Test
-    auto scene = MapScene::createScene();
+    auto scene = IntroScene::createScene();
     director->runWithScene(scene);
 
     // Starting Scene Game
