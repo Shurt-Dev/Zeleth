@@ -27,6 +27,9 @@ bool TileMap::init()
     // Charger la carte à tuiles
     loadTileMap();
 
+    // scale tilemap
+    enlargeTileMap(3.0f);
+
     return true;
 }
 
@@ -36,4 +39,9 @@ void TileMap::loadTileMap()
     _tileMap = cocos2d::TMXTiledMap::create("tiled/map.tmx");
     // ajout de la carte à tuiles à la scène
     this->addChild(_tileMap);
+}
+
+void TileMap::enlargeTileMap(float scale)
+{
+    _tileMap->setScale(scale);
 }

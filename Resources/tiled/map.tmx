@@ -67,7 +67,7 @@
   </data>
   </layer>
  </group>
- <layer id="20" name="Collisions" width="70" height="40" opacity="0.3">
+ <layer id="20" name="Collisions" width="70" height="40" visible="0" opacity="0.3">
   <data encoding="base64" compression="zlib">
    eJztl9kOxCAIRTvJ/P8398mEaVisooBzT+JLBYFb1+sCAAAAAAAAcHy+v41+7/HVxqzMM39ak1YbtZH0rKwNN1don+ZnjVNZl4aHLpxNT6O2mfCaLzPxPcbx5E3tWp+nLtra3sUKXd7WNZrDSqycrH2Bs5fG4GysujPqEhWrwjri/u+OnKP33+j4GlnnSzSn6jJ75p6ki6TDiD4n6uIRL3qNe54v1t2mki4Njzy4O9yIHlk0aczeVWbts+lBsfZNaU5IvlasEb/MWG/qnvfVKVpYVNxXd6GttQxvwgz8e/0AAAAA4LkBuQQDng==
   </data>

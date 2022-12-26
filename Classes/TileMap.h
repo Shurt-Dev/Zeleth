@@ -12,6 +12,8 @@ public:
     // Chargement de la carte à tuiles
     void loadTileMap();
 
+    void enlargeTileMap(float scale);
+
     // implement the "static create()" method manually
     CREATE_FUNC(TileMap);
 
