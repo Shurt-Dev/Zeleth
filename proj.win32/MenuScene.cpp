@@ -120,10 +120,10 @@ void MenuScene::setupStartButton()
         // Play the sound
         SimpleAudioEngine::getInstance()->playEffect("sound/sfx/start.mp3");
 
-        auto mapScene = MapScene::createScene();
+        auto gameScene = GameScene::createScene();
 
         // Change the scene
-        Director::getInstance()->replaceScene(TransitionFade::create(1.0, mapScene, Color3B(255, 255, 255)));
+        Director::getInstance()->replaceScene(TransitionFade::create(1.0, gameScene, Color3B(255, 255, 255)));
         });
 
     // Create the label

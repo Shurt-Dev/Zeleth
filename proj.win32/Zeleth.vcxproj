@@ -813,14 +813,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\MenuScene.h" />
     <ClInclude Include="IntroScene.h" />
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\MapScene.h" />
+    <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h" />
     <ClCompile Include="..\Classes\MainCharacter.cpp" />
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\MapScene.cpp" />
+    <ClCompile Include="..\Classes\GameScene.cpp" />
     <ClCompile Include="X:\Zeleth\proj.win32\main.cpp" />
     <ResourceCompile Include="X:\Zeleth\proj.win32\game.rc" />
     <ClInclude Include="X:\Zeleth\Resources\CloseNormal.png" />
