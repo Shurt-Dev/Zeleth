@@ -34,8 +34,5 @@ bool MainCharacter::init()
     // Position the main character at the center of the screen
     this->setPosition(center);
 
-    //// Zoom sur le personnage d'un facteur de 5,0
-    //_sprite->setScale(5.0);
-
     return true;
 }

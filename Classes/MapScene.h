@@ -25,13 +25,9 @@ private:
     MainCharacter* mainCharacter;
 
     TMXTiledMap* _tileMap;
-    //TMXLayer* _watter;
-    //TMXLayer* _grass;
-    //TMXLayer* _objects;
-    //TMXLayer* _foreground;
 
     //collisions tiles
-    //TMXLayer* _meta;
+    TMXLayer* _meta;
 
     bool _isLeftPressed;
     bool _isRightPressed;
