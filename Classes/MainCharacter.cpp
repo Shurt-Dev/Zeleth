@@ -1,38 +1,21 @@
 #include "MainCharacter.h"
 
-USING_NS_CC;
-
-// Crée un nouveau personnage
-MainCharacter* MainCharacter::create()
-{
-    MainCharacter* pSprite = new MainCharacter();
-    if (pSprite->init())
-    {
-        pSprite->autorelease();
-        return pSprite;
-    }
-    CC_SAFE_DELETE(pSprite);
-    return nullptr;
-}
-
 bool MainCharacter::init()
 {
+    // appeler la méthode init de la superclasse
     if (!Sprite::init())
+    {
         return false;
+    }
 
-    // Création du sprite pour le personnage
-    _sprite = Sprite::create("Player.png");
+    // Création du sprite à partir de l'image "sprite.png"
+    this->initWithFile("sprites/characters/sprite-resize.png");
 
-    // Ajout du sprite au noeud de la classe MainCharacter
-    this->addChild(_sprite);
+    // Détermination de la taille de l'écran
+    auto visibleSize = Director::getInstance()->getVisibleSize();
 
-    // Determine the center coordinates of the screen
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    Vec2 center = Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2);
-
-    // Position the main character at the center of the screen
-    this->setPosition(center);
+    // Définition de la position du sprite au milieu de l'écran
+    this->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
 
     return true;
 }

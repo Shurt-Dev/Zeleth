@@ -1,6 +1,3 @@
-#ifndef __INTRO_SCENE_H__
-#define __INTRO_SCENE_H__
-
 #include "cocos2d.h"
 #include "MenuScene.h"
 #include "SimpleAudioEngine.h"
@@ -25,5 +22,3 @@ private:
     Vec2 _origin;
     Vec2 _center;
 };
-
-#endif // __INTRO_SCENE_H__

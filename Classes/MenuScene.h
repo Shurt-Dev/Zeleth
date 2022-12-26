@@ -1,9 +1,8 @@
-#ifndef __MENU_SCENE_H__
-#define __MENU_SCENE_H__
-
 #include "SimpleAudioEngine.h"
 #include "cocos2d.h"
-#include "MapScene.h"
+#include "ui/CocosGUI.h"
+
+#include "GameScene.h"
 
 USING_NS_CC;
 
@@ -30,5 +29,3 @@ private:
     Vec2 _center;
     Vec2 _bottomRight;
 };
-
-#endif // __MENU_SCENE_H__

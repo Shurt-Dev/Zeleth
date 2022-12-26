@@ -2,7 +2,6 @@
 
 #include "IntroScene.h"
 #include "MenuScene.h"
-#include "MapScene.h"
 
 #if USE_AUDIO_ENGINE
 #include "audio/include/AudioEngine.h"
@@ -62,8 +61,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60.0);
 
     // Test
-    auto scene = IntroScene::createScene();
-    director->runWithScene(scene);
+    auto testScene = GameScene::createScene();
+    director->runWithScene(testScene);
 
     // Starting Scene Game
     //auto introScene = IntroScene::createScene();
