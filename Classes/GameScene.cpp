@@ -34,7 +34,5 @@ bool GameScene::init()
     // ajout de MainCharacter à la scène
     this->addChild(mainCharacter);
 
-    /*mainCharacter->setPosition(Vec2(100, 100));*/
-
     return true;
 }
