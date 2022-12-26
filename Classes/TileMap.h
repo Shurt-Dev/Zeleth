@@ -1,20 +1,21 @@
 #include "cocos2d.h"
 
-#include "TileMap.h"
-
 USING_NS_CC;
 
-class GameScene : public Scene
+class TileMap : public Scene
 {
 public:
     static Scene* createScene();
 
     virtual bool init();
 
+    // Chargement de la carte à tuiles
+    void loadTileMap();
+
     // implement the "static create()" method manually
-    CREATE_FUNC(GameScene);
+    CREATE_FUNC(TileMap);
 
 private:
-    // Instance de la classe TileMap
-    TileMap* _tileMap;
+    TMXTiledMap* _tileMap;
 };
+

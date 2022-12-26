@@ -22,6 +22,9 @@
     <ClCompile Include="MenuScene.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
@@ -61,6 +64,9 @@
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MenuScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TileMap.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
