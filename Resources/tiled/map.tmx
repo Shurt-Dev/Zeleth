@@ -73,7 +73,7 @@
   </data>
  </layer>
  <objectgroup id="27" name="Objects">
-  <object id="3" name="StartPoint" x="312.5" y="234.75">
+  <object id="3" name="StartPoint" x="311.955" y="251.659">
    <properties>
     <property name="StartPoint" value=""/>
    </properties>

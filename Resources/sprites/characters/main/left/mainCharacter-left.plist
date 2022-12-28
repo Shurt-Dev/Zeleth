@@ -15,7 +15,7 @@
                 <key>spriteSourceSize</key>
                 <string>{96,96}</string>
                 <key>textureRect</key>
-                <string>{{0,0},{96,96}}</string>
+                <string>{{1,1},{96,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -30,7 +30,7 @@
                 <key>spriteSourceSize</key>
                 <string>{96,96}</string>
                 <key>textureRect</key>
-                <string>{{96,0},{96,96}}</string>
+                <string>{{99,1},{96,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -45,7 +45,7 @@
                 <key>spriteSourceSize</key>
                 <string>{96,96}</string>
                 <key>textureRect</key>
-                <string>{{0,0},{96,96}}</string>
+                <string>{{197,1},{96,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -60,7 +60,7 @@
                 <key>spriteSourceSize</key>
                 <string>{96,96}</string>
                 <key>textureRect</key>
-                <string>{{192,0},{96,96}}</string>
+                <string>{{99,1},{96,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -76,9 +76,9 @@
             <key>realTextureFileName</key>
             <string>mainCharacter-left.png</string>
             <key>size</key>
-            <string>{288,96}</string>
+            <string>{294,98}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6494d4d702eb33defa10abb2f20f3379:8e6b5754d7c7b4a99131930c9001ab84:c99ff21d12e632496312a0b7406765a2$</string>
+            <string>$TexturePacker:SmartUpdate:1d60ead9e424f7bd4b62452ce52c46e3:66f1cf31de84c489ae9790a4aa7278c8:c99ff21d12e632496312a0b7406765a2$</string>
             <key>textureFileName</key>
             <string>mainCharacter-left.png</string>
         </dict>

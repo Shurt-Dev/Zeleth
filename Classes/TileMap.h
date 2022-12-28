@@ -10,8 +10,12 @@ public:
     virtual bool init();
 
     void loadTileMap();
+
+    void loadMainCharacter();
+
     void enlargeTileMap(float scale);
     void moveToStartPoint();
+
     void setupKeyboardInput();
 
     void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);

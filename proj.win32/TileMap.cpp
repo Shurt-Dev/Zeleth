@@ -10,6 +10,9 @@ bool TileMap::init()
     // Charger la carte à tuiles
     loadTileMap();
 
+    // Charger le personnage principal
+    loadMainCharacter();
+
     // scale tilemap
     enlargeTileMap(4.0f);
 
@@ -27,11 +30,6 @@ bool TileMap::init()
     _isKeyDownPressed = false;
     _isKeyLeftPressed = false;
 
-    // Création de l'objet MainCharacter
-    mainCharacter = MainCharacter::create();
-    // ajout de MainCharacter à la scène
-    this->addChild(mainCharacter);
-
     return true;
 }
 
@@ -41,6 +39,24 @@ void TileMap::loadTileMap()
     _tileMap = TMXTiledMap::create("tiled/map.tmx");
     // ajout de la carte à tuiles à la scène
     this->addChild(_tileMap);
+}
+
+void TileMap::loadMainCharacter()
+{
+    // Création de l'objet MainCharacter
+    mainCharacter = MainCharacter::create();
+
+    // Récupération de la taille de l'écran visible
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    // Calcul de la position du personnage au milieu de l'écran
+    Vec2 characterPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2);
+
+    // Définition de la position du personnage
+    mainCharacter->setPosition(characterPosition);
+
+    // ajout de MainCharacter à la scène
+    this->addChild(mainCharacter);
 }
 
 void TileMap::enlargeTileMap(float scale)
@@ -61,8 +77,6 @@ void TileMap::moveToStartPoint()
     int y = spawnPoint["y"].asInt();
 
     // Calculate the distance that the tile map needs to be moved to center the SpawnPoint object
-    // NOTE : J'ai passé 1 heure avant de comprendre qu'il fallait
-    // multiplier par 4 X et Y car la map est X4 (lol)
     Size visibleSize = Director::getInstance()->getVisibleSize();
     float xMovement = visibleSize.width / 2 - x*4;
     float yMovement = visibleSize.height / 2 - y*4;
@@ -89,18 +103,23 @@ void TileMap::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
     {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         _isKeyLeftPressed = true;
+        mainCharacter->runAction(RepeatForever::create(mainCharacter->getLeftWalkAnimation()));
         break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         _isKeyRightPressed = true;
+        mainCharacter->runAction(RepeatForever::create(mainCharacter->getRightWalkAnimation()));
         break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
         _isKeyUpPressed = true;
+        mainCharacter->runAction(RepeatForever::create(mainCharacter->getUpWalkAnimation()));
         break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = true;
+        mainCharacter->runAction(RepeatForever::create(mainCharacter->getDownWalkAnimation()));
         break;
     default:
         break;
+
     }
 }
 
@@ -110,15 +129,33 @@ void TileMap::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
     {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         _isKeyLeftPressed = false;
+
+        mainCharacter->stopAllActions();
+        mainCharacter->setSpriteFrame("mainCharacter-left-1.png");
+
         break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         _isKeyRightPressed = false;
+
+        mainCharacter->stopAllActions();
+        mainCharacter->setSpriteFrame("mainCharacter-right-1.png");
+
         break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
         _isKeyUpPressed = false;
+
+        mainCharacter->stopAllActions();
+        mainCharacter->setSpriteFrame("mainCharacter-up-1.png");
+
         break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = false;
+
+        mainCharacter->stopAllActions();
+        mainCharacter->setSpriteFrame("mainCharacter-down-1.png");
+
+        break;
+    default:
         break;
     }
 }
@@ -130,32 +167,18 @@ void TileMap::update(float delta)
     if (_isKeyLeftPressed)
     {
         movement.x = 1;
-        mainCharacter->stopAllActions();
-        mainCharacter->runAction(mainCharacter->getLeftWalkAnimation());
     }
-    if (_isKeyRightPressed)
+    else if (_isKeyRightPressed)
     {
         movement.x = -1;
-        mainCharacter->stopAllActions();
-        mainCharacter->runAction(mainCharacter->getRightWalkAnimation());
     }
-    if (_isKeyUpPressed)
+    else if (_isKeyUpPressed)
     {
         movement.y = -1;
-        mainCharacter->stopAllActions();
-        mainCharacter->runAction(mainCharacter->getUpWalkAnimation());
     }
-    if (_isKeyDownPressed)
+    else if (_isKeyDownPressed)
     {
         movement.y = 1;
-        mainCharacter->stopAllActions();
-        mainCharacter->runAction(mainCharacter->getDownWalkAnimation());
-    }
-    else
-    {
-        mainCharacter->stopAllActions();
-        // pas d'idle animation pour l'instant
-        //mainCharacter->runAction(mainCharacter->getIdleAnimation());
     }
 
     // s'assurer que movement ne contient qu'une seule valeur non nulle
@@ -165,10 +188,6 @@ void TileMap::update(float delta)
     }
 
     // mettre à jour la position du _tileMap par pixel et à chaque frame
-    int counter = 0;
-    while (counter < _movementSpeed)
-    {
-        _tileMap->setPosition(_tileMap->getPosition() + movement);
-        counter++;
-    }
+    _tileMap->setPosition(_tileMap->getPosition() + movement * _movementSpeed);
 }
+

@@ -7,9 +7,8 @@ class MainCharacter : public Sprite
 public:
     virtual bool init();
 
-    void setCenterScreen();
+    void startingRotation();
 
-    // movement animation
     Animate* MainCharacter::getLeftWalkAnimation();
     Animate* MainCharacter::getRightWalkAnimation();
     Animate* MainCharacter::getDownWalkAnimation();
@@ -17,4 +16,7 @@ public:
 
     // Méthodes de création de l'objet
     CREATE_FUNC(MainCharacter);
+
+private:
+    SpriteFrameCache* spritecache;
 };
