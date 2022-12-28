@@ -27,6 +27,11 @@ bool TileMap::init()
     _isKeyDownPressed = false;
     _isKeyLeftPressed = false;
 
+    // Création de l'objet MainCharacter
+    mainCharacter = MainCharacter::create();
+    // ajout de MainCharacter à la scène
+    this->addChild(mainCharacter);
+
     return true;
 }
 
@@ -121,21 +126,36 @@ void TileMap::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
 void TileMap::update(float delta)
 {
     Vec2 movement = Vec2::ZERO;
+
     if (_isKeyLeftPressed)
     {
         movement.x = 1;
+        mainCharacter->stopAllActions();
+        mainCharacter->runAction(mainCharacter->getLeftWalkAnimation());
     }
     if (_isKeyRightPressed)
     {
         movement.x = -1;
+        mainCharacter->stopAllActions();
+        mainCharacter->runAction(mainCharacter->getRightWalkAnimation());
     }
     if (_isKeyUpPressed)
     {
         movement.y = -1;
+        mainCharacter->stopAllActions();
+        mainCharacter->runAction(mainCharacter->getUpWalkAnimation());
     }
     if (_isKeyDownPressed)
     {
         movement.y = 1;
+        mainCharacter->stopAllActions();
+        mainCharacter->runAction(mainCharacter->getDownWalkAnimation());
+    }
+    else
+    {
+        mainCharacter->stopAllActions();
+        // pas d'idle animation pour l'instant
+        //mainCharacter->runAction(mainCharacter->getIdleAnimation());
     }
 
     // s'assurer que movement ne contient qu'une seule valeur non nulle

@@ -1,5 +1,7 @@
 #include "cocos2d.h"
 
+#include "MainCharacter.h"
+
 USING_NS_CC;
 
 class TileMap : public Node
@@ -22,6 +24,8 @@ public:
 
 private:
     TMXTiledMap* _tileMap;
+
+    MainCharacter* mainCharacter;
 
     bool _isKeyUpPressed;
     bool _isKeyRightPressed;
