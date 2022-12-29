@@ -1,5 +1,7 @@
 #include "cocos2d.h"
 
+#include "MainCharacter.h"
+
 USING_NS_CC;
 
 class TileMap : public Node
@@ -8,8 +10,12 @@ public:
     virtual bool init();
 
     void loadTileMap();
+
+    void loadMainCharacter();
+
     void enlargeTileMap(float scale);
     void moveToStartPoint();
+
     void setupKeyboardInput();
 
     void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);
@@ -22,6 +28,10 @@ public:
 
 private:
     TMXTiledMap* _tileMap;
+
+    MainCharacter* mainCharacter;
+
+    Vec2 lastMovementDirection;
 
     bool _isKeyUpPressed;
     bool _isKeyRightPressed;

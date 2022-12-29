@@ -10,6 +10,9 @@ bool TileMap::init()
     // Charger la carte à tuiles
     loadTileMap();
 
+    // Charger le personnage principal
+    loadMainCharacter();
+
     // scale tilemap
     enlargeTileMap(4.0f);
 
@@ -38,6 +41,24 @@ void TileMap::loadTileMap()
     this->addChild(_tileMap);
 }
 
+void TileMap::loadMainCharacter()
+{
+    // Création de l'objet MainCharacter
+    mainCharacter = MainCharacter::create();
+
+    // Récupération de la taille de l'écran visible
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    // Calcul de la position du personnage au milieu de l'écran
+    Vec2 characterPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2);
+
+    // Définition de la position du personnage
+    mainCharacter->setPosition(characterPosition);
+
+    // ajout de MainCharacter à la scène
+    this->addChild(mainCharacter);
+}
+
 void TileMap::enlargeTileMap(float scale)
 {
     _tileMap->setScale(scale);
@@ -56,8 +77,6 @@ void TileMap::moveToStartPoint()
     int y = spawnPoint["y"].asInt();
 
     // Calculate the distance that the tile map needs to be moved to center the SpawnPoint object
-    // NOTE : J'ai passé 1 heure avant de comprendre qu'il fallait
-    // multiplier par 4 X et Y car la map est X4 (lol)
     Size visibleSize = Director::getInstance()->getVisibleSize();
     float xMovement = visibleSize.width / 2 - x*4;
     float yMovement = visibleSize.height / 2 - y*4;
@@ -84,18 +103,23 @@ void TileMap::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
     {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         _isKeyLeftPressed = true;
+        lastMovementDirection = Vec2(1, 0);
         break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         _isKeyRightPressed = true;
+        lastMovementDirection = Vec2(-1, 0);
         break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
         _isKeyUpPressed = true;
+        lastMovementDirection = Vec2(0, -1);
         break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = true;
+        lastMovementDirection = Vec2(0, 1);
         break;
     default:
         break;
+
     }
 }
 
@@ -115,27 +139,69 @@ void TileMap::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = false;
         break;
+    default:
+        break;
     }
 }
 
 void TileMap::update(float delta)
 {
     Vec2 movement = Vec2::ZERO;
+
     if (_isKeyLeftPressed)
     {
         movement.x = 1;
     }
-    if (_isKeyRightPressed)
+    else if (_isKeyRightPressed)
     {
         movement.x = -1;
     }
-    if (_isKeyUpPressed)
+    else if (_isKeyUpPressed)
     {
         movement.y = -1;
     }
-    if (_isKeyDownPressed)
+    else if (_isKeyDownPressed)
     {
         movement.y = 1;
+    }
+
+    // Set the animation state based on the movement
+    if (movement.x == 1)
+    {
+        mainCharacter->setAnimation(AnimationState::Left);
+    }
+    if (movement.x == -1)
+    {
+        mainCharacter->setAnimation(AnimationState::Right);
+    }
+    if (movement.y == -1)
+    {
+        mainCharacter->setAnimation(AnimationState::Up);
+    }
+    if (movement.y == 1)
+    {
+        mainCharacter->setAnimation(AnimationState::Down);
+    }
+
+    if(movement.x == 0 && movement.y == 0)
+    {
+        // Déterminer la direction dans laquelle le personnage ne se déplace plus
+        if (lastMovementDirection.x == 1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleLeft);
+        }
+        if (lastMovementDirection.x == -1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleRight);
+        }
+        if (lastMovementDirection.y == -1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleUp);
+        }
+        if (lastMovementDirection.y == 1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleDown);
+        }
     }
 
     // s'assurer que movement ne contient qu'une seule valeur non nulle
@@ -145,10 +211,5 @@ void TileMap::update(float delta)
     }
 
     // mettre à jour la position du _tileMap par pixel et à chaque frame
-    int counter = 0;
-    while (counter < _movementSpeed)
-    {
-        _tileMap->setPosition(_tileMap->getPosition() + movement);
-        counter++;
-    }
+    _tileMap->setPosition(_tileMap->getPosition() + movement * _movementSpeed);
 }

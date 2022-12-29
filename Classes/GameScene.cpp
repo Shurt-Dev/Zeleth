@@ -29,10 +29,5 @@ bool GameScene::init()
     // ajout de la carte à tuiles à la scène
     this->addChild(_tileMap);
 
-    // Création de l'objet MainCharacter
-    auto mainCharacter = MainCharacter::create();
-    // ajout de MainCharacter à la scène
-    this->addChild(mainCharacter);
-
     return true;
 }
