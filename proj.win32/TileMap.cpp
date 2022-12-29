@@ -103,19 +103,15 @@ void TileMap::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
     {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         _isKeyLeftPressed = true;
-        mainCharacter->runAction(RepeatForever::create(mainCharacter->getLeftWalkAnimation()));
         break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         _isKeyRightPressed = true;
-        mainCharacter->runAction(RepeatForever::create(mainCharacter->getRightWalkAnimation()));
         break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
         _isKeyUpPressed = true;
-        mainCharacter->runAction(RepeatForever::create(mainCharacter->getUpWalkAnimation()));
         break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = true;
-        mainCharacter->runAction(RepeatForever::create(mainCharacter->getDownWalkAnimation()));
         break;
     default:
         break;
@@ -129,31 +125,15 @@ void TileMap::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
     {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         _isKeyLeftPressed = false;
-
-        mainCharacter->stopAllActions();
-        mainCharacter->setSpriteFrame("mainCharacter-left-1.png");
-
         break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         _isKeyRightPressed = false;
-
-        mainCharacter->stopAllActions();
-        mainCharacter->setSpriteFrame("mainCharacter-right-1.png");
-
         break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
         _isKeyUpPressed = false;
-
-        mainCharacter->stopAllActions();
-        mainCharacter->setSpriteFrame("mainCharacter-up-1.png");
-
         break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = false;
-
-        mainCharacter->stopAllActions();
-        mainCharacter->setSpriteFrame("mainCharacter-down-1.png");
-
         break;
     default:
         break;
@@ -181,6 +161,28 @@ void TileMap::update(float delta)
         movement.y = 1;
     }
 
+    // Set the animation state based on the movement
+    if (movement.x == 1)
+    {
+        mainCharacter->setAnimation(AnimationState::Left);
+    }
+    if (movement.x == -1)
+    {
+        mainCharacter->setAnimation(AnimationState::Right);
+    }
+    if (movement.y == -1)
+    {
+        mainCharacter->setAnimation(AnimationState::Up);
+    }
+    if (movement.y == 1)
+    {
+        mainCharacter->setAnimation(AnimationState::Down);
+    }
+    if(movement.x == 0 && movement.y == 0)
+    {
+        mainCharacter->setAnimation(AnimationState::Idle);
+    }
+
     // s'assurer que movement ne contient qu'une seule valeur non nulle
     if (movement.x != 0 && movement.y != 0)
     {
@@ -191,3 +193,4 @@ void TileMap::update(float delta)
     _tileMap->setPosition(_tileMap->getPosition() + movement * _movementSpeed);
 }
 
+//mainCharacter->setSpriteFrame("mainCharacter-left-1.png");

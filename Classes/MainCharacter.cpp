@@ -25,7 +25,7 @@ void MainCharacter::startingRotation()
     this->setSpriteFrame("mainCharacter-down-1.png");
 }
 
-Animate* MainCharacter::getLeftWalkAnimation()
+void MainCharacter::getLeftWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -37,10 +37,10 @@ Animate* MainCharacter::getLeftWalkAnimation()
     auto mainCharacterLeftAnimation = Animation::createWithSpriteFrames(frames, 0.2f);
     auto mainCharacterLeftAnimate = Animate::create(mainCharacterLeftAnimation);
 
-    return mainCharacterLeftAnimate;
+    this->runAction(RepeatForever::create(mainCharacterLeftAnimate));
 }
 
-Animate* MainCharacter::getRightWalkAnimation()
+void MainCharacter::getRightWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -53,10 +53,10 @@ Animate* MainCharacter::getRightWalkAnimation()
     auto mainCharacterRightAnimation = Animation::createWithSpriteFrames(frames, 0.2f);
     auto mainCharacterRightAnimate = Animate::create(mainCharacterRightAnimation);
 
-    return mainCharacterRightAnimate;
+    this->runAction(RepeatForever::create(mainCharacterRightAnimate));
 }
 
-Animate* MainCharacter::getDownWalkAnimation()
+void MainCharacter::getDownWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -69,10 +69,10 @@ Animate* MainCharacter::getDownWalkAnimation()
     auto mainCharacterDownAnimation = Animation::createWithSpriteFrames(frames, 0.2f);
     auto mainCharacterDownAnimate = Animate::create(mainCharacterDownAnimation);
 
-    return mainCharacterDownAnimate;
+    this->runAction(RepeatForever::create(mainCharacterDownAnimate));
 }
 
-Animate* MainCharacter::getUpWalkAnimation()
+void MainCharacter::getUpWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -85,5 +85,43 @@ Animate* MainCharacter::getUpWalkAnimation()
     auto mainCharacterUpAnimation = Animation::createWithSpriteFrames(frames, 0.2f);
     auto mainCharacterUpAnimate = Animate::create(mainCharacterUpAnimation);
 
-    return mainCharacterUpAnimate;
+    this->runAction(RepeatForever::create(mainCharacterUpAnimate));
+}
+
+void MainCharacter::setAnimationState(AnimationState state)
+{
+    _animationState = state;
+}
+
+void MainCharacter::setAnimation(AnimationState state)
+{
+    // Si l'animation en cours d'exécution est la même que celle demandée, ne rien faire
+    if (_animationState == state) return;
+
+    // Mettre à jour l'état de l'animation
+    _animationState = state;
+
+    // Arrêter toutes les actions en cours d'exécution
+    this->stopAllActions();
+
+    // Sélectionner l'animation à exécuter en fonction de l'état de l'animation
+    switch (_animationState)
+    {
+    case AnimationState::Right:
+        getRightWalkAnimation();
+        break;
+    case AnimationState::Left:
+        getLeftWalkAnimation();
+        break;
+    case AnimationState::Down:
+        getDownWalkAnimation();
+        break;
+    case AnimationState::Up:
+        getUpWalkAnimation();
+        break;
+    case AnimationState::Idle:
+        // Arrêter toutes les actions en cours d'exécution
+        this->stopAllActions();
+        break;
+    }
 }
