@@ -31,6 +31,8 @@ private:
 
     MainCharacter* mainCharacter;
 
+    Vec2 lastMovementDirection;
+
     bool _isKeyUpPressed;
     bool _isKeyRightPressed;
     bool _isKeyDownPressed;

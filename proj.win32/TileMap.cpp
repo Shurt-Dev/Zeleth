@@ -103,15 +103,19 @@ void TileMap::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
     {
     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
         _isKeyLeftPressed = true;
+        lastMovementDirection = Vec2(1, 0);
         break;
     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
         _isKeyRightPressed = true;
+        lastMovementDirection = Vec2(-1, 0);
         break;
     case EventKeyboard::KeyCode::KEY_UP_ARROW:
         _isKeyUpPressed = true;
+        lastMovementDirection = Vec2(0, -1);
         break;
     case EventKeyboard::KeyCode::KEY_DOWN_ARROW:
         _isKeyDownPressed = true;
+        lastMovementDirection = Vec2(0, 1);
         break;
     default:
         break;
@@ -178,9 +182,26 @@ void TileMap::update(float delta)
     {
         mainCharacter->setAnimation(AnimationState::Down);
     }
+
     if(movement.x == 0 && movement.y == 0)
     {
-        mainCharacter->setAnimation(AnimationState::Idle);
+        // Déterminer la direction dans laquelle le personnage ne se déplace plus
+        if (lastMovementDirection.x == 1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleLeft);
+        }
+        if (lastMovementDirection.x == -1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleRight);
+        }
+        if (lastMovementDirection.y == -1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleUp);
+        }
+        if (lastMovementDirection.y == 1)
+        {
+            mainCharacter->setAnimation(AnimationState::IdleDown);
+        }
     }
 
     // s'assurer que movement ne contient qu'une seule valeur non nulle
@@ -192,5 +213,3 @@ void TileMap::update(float delta)
     // mettre à jour la position du _tileMap par pixel et à chaque frame
     _tileMap->setPosition(_tileMap->getPosition() + movement * _movementSpeed);
 }
-
-//mainCharacter->setSpriteFrame("mainCharacter-left-1.png");

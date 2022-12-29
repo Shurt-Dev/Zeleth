@@ -88,6 +88,30 @@ void MainCharacter::getUpWalkAnimation()
     this->runAction(RepeatForever::create(mainCharacterUpAnimate));
 }
 
+void MainCharacter::getIdleLeft()
+{
+    this->stopAllActions();
+    this->setSpriteFrame("mainCharacter-left-1.png");
+}
+
+void MainCharacter::getIdleRight()
+{
+    this->stopAllActions();
+    this->setSpriteFrame("mainCharacter-right-1.png");
+}
+
+void MainCharacter::getIdleUp()
+{
+    this->stopAllActions();
+    this->setSpriteFrame("mainCharacter-up-1.png");
+}
+
+void MainCharacter::getIdleDown()
+{
+    this->stopAllActions();
+    this->setSpriteFrame("mainCharacter-down-1.png");
+}
+
 void MainCharacter::setAnimationState(AnimationState state)
 {
     _animationState = state;
@@ -119,9 +143,17 @@ void MainCharacter::setAnimation(AnimationState state)
     case AnimationState::Up:
         getUpWalkAnimation();
         break;
-    case AnimationState::Idle:
-        // Arrêter toutes les actions en cours d'exécution
-        this->stopAllActions();
+    case AnimationState::IdleRight:
+        getIdleRight();
+        break;
+    case AnimationState::IdleLeft:
+        getIdleLeft();
+        break;
+    case AnimationState::IdleUp:
+        getIdleUp();
+        break;
+    case AnimationState::IdleDown:
+        getIdleDown();
         break;
     }
 }
