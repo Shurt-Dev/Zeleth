@@ -7,11 +7,11 @@ bool TileMap::init()
         return false;
     }
 
-    // Charger la carte à tuiles
-    loadTileMap();
-
     // Charger le personnage principal
     loadMainCharacter();
+
+    // Charger la carte à tuiles
+    loadTileMap();
 
     // scale tilemap
     enlargeTileMap(4.0f);
@@ -37,6 +37,36 @@ void TileMap::loadTileMap()
 {
     // Chargement de la carte à tuiles à partir d'un fichier .tmx
     _tileMap = TMXTiledMap::create("tiled/map.tmx");
+
+    // define layers
+    auto foregroundObjects = _tileMap->getLayer("ForegroundObjects");
+    auto battleZones = _tileMap->getLayer("BattleZones");
+    auto collisions = _tileMap->getLayer("Collisions");
+    auto flowersAndGrass = _tileMap->getLayer("FlowersAndGrass");
+    auto plateau = _tileMap->getLayer("Plateau");
+    auto trees_3 = _tileMap->getLayer("Trees_3");
+    auto trees_2 = _tileMap->getLayer("Trees_2");
+    auto trees_1 = _tileMap->getLayer("Trees_1");
+    auto island = _tileMap->getLayer("Island");
+    auto ocean = _tileMap->getLayer("Ocean");
+
+    // define z-order layers
+    foregroundObjects->setGlobalZOrder(0);
+    mainCharacter->setGlobalZOrder(-1);
+    battleZones->setGlobalZOrder(-2);
+    collisions->setGlobalZOrder(-3);
+    flowersAndGrass->setGlobalZOrder(-4);
+    plateau->setGlobalZOrder(-5);
+    trees_3->setGlobalZOrder(-6);
+    trees_2->setGlobalZOrder(-7);
+    trees_1->setGlobalZOrder(-8);
+    island->setGlobalZOrder(-9);
+    ocean->setGlobalZOrder(-10);
+
+    //invisible layers
+    collisions->setVisible(false);
+    battleZones->setVisible(false);
+
     // ajout de la carte à tuiles à la scène
     this->addChild(_tileMap);
 }
