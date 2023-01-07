@@ -811,6 +811,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="..\Classes\MainCharacter.h" />
     <ClInclude Include="..\Classes\MenuScene.h" />
+    <ClInclude Include="..\Classes\Settings.h" />
     <ClInclude Include="..\Classes\TileMap.h" />
     <ClInclude Include="IntroScene.h" />
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h" />
@@ -818,6 +819,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h" />
     <ClCompile Include="..\Classes\MainCharacter.cpp" />
+    <ClCompile Include="..\Classes\Settings.cpp" />
     <ClCompile Include="IntroScene.cpp" />
     <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="TileMap.cpp" />

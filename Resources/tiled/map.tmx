@@ -15,17 +15,17 @@
    eJztmMtOFEEUhovpBJfyDAIiSiJsuLiERBBd4IbbinC/COpGwKVyVbysIGEpG+4baEh4BLbQG14D2POfTBWcKXqmk7HHPmD9yZfuLnp6Tn1UVadGKRcXFxcXl/uV0tQNZanM6yjo/mLwIJV0L+KJ6Vc5OFV/TwWe8wRUgqfgGajSzu5KGlFrkyYOJ0QzntUCXoFW8Bq8AY9Tt51JTWPMTmxG8ewx6/ncmdQxVGgv+cw7CfmCOr6CWlCXsB+CxlA1qEnYzx98/xpoBx0CvBBtqOOtkHHzCXVMCvHyAXV8TNjLI/2OXgYrAry8QA3vPbjxCt/3XDHr7gE4FOClGzX8gpPfCXvpRR19AnwYPqOWjYSdUKR5WRWy3krzciTYy8U/xPZyRvspzKOHoCTB+WR7CehYpNS+5pRB174+3wtpu2D3nrP2bJ+j44n+3npGA3gOJ9XCvARUr67dnPv63ByDkL9law+754R56QCdjC5dS5sgL8R+gfHVzbi5S17CqFOZY92mIeLzHBqTvh5DUr2YfWNUX+zaGT3EFLhPXsy+cTPCTQ4vKl8v52zdnWJMKxl7AcpxiJuXqKvZS59PqszaDfDVQ0yrcAdh7+ZLlV5bfOaF88OTsRcwMW76Uc8AGARDYFj74fB+2Nd8XJj3zvU6a73TuZcJL+1kB+wKcWJCbmZQ0yyYA/NgASyCb+z4HSzpfvzU7lq8214CPV8C7SGwzsnLBHvOjjAfPLRvs/dupo3YBFtgm/1vF7K4iXpncx/Sxki+4e7WmZsRMArGwDsw7qXHxJKF1DkTd4ybbHNt20LynIk76znmmmk3x/85En5jcnFxcXFxSTJXvOd3zw==
   </data>
  </layer>
- <layer id="11" name="Trees" width="70" height="40">
+ <layer id="11" name="Trees_1" width="70" height="40">
   <data encoding="base64" compression="zlib">
    eJzt2EsOwjAMhOGYwkWgwD2Awj143v8GzKZKQCIbS0VO/08aRbNLK2fjlAAAaMfCUuqUpbIyf2/FWt+yUXpla/5e2qnvLZ+RHHTfo3JSBvP30ln9YvmM5Kr73pS78jB/Lz3VX5bPbxHnaArjHPF/Po1zFPGdTeHXOwMAAAD+rdX9i1dt/zJntf3LnNX2LwAAAAAAIIY33v0aZQ==
   </data>
  </layer>
- <layer id="12" name="Trees 2" width="70" height="40">
+ <layer id="12" name="Trees_2" width="70" height="40">
   <data encoding="base64" compression="zlib">
    eJzt1FsOgkAMheGp4Ebktg8V3IcKrI1del54m0QhDWHw/5KTpm+loRMCAAA4qpOFkCm5cjb/PlUXzV4opVKZf18rTaTu3VUz3pS70pp/3ymPSN27p2Z8KW+lN/9+UMZIxXep3NbW5ts6+n6mhd8231Yqb88asZ38uqd/fnuW/ksAAAAAAAAAAACAhw9D6B66
   </data>
  </layer>
- <layer id="13" name="Trees 3" width="70" height="40">
+ <layer id="13" name="Trees_3" width="70" height="40">
   <data encoding="base64" compression="zlib">
    eJzt2DsOwkAMhGEbyEUgwD0Ij3sEktz/Bpl+lZVcUGz8f9JoNXLjbW0GAACQ08HNjspJ6Tze9+qsv12UXrl6vNfcNL97+bbgoT0H5am8PN5r3pp/vHxbMGrPr/JTJo/3mlnzxbc7AAAAAABZZblTRUXuVJlE7lSZRO5UAAAAAPAPK6ywFKE=
   </data>
@@ -35,7 +35,7 @@
    eJzt0EdKQ1EcRvFLQN2HXTDgGuyCDtyCGstA0C3Ye9mCNXbdgr0XcEGehxHkmWFwcHMO/AbvvtH/C8HMzMzMzP6rikwIlajK/P3XW+Stv8hbLFVzWw1qUYd6NKARTQXJJs3I/nprwWTEu7RyWxva0YFOdKEbPam7+wpviYnIdxngtkEMpXYZxVjq7nG+P8O3ct/lZ4dEue6SwzBG3CVMcds0ZjCLOcxjAYtYwjJWsIo1rGMDmxHvssVt29jBLvawjzwOcIgjHOMEpzjDOS4i3uWS265wjRvc4g73eMAjnvCMF7ziDe/4iHgXMzMzMzMzMzMzM7NS9QXtxz7V
   </data>
  </layer>
- <layer id="6" name="Flowers and Grass" width="70" height="40">
+ <layer id="6" name="FlowersAndGrass" width="70" height="40">
   <data encoding="base64" compression="zlib">
    eJzt2FsOgjAQBVDHL1EX6P5QEj5YhUqMyip8Y9yDbVpiM6ECKraBe5KmUfjo3PSlgwEAAAAAAIB7c3I9gnZMhtXvnETtC1K9KRWfDyW53DuaFXehV5Mi0Yek+lXHMhiLebI2agot9cn5cDOadNbzRz47dyyXJnguS53L0ZLJrSKr3MMsF2xMOb2fK32xdVzrqMY+74uDXheBHnNG6pzakVozhX1JpknNnBNjDfrsaoxP1r8R7UEqEynW/cNSR1byfVluXLH3pJ7nA2715a5XCL7YR6vO83+bGrWMG9bVJAfXZ1+bZqz9Er9L+cIcFz93eB6/ysW3teNCxDKw/W7oqjr3lr6Jyd99whX5PxXmip2cM7Z7fd/2FAAAAAD43BMK7j+N
   </data>
@@ -67,7 +67,7 @@
   </data>
   </layer>
  </group>
- <layer id="20" name="Collisions" width="70" height="40" visible="0" opacity="0.3">
+ <layer id="20" name="Collisions" width="70" height="40" opacity="0.3">
   <data encoding="base64" compression="zlib">
    eJztl9kOxCAIRTvJ/P8398mEaVisooBzT+JLBYFb1+sCAAAAAAAAcHy+v41+7/HVxqzMM39ak1YbtZH0rKwNN1don+ZnjVNZl4aHLpxNT6O2mfCaLzPxPcbx5E3tWp+nLtra3sUKXd7WNZrDSqycrH2Bs5fG4GysujPqEhWrwjri/u+OnKP33+j4GlnnSzSn6jJ75p6ki6TDiD4n6uIRL3qNe54v1t2mki4Njzy4O9yIHlk0aczeVWbts+lBsfZNaU5IvlasEb/MWG/qnvfVKVpYVNxXd6GttQxvwgz8e/0AAAAA4LkBuQQDng==
   </data>
@@ -80,12 +80,12 @@
    <point/>
   </object>
  </objectgroup>
- <layer id="26" name="Battle Zones" width="70" height="40" visible="0" opacity="0.5">
+ <layer id="26" name="BattleZones" width="70" height="40" opacity="0.5">
   <data encoding="base64" compression="zlib">
    eJzt0EEKACAIRUGD7n/mlka0LFCYgb8VeREAAAAAAEAlY+ZIutx17rL/fu7l7W5+dgEAAABqWPxgAIM=
   </data>
  </layer>
- <layer id="22" name="Foreground Objects" width="70" height="40">
+ <layer id="22" name="ForegroundObjects" width="70" height="40">
   <data encoding="base64" compression="zlib">
    eJzt1ksKgzAUheFE68TaTXRQQe0mHGhf6v534+lMQiitiBH7f3AGCQQul+QSYwAAAAAAwFbcrDF3+/0+/hv3Bb946E68lM5+3gOWkCpHJVNOgWvZkkIplUq5Bq4lpEgzJ1YOSuKZP70yrF5VeGdmsVdNX7wi+uI15x1ddCbfeT/nvKNGZ9qd98X1/hs/J/9jdw0AAAAASxsBtewJtQ==
   </data>
