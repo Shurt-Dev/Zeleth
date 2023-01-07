@@ -3,6 +3,7 @@
 #include "ui/CocosGUI.h"
 
 #include "GameScene.h"
+#include "Settings.h"
 
 USING_NS_CC;
 
