@@ -1,6 +1,5 @@
 #include "SimpleAudioEngine.h"
 #include "cocos2d.h"
-#include "ui/CocosGUI.h"
 
 #include "GameScene.h"
 #include "Settings.h"
@@ -19,7 +18,8 @@ public:
     void setupBackground();
     void setupQuitButton();
     void setupStartButton();
-    void setupSettingsButton();
+
+    void setupSettings();
 
     // implement the "static create()" method manually
     CREATE_FUNC(MenuScene);
@@ -29,4 +29,6 @@ private:
     Vec2 _origin;
     Vec2 _center;
     Vec2 _bottomRight;
+
+    Settings* _settings;
 };

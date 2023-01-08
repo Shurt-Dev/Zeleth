@@ -31,7 +31,8 @@ bool MenuScene::init()
     createTitle();
     setupQuitButton();
     setupStartButton();
-    setupSettingsButton();
+    
+    setupSettings();
 
     return true;
 }
@@ -123,7 +124,7 @@ void MenuScene::setupStartButton()
 
         // Change the scene
         Director::getInstance()->replaceScene(TransitionFade::create(1.0, gameScene, Color3B(255, 255, 255)));
-        });
+    });
 
     // Create the label
     auto startButtonText = Label::createWithTTF("COMMENCER", "fonts/ui/normal.ttf", 40);
@@ -139,37 +140,10 @@ void MenuScene::setupStartButton()
     this->addChild(startButton);
 }
 
-void MenuScene::setupSettingsButton()
+void MenuScene::setupSettings()
 {
-    // Create the settings button
-    auto settingsButton = ui::Button::create("sprites/ui/menu/settings.png");
+    _settings = Settings::create();
 
-    // Disable scaling when the button is clicked
-    settingsButton->setZoomScale(0);
-
-    // Set the position of the settings button
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    settingsButton->setPosition(Vec2(150, 40));
-
-    // Add a callback function to the settings button that will change the scene when the button is clicked
-    settingsButton->addClickEventListener([](Ref* sender)
-    {
-        // Play the sound
-        SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
-
-        // display audio settings 
-    });
-
-    // Create the label
-    auto settingsButtonText = Label::createWithTTF("PARAMETRE", "fonts/ui/normal.ttf", 22);
-    settingsButtonText->setColor(Color3B(229, 229, 229)); // couleur blanc (RGB)
-
-    // Add the label to the settings button
-    settingsButton->addChild(settingsButtonText);
-
-    // Position the label within the settings button
-    settingsButtonText->setPosition(Vec2(settingsButton->getContentSize().width / 2, settingsButton->getContentSize().height / 2));
-
-    // Add the settings button to the scene
-    this->addChild(settingsButton);
+    this->addChild(_settings);
 }
+

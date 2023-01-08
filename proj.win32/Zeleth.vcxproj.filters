@@ -1,39 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\GameScene.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="X:\Zeleth\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
     <ClCompile Include="X:\Zeleth\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MainCharacter.cpp">
+    <ClCompile Include="..\Classes\SetSoundEffectVolume.cpp">
+      <Filter>Source Files\Classes\Menu\Settings\SetSoundEffectVolume</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SetMusicVolume.cpp">
+      <Filter>Source Files\Classes\Menu\Settings\SetMusicVolume</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuScene.cpp">
+      <Filter>Source Files\Classes\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
     <ClCompile Include="IntroScene.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files\Classes\Intro</Filter>
     </ClCompile>
-    <ClCompile Include="MenuScene.cpp">
-      <Filter>Source Files\Classes</Filter>
+    <ClCompile Include="..\Classes\GameScene.cpp">
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainCharacter.cpp">
+      <Filter>Source Files\Classes\Game</Filter>
     </ClCompile>
     <ClCompile Include="TileMap.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\DeploySettingsButton.cpp">
+      <Filter>Source Files\Classes\Menu\Settings\DeploySettingsButton</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Settings.cpp">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files\Classes\Menu\Settings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
-      <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\GameScene.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="X:\Zeleth\proj.win32\main.h">
@@ -60,20 +66,32 @@
     <ClInclude Include="X:\Zeleth\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MainCharacter.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClInclude Include="..\Classes\SetSoundEffectVolume.h">
+      <Filter>Source Files\Classes\Menu\Settings\SetSoundEffectVolume</Filter>
     </ClInclude>
-    <ClInclude Include="IntroScene.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClInclude Include="..\Classes\SetMusicVolume.h">
+      <Filter>Source Files\Classes\Menu\Settings\SetMusicVolume</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MenuScene.h">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files\Classes\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroScene.h">
+      <Filter>Source Files\Classes\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameScene.h">
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainCharacter.h">
+      <Filter>Source Files\Classes\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TileMap.h">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\DeploySettingsButton.h">
+      <Filter>Source Files\Classes\Menu\Settings\DeploySettingsButton</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Settings.h">
-      <Filter>Source Files\Classes</Filter>
+      <Filter>Source Files\Classes\Menu\Settings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +120,27 @@
     </Filter>
     <Filter Include="Source Files\proj.win32">
       <UniqueIdentifier>{AAFA5448-8D8F-31EC-976E-5B2B478C3E1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Menu">
+      <UniqueIdentifier>{ad4aa0a0-a224-4e5e-8c10-62dc46960a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Menu\Settings">
+      <UniqueIdentifier>{a096d049-0067-4f5b-acce-1d3123ebb59e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Menu\Settings\SetMusicVolume">
+      <UniqueIdentifier>{3e96bb4e-c99e-4a79-b070-25be14b936a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Menu\Settings\SetSoundEffectVolume">
+      <UniqueIdentifier>{91028e52-b060-4f99-b762-1b7fb1d65ae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game">
+      <UniqueIdentifier>{29b869a8-a8bb-4b93-a520-13804f0ad0d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Intro">
+      <UniqueIdentifier>{a2708d5b-8854-4456-a6e6-8fce407cdc88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Menu\Settings\DeploySettingsButton">
+      <UniqueIdentifier>{b178fca7-3bde-4cb6-bb7f-6feac4ce92ce}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
