@@ -1,7 +1,5 @@
 #include "MenuScene.h"
 
-using namespace CocosDenshion;
-
 Scene* MenuScene::createScene()
 {
     // Preload the background music
@@ -80,7 +78,7 @@ void MenuScene::setupBackground()
 void MenuScene::setupQuitButton()
 {
     // Create the quit button
-    auto quitButton = ui::Button::create("sprites/ui/menu/quit.png");
+    auto quitButton = Button::create("sprites/ui/menu/quit.png");
 
     // Disable scaling when the button is clicked
     quitButton->setZoomScale(0);
@@ -104,7 +102,7 @@ void MenuScene::setupQuitButton()
 void MenuScene::setupStartButton()
 {
     // Create the start button
-    auto startButton = ui::Button::create("sprites/ui/menu/start.png");
+    auto startButton = Button::create("sprites/ui/menu/start.png");
 
     // Set the position of the start button
     startButton->setPosition(_center);
@@ -143,6 +141,8 @@ void MenuScene::setupStartButton()
 void MenuScene::setupSettings()
 {
     _settings = Settings::create();
+
+    _settings->setPosition(Vec2(150, 40));
 
     this->addChild(_settings);
 }

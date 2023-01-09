@@ -60,6 +60,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set 60 FPS
     director->setAnimationInterval(1.0 / 60.0);
 
+    // Mettre le volume de la musique de fond à 75%
+    CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.75f);
+
+    // Mettre le volume des effets sonores à 75%
+    CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.75f);
+
+
     // Test
     auto testScene = MenuScene::createScene();
     director->runWithScene(testScene);

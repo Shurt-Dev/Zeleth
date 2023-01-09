@@ -16,22 +16,20 @@ bool DeploySettingsButton::init()
 void DeploySettingsButton::createButton()
 {
     // Create the settings button
-    auto settingsButton = ui::Button::create("sprites/ui/menu/settings.png");
-
-    // Disable scaling when the button is clicked
-    settingsButton->setZoomScale(0);
-
-    // Set the position of the settings button
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    this->setPosition(Vec2(150, 40));
+    settingsButton = Button::create("sprites/ui/menu/settings.png");
 
     this->addChild(settingsButton);
+}
+
+void DeploySettingsButton::clicEffect()
+{
+    SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
 }
 
 void DeploySettingsButton::createText()
 {
     // Create the label
-    auto settingsButtonText = Label::createWithTTF("PARAMETRE", "fonts/ui/normal.ttf", 22);
+    settingsButtonText = Label::createWithTTF("PARAMETRE", "fonts/ui/normal.ttf", 22);
     settingsButtonText->setColor(Color3B(229, 229, 229)); // couleur blanc (RGB)
 
     // Position the label within the settings button
@@ -39,9 +37,4 @@ void DeploySettingsButton::createText()
 
     // Add the label to the settings button
     this->addChild(settingsButtonText);
-}
-
-void DeploySettingsButton::clicEffect()
-{
-    SimpleAudioEngine::getInstance()->playEffect("sound/sfx/click.mp3");
 }

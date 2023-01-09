@@ -6,6 +6,9 @@
 
 USING_NS_CC;
 
+using namespace CocosDenshion;
+using namespace ui;
+
 class MenuScene : public Scene
 {
 public:
