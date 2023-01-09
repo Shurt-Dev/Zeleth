@@ -25,6 +25,8 @@ bool IntroScene::init()
     animateTitle();
     animateTransition();
 
+    createVideo();
+
     return true;
 }
 
@@ -51,9 +53,10 @@ void IntroScene::animateTransition()
     SimpleAudioEngine::getInstance()->playEffect("sound/sfx/intro-logo-infinity-game.mp3");
 
     auto delayTransistionScene = DelayTime::create(7);
-    auto replace = CallFunc::create([]() {
+    auto replace = CallFunc::create([]() 
+    {
         Director::getInstance()->replaceScene(MenuScene::createScene());
-        });
+    });
 
     auto transistionScene = Sequence::create(delayTransistionScene, replace, nullptr);
     this->runAction(transistionScene);
