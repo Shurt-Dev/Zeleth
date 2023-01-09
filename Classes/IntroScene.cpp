@@ -25,8 +25,6 @@ bool IntroScene::init()
     animateTitle();
     animateTransition();
 
-    createVideo();
-
     return true;
 }
 
@@ -39,10 +37,11 @@ void IntroScene::animateTitle()
 
     this->addChild(title);
 
-    auto fadeIn = FadeIn::create(2.0f);
-    auto delayTitle = DelayTime::create(3.0f);
-    auto fadeOut = FadeOut::create(2.0f);
-    auto animationTitle = Sequence::create(fadeIn, delayTitle, fadeOut, nullptr);
+    auto startDelay = DelayTime::create(0.5f);
+    auto fadeIn = FadeIn::create(1.0f);
+    auto delayTitle = DelayTime::create(2.0f);
+    auto fadeOut = FadeOut::create(1.0f);
+    auto animationTitle = Sequence::create(startDelay, fadeIn, delayTitle, fadeOut, nullptr);
 
     title->runAction(animationTitle);
 }
@@ -52,7 +51,7 @@ void IntroScene::animateTransition()
     // run music effect
     SimpleAudioEngine::getInstance()->playEffect("sound/sfx/intro-logo-infinity-game.mp3");
 
-    auto delayTransistionScene = DelayTime::create(7);
+    auto delayTransistionScene = DelayTime::create(5);
     auto replace = CallFunc::create([]() 
     {
         Director::getInstance()->replaceScene(MenuScene::createScene());

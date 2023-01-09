@@ -22,9 +22,6 @@
     <ClCompile Include="..\Classes\MainCharacter.cpp">
       <Filter>Source Files\Classes\Game</Filter>
     </ClCompile>
-    <ClCompile Include="TileMap.cpp">
-      <Filter>Source Files\Classes\Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\DeploySettingsButton.cpp">
       <Filter>Source Files\Classes\Menu\Settings\DeploySettingsButton</Filter>
     </ClCompile>
@@ -36,6 +33,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\MenuScene.cpp">
       <Filter>Source Files\Classes\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TileMap.cpp">
+      <Filter>Source Files\Classes\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

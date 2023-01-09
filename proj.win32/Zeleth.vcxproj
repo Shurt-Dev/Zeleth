@@ -828,7 +828,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\Classes\SetMusicVolume.cpp" />
     <ClCompile Include="..\Classes\SetSoundEffectVolume.cpp" />
     <ClCompile Include="..\Classes\Settings.cpp" />
-    <ClCompile Include="TileMap.cpp" />
+    <ClCompile Include="..\Classes\TileMap.cpp" />
     <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\GameScene.cpp" />
     <ClCompile Include="X:\Zeleth\proj.win32\main.cpp" />

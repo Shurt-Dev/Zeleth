@@ -1,6 +1,7 @@
 #include "cocos2d.h"
-#include "MenuScene.h"
 #include "SimpleAudioEngine.h"
+
+#include "MenuScene.h"
 
 USING_NS_CC;
 
@@ -11,7 +12,9 @@ public:
 
     virtual bool init();
 
+    void createTitle();
     void animateTitle();
+
     void animateTransition();
 
     // implement the "static create()" method manually

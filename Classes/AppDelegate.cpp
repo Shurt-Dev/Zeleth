@@ -1,7 +1,6 @@
 #include "AppDelegate.h"
 
 #include "IntroScene.h"
-#include "MenuScene.h"
 
 #if USE_AUDIO_ENGINE
 #include "audio/include/AudioEngine.h"
@@ -66,9 +65,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Mettre le volume des effets sonores à 75%
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.75f);
 
-
     // Test
-    auto testScene = MenuScene::createScene();
+    auto testScene = IntroScene::createScene();
     director->runWithScene(testScene);
 
     // Starting Scene Game
