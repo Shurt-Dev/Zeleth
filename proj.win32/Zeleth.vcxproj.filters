@@ -13,14 +13,8 @@
     <ClCompile Include="..\Classes\SetMusicVolume.cpp">
       <Filter>Source Files\Classes\Menu\Settings\SetMusicVolume</Filter>
     </ClCompile>
-    <ClCompile Include="MenuScene.cpp">
-      <Filter>Source Files\Classes\Menu</Filter>
-    </ClCompile>
     <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp">
       <Filter>Source Files\Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="IntroScene.cpp">
-      <Filter>Source Files\Classes\Intro</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\GameScene.cpp">
       <Filter>Source Files\Classes\Game</Filter>
@@ -36,6 +30,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Settings.cpp">
       <Filter>Source Files\Classes\Menu\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\IntroScene.cpp">
+      <Filter>Source Files\Classes\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MenuScene.cpp">
+      <Filter>Source Files\Classes\Menu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,9 +75,6 @@
     <ClInclude Include="..\Classes\MenuScene.h">
       <Filter>Source Files\Classes\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="IntroScene.h">
-      <Filter>Source Files\Classes\Intro</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\GameScene.h">
       <Filter>Source Files\Classes\Game</Filter>
     </ClInclude>
@@ -92,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Settings.h">
       <Filter>Source Files\Classes\Menu\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IntroScene.h">
+      <Filter>Source Files\Classes\Intro</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
