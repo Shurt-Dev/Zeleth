@@ -129,9 +129,6 @@
     <ClInclude Include="..\Classes\MapOption.h">
       <Filter>Source Files\Classes\Game\Map Option</Filter>
     </ClInclude>
-    <ClInclude Include="Quest.h">
-      <Filter>Source Files\Classes\Game\World\Quest</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Collectable.h">
       <Filter>Source Files\Classes\Game\World\Collectable</Filter>
     </ClInclude>
@@ -152,6 +149,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TileMap.h">
       <Filter>Source Files\Classes\Game\World\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Quest.h">
+      <Filter>Source Files\Classes\Game\World\Quest</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -8,4 +8,7 @@ class World : public Node
 {
 public:
     virtual bool init();
+
+private:
+
 };

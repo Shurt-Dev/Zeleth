@@ -821,12 +821,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\Pnj.h" />
     <ClInclude Include="..\Classes\Protagonist.h" />
     <ClInclude Include="..\Classes\Puzzle.h" />
+    <ClInclude Include="..\Classes\Quest.h" />
     <ClInclude Include="..\Classes\SetMusicVolume.h" />
     <ClInclude Include="..\Classes\SetSoundEffectVolume.h" />
     <ClInclude Include="..\Classes\Settings.h" />
     <ClInclude Include="..\Classes\TileMap.h" />
     <ClInclude Include="..\Classes\World.h" />
-    <ClInclude Include="Quest.h" />
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
