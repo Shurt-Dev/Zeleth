@@ -34,8 +34,38 @@
     <ClCompile Include="..\Classes\MenuScene.cpp">
       <Filter>Source Files\Classes\Menu</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\World.cpp">
+      <Filter>Source Files\Classes\Game\World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapUI.cpp">
+      <Filter>Source Files\Classes\Game\MapUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapOption.cpp">
+      <Filter>Source Files\Classes\Game\Map Option</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Collectable.cpp">
+      <Filter>Source Files\Classes\Game\World\Collectable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Puzzle.cpp">
+      <Filter>Source Files\Classes\Game\World\Puzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Protagonist.cpp">
+      <Filter>Source Files\Classes\Game\World\Protagonist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Monsters.cpp">
+      <Filter>Source Files\Classes\Game\World\Monsters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Pnj.cpp">
+      <Filter>Source Files\Classes\Game\World\Pnj</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Collisions.cpp">
+      <Filter>Source Files\Classes\Game\World\Collisions</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\TileMap.cpp">
-      <Filter>Source Files\Classes\Game</Filter>
+      <Filter>Source Files\Classes\Game\World\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Quest.cpp">
+      <Filter>Source Files\Classes\Game\World\Quest</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -81,9 +111,6 @@
     <ClInclude Include="..\Classes\MainCharacter.h">
       <Filter>Source Files\Classes\Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\TileMap.h">
-      <Filter>Source Files\Classes\Game</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\DeploySettingsButton.h">
       <Filter>Source Files\Classes\Menu\Settings\DeploySettingsButton</Filter>
     </ClInclude>
@@ -92,6 +119,39 @@
     </ClInclude>
     <ClInclude Include="..\Classes\IntroScene.h">
       <Filter>Source Files\Classes\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\World.h">
+      <Filter>Source Files\Classes\Game\World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapUI.h">
+      <Filter>Source Files\Classes\Game\MapUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapOption.h">
+      <Filter>Source Files\Classes\Game\Map Option</Filter>
+    </ClInclude>
+    <ClInclude Include="Quest.h">
+      <Filter>Source Files\Classes\Game\World\Quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Collectable.h">
+      <Filter>Source Files\Classes\Game\World\Collectable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Puzzle.h">
+      <Filter>Source Files\Classes\Game\World\Puzzle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Protagonist.h">
+      <Filter>Source Files\Classes\Game\World\Protagonist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Monsters.h">
+      <Filter>Source Files\Classes\Game\World\Monsters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Pnj.h">
+      <Filter>Source Files\Classes\Game\World\Pnj</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Collisions.h">
+      <Filter>Source Files\Classes\Game\World\Collisions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TileMap.h">
+      <Filter>Source Files\Classes\Game\World\TileMap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +201,39 @@
     </Filter>
     <Filter Include="Source Files\Classes\Menu\Settings\DeploySettingsButton">
       <UniqueIdentifier>{b178fca7-3bde-4cb6-bb7f-6feac4ce92ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World">
+      <UniqueIdentifier>{221c4893-09be-4376-83a9-42878a0145dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\MapUI">
+      <UniqueIdentifier>{f8e97992-9aea-4888-8306-701a69a62723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Map Option">
+      <UniqueIdentifier>{b21c3e04-613c-4bda-af1b-b9a54a4ad41c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Quest">
+      <UniqueIdentifier>{c6b3cbc6-4211-4ec9-bb0a-0519f20bdf5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Puzzle">
+      <UniqueIdentifier>{e48b9cfc-2b76-492b-9655-f858bafe84f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Collectable">
+      <UniqueIdentifier>{7e32fbea-3fce-4291-8aff-a3944fd88f0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Protagonist">
+      <UniqueIdentifier>{2211165e-e408-415e-a043-7aef0c5792a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Pnj">
+      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Monsters">
+      <UniqueIdentifier>{3d4043a8-9071-46cb-bd74-3aa67057d686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\Collisions">
+      <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\TileMap">
+      <UniqueIdentifier>{1d96d20d-a45b-4547-a6b7-4ec4d1165b35}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

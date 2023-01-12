@@ -41,7 +41,7 @@ void TileMap::loadTileMap()
     // define layers
     auto foregroundObjects = _tileMap->getLayer("ForegroundObjects");
     auto battleZones = _tileMap->getLayer("BattleZones");
-    auto collisions = _tileMap->getLayer("Collisions");
+    /*auto collisions = _tileMap->getLayer("Collisions");*/
     auto flowersAndGrass = _tileMap->getLayer("FlowersAndGrass");
     auto plateau = _tileMap->getLayer("Plateau");
     auto trees_3 = _tileMap->getLayer("Trees_3");
@@ -54,7 +54,7 @@ void TileMap::loadTileMap()
     foregroundObjects->setGlobalZOrder(0);
     mainCharacter->setGlobalZOrder(-1);
     battleZones->setGlobalZOrder(-2);
-    collisions->setGlobalZOrder(-3);
+    /*collisions->setGlobalZOrder(-3);*/
     flowersAndGrass->setGlobalZOrder(-4);
     plateau->setGlobalZOrder(-5);
     trees_3->setGlobalZOrder(-6);
@@ -64,7 +64,7 @@ void TileMap::loadTileMap()
     ocean->setGlobalZOrder(-10);
 
     //invisible layers
-    collisions->setVisible(false);
+    /*collisions->setVisible(false);*/
     battleZones->setVisible(false);
 
     // ajout de la carte à tuiles à la scène

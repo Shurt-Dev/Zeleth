@@ -1,5 +1,7 @@
 #include "cocos2d.h"
 
+#include "World.h"
+
 #include "TileMap.h"
 
 USING_NS_CC;
