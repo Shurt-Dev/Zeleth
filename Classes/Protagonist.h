@@ -4,13 +4,13 @@ USING_NS_CC;
 
 enum class AnimationState {
 	Right = 1,
-	Left,
-	Down,
-	Up,
-	IdleLeft,
-	IdleRight,
-	IdleUp,
-	IdleDown
+	Left = 2,
+	Down = 3,
+	Up = 4,
+	IdleLeft = 5,
+	IdleRight = 6,
+	IdleUp = 7,
+	IdleDown = 8,
 };
 
 class Protagonist : public Sprite
