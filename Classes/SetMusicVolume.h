@@ -18,4 +18,8 @@ public:
 
     // Création de l'objet
     CREATE_FUNC(SetMusicVolume);
+
+private:
+    Label* textMusic;
+    Slider* slider;
 };

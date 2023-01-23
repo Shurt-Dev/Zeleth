@@ -1,8 +1,9 @@
 #include "cocos2d.h"
 
-#include "World.h"
-
-#include "TileMap.h"
+#include "GameUI.h"
+#include "ExitGame.h"
+#include "Island.h"
+#include "Protagonist.h"
 
 USING_NS_CC;
 
@@ -13,10 +14,33 @@ public:
 
     virtual bool init();
 
-    // implement the "static create()" method manually
+    void getIsland();
+    void getProtagonist();
+
+    // intputs
+    void setupKeyboardInput();
+    void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);
+    void onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event);
+
+    // update method
+    void update(float delta);
+
+    void initMap();
+    void mapLoop();
+
     CREATE_FUNC(GameScene);
 
 private:
-    // Instance de la classe TileMap
-    TileMap* _tileMap;
+    Island* m_island;
+    Protagonist* m_protagonist;
+
+    EventListenerKeyboard* m_listener;
+
+    Vec2 lastMovementDirection;
+    Vec2 movement;
+
+    bool isKeyUpPressed;
+    bool isKeyRightPressed;
+    bool isKeyDownPressed;
+    bool isKeyLeftPressed;
 };

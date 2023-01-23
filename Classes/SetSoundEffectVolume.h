@@ -18,4 +18,8 @@ public:
 	
 	// implement the "static create()" method manually
 	CREATE_FUNC(SetSoundEffectVolume);
+
+private:
+	Label* textSoundEffect;
+	Slider* slider;
 };

@@ -21,7 +21,9 @@ public:
     CREATE_FUNC(IntroScene);
 
 private:
-    Size _visibleSize;
-    Vec2 _origin;
-    Vec2 _center;
+    Label* title;
+
+    Size visibleSize;
+    Vec2 origin;
+    Vec2 center;
 };

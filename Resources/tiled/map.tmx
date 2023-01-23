@@ -73,14 +73,14 @@
   </data>
  </layer>
  <objectgroup id="27" name="Objects">
-  <object id="3" name="StartPoint" x="311.955" y="251.659">
+  <object id="3" name="StartPoint" x="312" y="252">
    <properties>
     <property name="StartPoint" value=""/>
    </properties>
    <point/>
   </object>
  </objectgroup>
- <layer id="26" name="BattleZones" width="70" height="40" opacity="0.5">
+ <layer id="26" name="BattleZones" width="70" height="40" visible="0" opacity="0.5">
   <data encoding="base64" compression="zlib">
    eJzt0EEKACAIRUGD7n/mlka0LFCYgb8VeREAAAAAAEAlY+ZIutx17rL/fu7l7W5+dgEAAABqWPxgAIM=
   </data>

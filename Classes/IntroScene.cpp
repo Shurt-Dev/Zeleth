@@ -18,25 +18,30 @@ bool IntroScene::init()
     }
 
     // Determine the center coordinates of the screen
-    _visibleSize = Director::getInstance()->getVisibleSize();
-    _origin = Director::getInstance()->getVisibleOrigin();
-    _center = Vec2(_origin.x + _visibleSize.width / 2, _origin.y + _visibleSize.height / 2);
+    visibleSize = Director::getInstance()->getVisibleSize();
+    origin = Director::getInstance()->getVisibleOrigin();
+    center = Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2);
 
-    animateTitle();
+    createTitle();
     animateTransition();
 
     return true;
 }
 
-void IntroScene::animateTitle()
+void IntroScene::createTitle()
 {
     // Title Infinity Games
-    auto title = Label::createWithTTF("Infinity Games", "fonts/studio.ttf", 120);
+    title = Label::createWithTTF("Infinity Games", "fonts/studio.ttf", 120);
     title->setOpacity(0);
-    title->setPosition(_center);
+    title->setPosition(center);
 
     this->addChild(title);
 
+    animateTitle();
+}
+
+void IntroScene::animateTitle()
+{
     auto startDelay = DelayTime::create(0.5f);
     auto fadeIn = FadeIn::create(1.0f);
     auto delayTitle = DelayTime::create(2.0f);

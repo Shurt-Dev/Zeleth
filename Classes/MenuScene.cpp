@@ -19,18 +19,17 @@ bool MenuScene::init()
     }
 
     // Determine the center coordinates of the screen
-    _visibleSize = Director::getInstance()->getVisibleSize();
-    _origin = Director::getInstance()->getVisibleOrigin();
-    _center = Vec2(_origin.x + _visibleSize.width / 2, _origin.y + _visibleSize.height / 2);
-    _bottomRight = _origin + Vec2(_visibleSize.width, 0);
+    visibleSize = Director::getInstance()->getVisibleSize();
+    origin = Director::getInstance()->getVisibleOrigin();
+    center = Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2);
+    bottomRight = origin + Vec2(visibleSize.width, 0);
 
     setupBackground();
     setupAudio();
     createTitle();
     setupQuitButton();
     setupStartButton();
-    
-    setupSettings();
+    setupAudioSettings();
 
     return true;
 }
@@ -40,7 +39,7 @@ void MenuScene::createTitle()
     // Title Game and animation
     auto title = Label::createWithTTF("Zeleth", "fonts/title-game.ttf", 250);
 
-    title->setPosition(Vec2(_center.x, _origin.y + 3 * _visibleSize.height / 4));
+    title->setPosition(Vec2(center.x, origin.y + 3 * visibleSize.height / 4));
     title->setColor(Color3B(229, 229, 229)); // couleur blanc (RGB)
 
     this->addChild(title);
@@ -49,7 +48,7 @@ void MenuScene::createTitle()
 void MenuScene::setupAudio()
 {
     //Set Audio default
-    SimpleAudioEngine::getInstance()->setEffectsVolume(0.4);
+    SimpleAudioEngine::getInstance()->setEffectsVolume(0.4f);
 
     // Play the background music in a loop
     SimpleAudioEngine::getInstance()->playBackgroundMusic("sound/music/menu.ogg", true);
@@ -58,14 +57,14 @@ void MenuScene::setupAudio()
 void MenuScene::setupBackground()
 {
     // Load the background image
-    auto background = Sprite::create("sprites/background/menu.png");
+    background = Sprite::create("sprites/background/menu.png");
 
     // Set the anchor point of the background to the bottom-left corner
     background->setAnchorPoint(Vec2(0, 0));
 
     // Set the scale of the background to fit the screen size
-    background->setScale(_visibleSize.width / background->getContentSize().width,
-        _visibleSize.height / background->getContentSize().height);
+    background->setScale(visibleSize.width / background->getContentSize().width,
+        visibleSize.height / background->getContentSize().height);
 
     // Set the position of the background based on its size and anchor point
     background->setPosition(Vec2(-(background->getContentSize().width * background->getAnchorPoint().x),
@@ -78,13 +77,13 @@ void MenuScene::setupBackground()
 void MenuScene::setupQuitButton()
 {
     // Create the quit button
-    auto quitButton = Button::create("sprites/ui/menu/quit.png");
+    quitButton = Button::create("sprites/ui/menu/quit.png");
 
     // Disable scaling when the button is clicked
     quitButton->setZoomScale(0);
 
     // Set the position of the quit button
-    quitButton->setPosition(_bottomRight - Vec2(60, -50));
+    quitButton->setPosition(bottomRight - Vec2(60, -50));
 
     // Disable scaling when the button is clicked
     quitButton->setZoomScale(0);
@@ -102,10 +101,10 @@ void MenuScene::setupQuitButton()
 void MenuScene::setupStartButton()
 {
     // Create the start button
-    auto startButton = Button::create("sprites/ui/menu/start.png");
+    startButton = Button::create("sprites/ui/menu/start.png");
 
     // Set the position of the start button
-    startButton->setPosition(_center);
+    startButton->setPosition(center);
 
     // Disable scaling when the button is clicked
     startButton->setZoomScale(0);
@@ -138,12 +137,11 @@ void MenuScene::setupStartButton()
     this->addChild(startButton);
 }
 
-void MenuScene::setupSettings()
+void MenuScene::setupAudioSettings()
 {
-    _settings = Settings::create();
+    audioSettings = AudioSettings::create();
 
-    _settings->setPosition(Vec2(150, 40));
+    audioSettings->setPosition(Vec2(150, 40));
 
-    this->addChild(_settings);
+    this->addChild(audioSettings);
 }
-

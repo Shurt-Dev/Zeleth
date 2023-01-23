@@ -1,5 +1,4 @@
 #include "AppDelegate.h"
-
 #include "IntroScene.h"
 
 #if USE_AUDIO_ENGINE
@@ -57,7 +56,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setDisplayStats(false);
 
     // set 60 FPS
-    director->setAnimationInterval(1.0 / 60.0);
+    director->setAnimationInterval(1.0f / 60.0f);
 
     // Mettre le volume de la musique de fond à 75%
     CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.75f);
@@ -65,15 +64,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Mettre le volume des effets sonores à 75%
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.75f);
 
-    // Test
-    auto testScene = IntroScene::createScene();
-    director->runWithScene(testScene);
-
     // Starting Scene Game
-    //auto introScene = IntroScene::createScene();
+    auto introScene = GameScene::createScene();
 
     // run
-    //director->runWithScene(introScene);
+    director->runWithScene(introScene);
 
     return true;
 }

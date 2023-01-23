@@ -1,8 +1,10 @@
 #include "SimpleAudioEngine.h"
 #include "cocos2d.h"
+#include "ui/UIButton.h"
 
 #include "GameScene.h"
-#include "Settings.h"
+//#include "Settings.h"
+#include "AudioSettings.h"
 
 USING_NS_CC;
 
@@ -21,17 +23,20 @@ public:
     void setupBackground();
     void setupQuitButton();
     void setupStartButton();
+    void setupAudioSettings();
 
-    void setupSettings();
-
-    // implement the "static create()" method manually
     CREATE_FUNC(MenuScene);
 
 private:
-    Size _visibleSize;
-    Vec2 _origin;
-    Vec2 _center;
-    Vec2 _bottomRight;
+    Size visibleSize;
+    Vec2 origin;
+    Vec2 center;
+    Vec2 bottomRight;
 
-    Settings* _settings;
+    AudioSettings* audioSettings;
+
+    Sprite* background;
+
+    Button* startButton;
+    Button* quitButton;
 };

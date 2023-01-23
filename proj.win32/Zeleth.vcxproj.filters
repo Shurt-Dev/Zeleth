@@ -8,10 +8,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\SetSoundEffectVolume.cpp">
-      <Filter>Source Files\Classes\Menu\Settings\SetSoundEffectVolume</Filter>
+      <Filter>Source Files\Classes\Menu\AudioSettings\SetSoundEffectVolume</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\SetMusicVolume.cpp">
-      <Filter>Source Files\Classes\Menu\Settings\SetMusicVolume</Filter>
+      <Filter>Source Files\Classes\Menu\AudioSettings\SetMusicVolume</Filter>
     </ClCompile>
     <ClCompile Include="X:\Zeleth\Classes\AppDelegate.cpp">
       <Filter>Source Files\Classes</Filter>
@@ -19,53 +19,53 @@
     <ClCompile Include="..\Classes\GameScene.cpp">
       <Filter>Source Files\Classes\Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MainCharacter.cpp">
-      <Filter>Source Files\Classes\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\DeploySettingsButton.cpp">
-      <Filter>Source Files\Classes\Menu\Settings\DeploySettingsButton</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Settings.cpp">
-      <Filter>Source Files\Classes\Menu\Settings</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\IntroScene.cpp">
       <Filter>Source Files\Classes\Intro</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\MenuScene.cpp">
       <Filter>Source Files\Classes\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\World.cpp">
-      <Filter>Source Files\Classes\Game\World</Filter>
+    <ClCompile Include="..\Classes\GameUI.cpp">
+      <Filter>Source Files\Classes\Game\GameUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MapUI.cpp">
-      <Filter>Source Files\Classes\Game\MapUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\MapOption.cpp">
-      <Filter>Source Files\Classes\Game\Map Option</Filter>
+    <ClCompile Include="..\Classes\ExitGame.cpp">
+      <Filter>Source Files\Classes\Game\ExitGame</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Collectable.cpp">
-      <Filter>Source Files\Classes\Game\World\Collectable</Filter>
+      <Filter>Source Files\Classes\Game\Collectable</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Puzzle.cpp">
-      <Filter>Source Files\Classes\Game\World\Puzzle</Filter>
+      <Filter>Source Files\Classes\Game\Puzzle</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Protagonist.cpp">
-      <Filter>Source Files\Classes\Game\World\Protagonist</Filter>
+      <Filter>Source Files\Classes\Game\Protagonist</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Monsters.cpp">
-      <Filter>Source Files\Classes\Game\World\Monsters</Filter>
+      <Filter>Source Files\Classes\Game\Monsters</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Pnj.cpp">
-      <Filter>Source Files\Classes\Game\World\Pnj</Filter>
+      <Filter>Source Files\Classes\Game\Pnj</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Collisions.cpp">
-      <Filter>Source Files\Classes\Game\World\Collisions</Filter>
+      <Filter>Source Files\Classes\Game\Protagonist\Collisions</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TileMap.cpp">
-      <Filter>Source Files\Classes\Game\World\TileMap</Filter>
+      <Filter>Source Files\Classes\Game\Islands</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Quest.cpp">
-      <Filter>Source Files\Classes\Game\World\Quest</Filter>
+    <ClCompile Include="..\Classes\MainCharacter.cpp">
+      <Filter>Source Files\Classes\Game\Protagonist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Island.cpp">
+      <Filter>Source Files\Classes\Game\Islands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AudioSettings.cpp">
+      <Filter>Source Files\Classes\Menu\AudioSettings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Quit.cpp">
+      <Filter>Source Files\Classes\Game\ExitGame\Quit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ReturnToMenu.cpp">
+      <Filter>Source Files\Classes\Game\ExitGame\ReturnToMenu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,29 +78,11 @@
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
-    <ClInclude Include="X:\Zeleth\Resources\CloseNormal.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="X:\Zeleth\Resources\CloseSelected.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="X:\Zeleth\Resources\HelloWorld.png">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="X:\Zeleth\Resources\fonts\Marker Felt.ttf">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="X:\Zeleth\Resources\fonts\arial.ttf">
-      <Filter>Resources\fonts</Filter>
-    </ClInclude>
-    <ClInclude Include="X:\Zeleth\Resources\res\.gitkeep">
-      <Filter>Resources\res</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\SetSoundEffectVolume.h">
-      <Filter>Source Files\Classes\Menu\Settings\SetSoundEffectVolume</Filter>
+      <Filter>Source Files\Classes\Menu\AudioSettings\SetSoundEffectVolume</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\SetMusicVolume.h">
-      <Filter>Source Files\Classes\Menu\Settings\SetMusicVolume</Filter>
+      <Filter>Source Files\Classes\Menu\AudioSettings\SetMusicVolume</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MenuScene.h">
       <Filter>Source Files\Classes\Menu</Filter>
@@ -108,50 +90,50 @@
     <ClInclude Include="..\Classes\GameScene.h">
       <Filter>Source Files\Classes\Game</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MainCharacter.h">
-      <Filter>Source Files\Classes\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\DeploySettingsButton.h">
-      <Filter>Source Files\Classes\Menu\Settings\DeploySettingsButton</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Settings.h">
-      <Filter>Source Files\Classes\Menu\Settings</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\IntroScene.h">
       <Filter>Source Files\Classes\Intro</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\World.h">
-      <Filter>Source Files\Classes\Game\World</Filter>
+    <ClInclude Include="..\Classes\GameUI.h">
+      <Filter>Source Files\Classes\Game\GameUI</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MapUI.h">
-      <Filter>Source Files\Classes\Game\MapUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MapOption.h">
-      <Filter>Source Files\Classes\Game\Map Option</Filter>
+    <ClInclude Include="..\Classes\ExitGame.h">
+      <Filter>Source Files\Classes\Game\ExitGame</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Collectable.h">
-      <Filter>Source Files\Classes\Game\World\Collectable</Filter>
+      <Filter>Source Files\Classes\Game\Collectable</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Puzzle.h">
-      <Filter>Source Files\Classes\Game\World\Puzzle</Filter>
+      <Filter>Source Files\Classes\Game\Puzzle</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Protagonist.h">
-      <Filter>Source Files\Classes\Game\World\Protagonist</Filter>
+      <Filter>Source Files\Classes\Game\Protagonist</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Monsters.h">
-      <Filter>Source Files\Classes\Game\World\Monsters</Filter>
+      <Filter>Source Files\Classes\Game\Monsters</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Pnj.h">
-      <Filter>Source Files\Classes\Game\World\Pnj</Filter>
+      <Filter>Source Files\Classes\Game\Pnj</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Collisions.h">
-      <Filter>Source Files\Classes\Game\World\Collisions</Filter>
+      <Filter>Source Files\Classes\Game\Protagonist\Collisions</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TileMap.h">
-      <Filter>Source Files\Classes\Game\World\TileMap</Filter>
+      <Filter>Source Files\Classes\Game\Islands</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Quest.h">
-      <Filter>Source Files\Classes\Game\World\Quest</Filter>
+    <ClInclude Include="..\Classes\MainCharacter.h">
+      <Filter>Source Files\Classes\Game\Protagonist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Island.h">
+      <Filter>Source Files\Classes\Game\Islands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AudioSettings.h">
+      <Filter>Source Files\Classes\Menu\AudioSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Quit.h">
+      <Filter>Source Files\Classes\Game\ExitGame\Quit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ReturnToMenu.h">
+      <Filter>Source Files\Classes\Game\ExitGame\ReturnToMenu</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -166,12 +148,6 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{638EBC6B-D7A3-31A9-9DD3-EEAD0F13B56B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resources\fonts">
-      <UniqueIdentifier>{EA1EF1A9-038A-309A-868D-69DFC6C7993B}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resources\res">
-      <UniqueIdentifier>{E82F1A6F-83CB-3936-8478-F3E011E455D0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{1FAF67A8-8573-3D0A-955F-9FFA0E836997}</UniqueIdentifier>
     </Filter>
@@ -184,56 +160,53 @@
     <Filter Include="Source Files\Classes\Menu">
       <UniqueIdentifier>{ad4aa0a0-a224-4e5e-8c10-62dc46960a77}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Menu\Settings">
-      <UniqueIdentifier>{a096d049-0067-4f5b-acce-1d3123ebb59e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Menu\Settings\SetMusicVolume">
-      <UniqueIdentifier>{3e96bb4e-c99e-4a79-b070-25be14b936a4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Menu\Settings\SetSoundEffectVolume">
-      <UniqueIdentifier>{91028e52-b060-4f99-b762-1b7fb1d65ae0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Classes\Game">
       <UniqueIdentifier>{29b869a8-a8bb-4b93-a520-13804f0ad0d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes\Intro">
       <UniqueIdentifier>{a2708d5b-8854-4456-a6e6-8fce407cdc88}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Menu\Settings\DeploySettingsButton">
-      <UniqueIdentifier>{b178fca7-3bde-4cb6-bb7f-6feac4ce92ce}</UniqueIdentifier>
+    <Filter Include="Source Files\Classes\Menu\AudioSettings">
+      <UniqueIdentifier>{a096d049-0067-4f5b-acce-1d3123ebb59e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\World">
-      <UniqueIdentifier>{221c4893-09be-4376-83a9-42878a0145dc}</UniqueIdentifier>
+    <Filter Include="Source Files\Classes\Menu\AudioSettings\SetMusicVolume">
+      <UniqueIdentifier>{3e96bb4e-c99e-4a79-b070-25be14b936a4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\MapUI">
-      <UniqueIdentifier>{f8e97992-9aea-4888-8306-701a69a62723}</UniqueIdentifier>
+    <Filter Include="Source Files\Classes\Menu\AudioSettings\SetSoundEffectVolume">
+      <UniqueIdentifier>{91028e52-b060-4f99-b762-1b7fb1d65ae0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\Map Option">
+    <Filter Include="Source Files\Classes\Game\ExitGame">
       <UniqueIdentifier>{b21c3e04-613c-4bda-af1b-b9a54a4ad41c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Quest">
-      <UniqueIdentifier>{c6b3cbc6-4211-4ec9-bb0a-0519f20bdf5b}</UniqueIdentifier>
+    <Filter Include="Source Files\Classes\Game\ExitGame\ReturnToMenu">
+      <UniqueIdentifier>{57c70c2e-f8d1-41af-858f-8d5c518c2f32}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Puzzle">
+    <Filter Include="Source Files\Classes\Game\ExitGame\Quit">
+      <UniqueIdentifier>{f7423da2-c0fa-4c43-9102-bc79113d1dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\GameUI">
+      <UniqueIdentifier>{f8e97992-9aea-4888-8306-701a69a62723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Puzzle">
       <UniqueIdentifier>{e48b9cfc-2b76-492b-9655-f858bafe84f9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Collectable">
-      <UniqueIdentifier>{7e32fbea-3fce-4291-8aff-a3944fd88f0d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Protagonist">
-      <UniqueIdentifier>{2211165e-e408-415e-a043-7aef0c5792a2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Pnj">
-      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Monsters">
+    <Filter Include="Source Files\Classes\Game\Monsters">
       <UniqueIdentifier>{3d4043a8-9071-46cb-bd74-3aa67057d686}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\World\Collisions">
-      <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
+    <Filter Include="Source Files\Classes\Game\Collectable">
+      <UniqueIdentifier>{7e32fbea-3fce-4291-8aff-a3944fd88f0d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\World\TileMap">
+    <Filter Include="Source Files\Classes\Game\Islands">
       <UniqueIdentifier>{1d96d20d-a45b-4547-a6b7-4ec4d1165b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Pnj">
+      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Protagonist">
+      <UniqueIdentifier>{2211165e-e408-415e-a043-7aef0c5792a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Protagonist\Collisions">
+      <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

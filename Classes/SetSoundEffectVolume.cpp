@@ -15,7 +15,7 @@ bool SetSoundEffectVolume::init()
 
 void SetSoundEffectVolume::createTextEffects()
 {
-    auto textSoundEffect = Label::createWithTTF("Sound Effects", "fonts/ui/normal.ttf", 24);
+    textSoundEffect = Label::createWithTTF("Sound Effects", "fonts/ui/normal.ttf", 24);
 
     textSoundEffect->setPosition(Vec2(0, 50));
 
@@ -25,7 +25,7 @@ void SetSoundEffectVolume::createTextEffects()
 void SetSoundEffectVolume::createSliderEffects()
 {
     // Créer le slider
-    auto slider = Slider::create();
+    slider = Slider::create();
 
     // Configurer la texture du slider et de la barre de progression
 

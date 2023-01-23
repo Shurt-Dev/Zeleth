@@ -15,7 +15,7 @@ bool SetMusicVolume::init()
 
 void SetMusicVolume::createTextMusic()
 {
-    auto textMusic = Label::createWithTTF("Music", "fonts/ui/normal.ttf", 24);
+    textMusic = Label::createWithTTF("Music", "fonts/ui/normal.ttf", 24);
 
     textMusic->setPosition(Vec2(0, 50));
 
@@ -25,7 +25,7 @@ void SetMusicVolume::createTextMusic()
 void SetMusicVolume::createSliderMusic()
 {
     // Créer le slider
-    auto slider = Slider::create();
+    slider = Slider::create();
 
     // Configurer la texture du slider et de la barre de progression
 
