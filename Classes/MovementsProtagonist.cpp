@@ -1,6 +1,6 @@
-#include "GameUI.h"
+#include "MovementsProtagonist.h"
 
-bool GameUI::init()
+bool MovementsProtagonist::init()
 {
     if (!Node::init())
     {

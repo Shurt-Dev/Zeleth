@@ -1,5 +1,8 @@
 #include "cocos2d.h"
 
+#include "TileMap.h"
+#include "Entities.h"
+
 USING_NS_CC;
 
 class Island : public Node
@@ -7,23 +10,12 @@ class Island : public Node
 public:
 	virtual bool init();
 
-	void loadMap();
-	void setRenderScale();
-	void setSpawnPointProtagonist();
+	void createEuphoriaTileMap();
+	void createProtagonist();
 
 	CREATE_FUNC(Island);
-
+	
 private:
-	TMXTiledMap* m_islandMap;
-	TMXObjectGroup* m_objectGroup;
-	ValueMap spawnPoint;
-
-	Vec2 startPosition;
-	Size visibleSize;
-
-	int xSpawnPoint;
-	int ySpawnPoint;
-
-	float xMovement;
-	float yMovement;
+	Entities entities;
+	TileMap tileMap;
 };

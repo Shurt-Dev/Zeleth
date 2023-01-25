@@ -2,12 +2,12 @@
 
 USING_NS_CC;
 
-class GameUI : public Node
+class MovementsProtagonist : public Node
 {
 public:
 	virtual bool init();
 
-	CREATE_FUNC(GameUI);
+	CREATE_FUNC(MovementsProtagonist);
 
 private:
 

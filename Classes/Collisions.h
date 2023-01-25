@@ -1,7 +1,5 @@
 #include "cocos2d.h"
 
-#include "AnimationsProtagonist.h"
-
 USING_NS_CC;
 
 class Collisions : public Node

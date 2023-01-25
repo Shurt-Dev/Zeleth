@@ -1,53 +1,23 @@
 #include "cocos2d.h"
 
-USING_NS_CC;
+#include "MovementsProtagonist.h"
+#include "AnimationsProtagonist.h"
 
-enum class AnimationState {
-	Right = 1,
-	Left = 2,
-	Down = 3,
-	Up = 4,
-	IdleLeft = 5,
-	IdleRight = 6,
-	IdleUp = 7,
-	IdleDown = 8,
-};
+USING_NS_CC;
 
 class Protagonist : public Sprite
 {
 public:
 	virtual bool init();
 
-	void loadSpriteCache();
-	void setUpScreenPosition();
-	void startingRotation();
-
-	const float getMovementSpeed();
-
-	void getLeftWalkAnimation();
-	void getRightWalkAnimation();
-	void getDownWalkAnimation();
-	void getUpWalkAnimation();
-
-	void getIdleLeft();
-	void getIdleRight();
-	void getIdleUp();
-	void getIdleDown();
-
-	void setAnimationState(AnimationState state);
-	void setAnimation(AnimationState state);
+	void setAnimations();
+	void setStartRotation();
 
 	CREATE_FUNC(Protagonist);
 
-protected:
+private:
 	SpriteFrameCache* m_spritecache;
 
-	AnimationState animationState;
-
-	// data screen position
-	Size visibleSize;
-	Vec2 visibleOrigin;
-	Vec2 center;
-
-	float movementSpeed;
+	AnimationsProtagonist animation;
+	MovementsProtagonist movements;
 };

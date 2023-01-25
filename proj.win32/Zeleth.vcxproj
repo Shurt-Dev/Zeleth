@@ -809,16 +809,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\AnimationsProtagonist.h" />
     <ClInclude Include="..\Classes\AudioSettings.h" />
     <ClInclude Include="..\Classes\Collectable.h" />
     <ClInclude Include="..\Classes\Collisions.h" />
+    <ClInclude Include="..\Classes\Entities.h" />
     <ClInclude Include="..\Classes\IntroScene.h" />
     <ClInclude Include="..\Classes\MainCharacter.h" />
     <ClInclude Include="..\Classes\ExitGame.h" />
     <ClInclude Include="..\Classes\Island.h" />
-    <ClInclude Include="..\Classes\GameUI.h" />
     <ClInclude Include="..\Classes\MenuScene.h" />
     <ClInclude Include="..\Classes\Monsters.h" />
+    <ClInclude Include="..\Classes\MovementsProtagonist.h" />
     <ClInclude Include="..\Classes\Pnj.h" />
     <ClInclude Include="..\Classes\Protagonist.h" />
     <ClInclude Include="..\Classes\Puzzle.h" />
@@ -831,16 +833,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h" />
+    <ClCompile Include="..\Classes\AnimationsProtagonist.cpp" />
     <ClCompile Include="..\Classes\AudioSettings.cpp" />
     <ClCompile Include="..\Classes\Collectable.cpp" />
     <ClCompile Include="..\Classes\Collisions.cpp" />
+    <ClCompile Include="..\Classes\Entities.cpp" />
     <ClCompile Include="..\Classes\IntroScene.cpp" />
     <ClCompile Include="..\Classes\MainCharacter.cpp" />
     <ClCompile Include="..\Classes\ExitGame.cpp" />
     <ClCompile Include="..\Classes\Island.cpp" />
-    <ClCompile Include="..\Classes\GameUI.cpp" />
     <ClCompile Include="..\Classes\MenuScene.cpp" />
     <ClCompile Include="..\Classes\Monsters.cpp" />
+    <ClCompile Include="..\Classes\MovementsProtagonist.cpp" />
     <ClCompile Include="..\Classes\Pnj.cpp" />
     <ClCompile Include="..\Classes\Protagonist.cpp" />
     <ClCompile Include="..\Classes\Puzzle.cpp" />

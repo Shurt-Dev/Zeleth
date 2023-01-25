@@ -25,9 +25,6 @@
     <ClCompile Include="..\Classes\MenuScene.cpp">
       <Filter>Source Files\Classes\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\GameUI.cpp">
-      <Filter>Source Files\Classes\Game\GameUI</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\ExitGame.cpp">
       <Filter>Source Files\Classes\Game\ExitGame</Filter>
     </ClCompile>
@@ -38,22 +35,19 @@
       <Filter>Source Files\Classes\Game\Puzzle</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Protagonist.cpp">
-      <Filter>Source Files\Classes\Game\Protagonist</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Monsters.cpp">
-      <Filter>Source Files\Classes\Game\Monsters</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Monsters</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Pnj.cpp">
-      <Filter>Source Files\Classes\Game\Pnj</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Pnj</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Collisions.cpp">
-      <Filter>Source Files\Classes\Game\Protagonist\Collisions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TileMap.cpp">
-      <Filter>Source Files\Classes\Game\Islands</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Protagonist\Collisions</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\MainCharacter.cpp">
-      <Filter>Source Files\Classes\Game\Protagonist</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Island.cpp">
       <Filter>Source Files\Classes\Game\Islands</Filter>
@@ -66,6 +60,18 @@
     </ClCompile>
     <ClCompile Include="..\Classes\ReturnToMenu.cpp">
       <Filter>Source Files\Classes\Game\ExitGame\ReturnToMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TileMap.cpp">
+      <Filter>Source Files\Classes\Game\Islands\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MovementsProtagonist.cpp">
+      <Filter>Source Files\Classes\Game\Entities\Protagonist\Movements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entities.cpp">
+      <Filter>Source Files\Classes\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AnimationsProtagonist.cpp">
+      <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,9 +99,6 @@
     <ClInclude Include="..\Classes\IntroScene.h">
       <Filter>Source Files\Classes\Intro</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\GameUI.h">
-      <Filter>Source Files\Classes\Game\GameUI</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\ExitGame.h">
       <Filter>Source Files\Classes\Game\ExitGame</Filter>
     </ClInclude>
@@ -106,22 +109,19 @@
       <Filter>Source Files\Classes\Game\Puzzle</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Protagonist.h">
-      <Filter>Source Files\Classes\Game\Protagonist</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Monsters.h">
-      <Filter>Source Files\Classes\Game\Monsters</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Monsters</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Pnj.h">
-      <Filter>Source Files\Classes\Game\Pnj</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Pnj</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Collisions.h">
-      <Filter>Source Files\Classes\Game\Protagonist\Collisions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TileMap.h">
-      <Filter>Source Files\Classes\Game\Islands</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Protagonist\Collisions</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MainCharacter.h">
-      <Filter>Source Files\Classes\Game\Protagonist</Filter>
+      <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Island.h">
       <Filter>Source Files\Classes\Game\Islands</Filter>
@@ -134,6 +134,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ReturnToMenu.h">
       <Filter>Source Files\Classes\Game\ExitGame\ReturnToMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TileMap.h">
+      <Filter>Source Files\Classes\Game\Islands\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MovementsProtagonist.h">
+      <Filter>Source Files\Classes\Game\Entities\Protagonist\Movements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entities.h">
+      <Filter>Source Files\Classes\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AnimationsProtagonist.h">
+      <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -184,14 +196,8 @@
     <Filter Include="Source Files\Classes\Game\ExitGame\Quit">
       <UniqueIdentifier>{f7423da2-c0fa-4c43-9102-bc79113d1dab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\GameUI">
-      <UniqueIdentifier>{f8e97992-9aea-4888-8306-701a69a62723}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Classes\Game\Puzzle">
       <UniqueIdentifier>{e48b9cfc-2b76-492b-9655-f858bafe84f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Monsters">
-      <UniqueIdentifier>{3d4043a8-9071-46cb-bd74-3aa67057d686}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes\Game\Collectable">
       <UniqueIdentifier>{7e32fbea-3fce-4291-8aff-a3944fd88f0d}</UniqueIdentifier>
@@ -199,14 +205,29 @@
     <Filter Include="Source Files\Classes\Game\Islands">
       <UniqueIdentifier>{1d96d20d-a45b-4547-a6b7-4ec4d1165b35}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\Pnj">
-      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
+    <Filter Include="Source Files\Classes\Game\Islands\TileMap">
+      <UniqueIdentifier>{5a940cb0-f8b1-419b-a574-9162862317c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\Protagonist">
+    <Filter Include="Source Files\Classes\Game\Entities">
+      <UniqueIdentifier>{5bdc651e-e66a-47fa-ab10-5a12d6778fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist">
       <UniqueIdentifier>{2211165e-e408-415e-a043-7aef0c5792a2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\Protagonist\Collisions">
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Collisions">
       <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Movements">
+      <UniqueIdentifier>{220b5444-0e46-43bc-9a92-e34aa267b176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Pnj">
+      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Monsters">
+      <UniqueIdentifier>{3d4043a8-9071-46cb-bd74-3aa67057d686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Animations">
+      <UniqueIdentifier>{57b44595-84b7-427a-8b37-7bc2c82bce89}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
