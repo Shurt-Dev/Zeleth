@@ -1,7 +1,5 @@
 #include "cocos2d.h"
 
-#include "MainCharacter.h"
-
 USING_NS_CC;
 
 class TileMap : public Node
@@ -9,34 +7,19 @@ class TileMap : public Node
 public:
     virtual bool init();
 
-    void loadTileMap();
+    void loadEuphoriaTileMap();
 
-    void loadMainCharacter();
+    TMXTiledMap* getEuphoriaMap();
 
-    void enlargeTileMap(float scale);
-    void moveToStartPoint();
+    void getObjects();
+    void setSpawnProtagonist();
 
-    void setupKeyboardInput();
-
-    void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);
-    void onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event);
-
-    void update(float delta);
-
-    // implement the "static create()" method manually
     CREATE_FUNC(TileMap);
 
 private:
-    TMXTiledMap* _tileMap;
+    TMXTiledMap* m_euphoriaTileMap;
+    TMXObjectGroup* m_objectGroup;
 
-    MainCharacter* mainCharacter;
-
-    Vec2 lastMovementDirection;
-
-    bool _isKeyUpPressed;
-    bool _isKeyRightPressed;
-    bool _isKeyDownPressed;
-    bool _isKeyLeftPressed;
-
-    int _movementSpeed;
+    ValueMap spawnProtagonist;
+    Size visibleSize;
 };

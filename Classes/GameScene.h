@@ -1,6 +1,6 @@
 #include "cocos2d.h"
 
-#include "TileMap.h"
+#include "Island.h"
 
 USING_NS_CC;
 
@@ -11,10 +11,12 @@ public:
 
     virtual bool init();
 
-    // implement the "static create()" method manually
+    void main();
+
+    void createIsland();
+
     CREATE_FUNC(GameScene);
 
 private:
-    // Instance de la classe TileMap
-    TileMap* _tileMap;
+    Island* m_island;
 };

@@ -1,8 +1,7 @@
-#ifndef __INTRO_SCENE_H__
-#define __INTRO_SCENE_H__
-
 #include "cocos2d.h"
-//#include "MapSceneCharacter.h"
+#include "SimpleAudioEngine.h"
+
+#include "MenuScene.h"
 
 USING_NS_CC;
 
@@ -13,8 +12,18 @@ public:
 
     virtual bool init();
 
+    void createTitle();
+    void animateTitle();
+
+    void animateTransition();
+
     // implement the "static create()" method manually
     CREATE_FUNC(IntroScene);
-};
 
-#endif // __INTRO_SCENE_H__
+private:
+    Label* title;
+
+    Size visibleSize;
+    Vec2 origin;
+    Vec2 center;
+};
