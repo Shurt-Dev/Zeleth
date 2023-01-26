@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.8" tiledversion="1.8.4" name="sceneSpriteSheet" tilewidth="12" tileheight="12" tilecount="1024" columns="32">
  <image source="tileset.png" width="384" height="384"/>
+ <tile id="131">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 12,12 0,12"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="132">
+  <objectgroup draworder="index" id="2">
+   <object id="2" x="0" y="0">
+    <polygon points="0,0 0,12 12,12 12,0"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="133">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="12" y="0">
+    <polygon points="0,0 0,12 -12,12 -12,0"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="134">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 12,12 0,12"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="163">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 12,12 0,12"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="166">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 12,12 0,12"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="195">
+  <objectgroup draworder="index" id="2">
+   <object id="1" name="Collidable" x="0" y="0">
+    <polygon points="0,0 -0.0222222,10 0.933333,10.9333 4.93333,10.9778 7.06667,9.02222 11.9778,9.04444 12,0"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="196">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 12.0222,9.02222 6.97778,9.97778 4.02222,9.97778 0,9"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="197">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 11.9556,8.97778 8,10 4.93333,10.0222 0,9"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="198">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 12,0 12.0222,10.0222 11.0667,11.0222 6.97778,11.0444 4.93333,9.02222 0.0222222,8.97778"/>
+   </object>
+  </objectgroup>
+ </tile>
  <tile id="322">
   <objectgroup draworder="index" id="2">
    <object id="1" x="3.02222" y="12">
@@ -17,7 +87,7 @@
  </tile>
  <tile id="327">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="5.95556" y="11.9778">
+   <object id="1" name="Collidable" x="5.95556" y="11.9778">
     <properties>
      <property name="Collidable" type="bool" value="true"/>
     </properties>
@@ -27,7 +97,7 @@
  </tile>
  <tile id="328">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="12">
+   <object id="1" name="Collidable" x="0" y="12">
     <properties>
      <property name="Collidable" type="bool" value="true"/>
     </properties>
@@ -71,7 +141,7 @@
  </tile>
  <tile id="359">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="11.9778" y="10.9778">
+   <object id="1" name="Collidable" x="11.9778" y="10.9778">
     <properties>
      <property name="Collidable" type="bool" value="true"/>
     </properties>
@@ -81,7 +151,7 @@
  </tile>
  <tile id="360">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0">
+   <object id="1" name="Collidable" x="0" y="0">
     <properties>
      <property name="Collidable" type="bool" value="true"/>
     </properties>
