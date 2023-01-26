@@ -9,6 +9,7 @@ bool Island::init()
 
     createEuphoriaTileMap();
     createProtagonist();
+    createCamera();
 
     return true;
 }
@@ -27,4 +28,11 @@ void Island::createProtagonist()
     entities.createProtagonist();
 
     this->addChild(entities.setProtagonist());
+}
+
+void Island::createCamera()
+{
+    m_follow = Follow::create(entities.setProtagonist());
+
+    this->runAction(m_follow);
 }

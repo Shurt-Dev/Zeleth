@@ -64,9 +64,6 @@
     <ClCompile Include="..\Classes\TileMap.cpp">
       <Filter>Source Files\Classes\Game\Islands\TileMap</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\MovementsProtagonist.cpp">
-      <Filter>Source Files\Classes\Game\Entities\Protagonist\Movements</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Entities.cpp">
       <Filter>Source Files\Classes\Game\Entities</Filter>
     </ClCompile>
@@ -137,9 +134,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TileMap.h">
       <Filter>Source Files\Classes\Game\Islands\TileMap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MovementsProtagonist.h">
-      <Filter>Source Files\Classes\Game\Entities\Protagonist\Movements</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Entities.h">
       <Filter>Source Files\Classes\Game\Entities</Filter>
@@ -216,9 +210,6 @@
     </Filter>
     <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Collisions">
       <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Movements">
-      <UniqueIdentifier>{220b5444-0e46-43bc-9a92-e34aa267b176}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes\Game\Entities\Pnj">
       <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>

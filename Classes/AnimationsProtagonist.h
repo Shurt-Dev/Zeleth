@@ -1,7 +1,17 @@
 #include "cocos2d.h"
-#include <string>
 
 USING_NS_CC;
+
+enum class AnimationState {
+    Right = 1,
+    Left = 2,
+    Down = 3,
+    Up = 4,
+    IdleLeft = 5,
+    IdleRight = 6,
+    IdleUp = 7,
+    IdleDown = 8
+};
 
 class AnimationsProtagonist : public Sprite
 {
@@ -9,11 +19,26 @@ public:
 	virtual bool init();
 
     void loadAnimations();
-    std::string getStartRotation();
+    void getStartRotation();
+
+    void getLeftWalkAnimation();
+    void getRightWalkAnimation();
+    void getDownWalkAnimation();
+    void getUpWalkAnimation();
+
+    void getIdleLeft();
+    void getIdleRight();
+    void getIdleUp();
+    void getIdleDown();
+
+    void setAnimationState(AnimationState state);
+    void setAnimation(AnimationState state);
 
     // Création de l'objet
     CREATE_FUNC(AnimationsProtagonist);
 
 private:
     SpriteFrameCache* spritecache;
+
+    AnimationState _animationState;
 };

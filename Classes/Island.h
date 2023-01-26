@@ -13,9 +13,13 @@ public:
 	void createEuphoriaTileMap();
 	void createProtagonist();
 
+	void createCamera();
+
 	CREATE_FUNC(Island);
 	
 private:
+	Follow* m_follow;
+
 	Entities entities;
 	TileMap tileMap;
 };
