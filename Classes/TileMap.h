@@ -11,8 +11,15 @@ public:
 
     TMXTiledMap* getEuphoriaMap();
 
+    void getObjects();
+    void setSpawnProtagonist();
+
     CREATE_FUNC(TileMap);
 
 private:
     TMXTiledMap* m_euphoriaTileMap;
+    TMXObjectGroup* m_objectGroup;
+
+    ValueMap spawnProtagonist;
+    Size visibleSize;
 };

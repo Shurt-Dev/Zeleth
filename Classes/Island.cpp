@@ -27,6 +27,9 @@ void Island::createProtagonist()
     // Create Protagonist
     entities.createProtagonist();
 
+    // set protagonist spawn
+    tileMap.setSpawnProtagonist();
+
     this->addChild(entities.setProtagonist());
 }
 

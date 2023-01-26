@@ -73,10 +73,7 @@
   </data>
  </layer>
  <objectgroup id="27" name="Objects">
-  <object id="3" name="StartPoint" x="312" y="252">
-   <properties>
-    <property name="StartPoint" value=""/>
-   </properties>
+  <object id="3" name="SpawnProtagonist" x="312" y="252">
    <point/>
   </object>
  </objectgroup>
