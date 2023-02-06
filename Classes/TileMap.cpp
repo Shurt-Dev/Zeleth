@@ -17,7 +17,7 @@ void TileMap::loadEuphoriaTileMap()
     // resize x4
     m_euphoriaTileMap->setScale(4.0f);
 
-    getObjects();
+    setObjects();
 }
 
 TMXTiledMap* TileMap::getEuphoriaMap()
@@ -25,7 +25,7 @@ TMXTiledMap* TileMap::getEuphoriaMap()
     return m_euphoriaTileMap;
 }
 
-void TileMap::getObjects()
+void TileMap::setObjects()
 {
     // Obtain the object group named "Objects"
     m_objectGroup = m_euphoriaTileMap->getObjectGroup("Objects");

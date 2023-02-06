@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="12" tileheight="12" infinite="0" nextlayerid="28" nextobjectid="4">
- <editorsettings>
-  <export target="../../pelletTown.json" format="json"/>
- </editorsettings>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="70" height="40" tilewidth="12" tileheight="12" infinite="0" nextlayerid="29" nextobjectid="4">
  <tileset firstgid="1" source="pokemonStyleGameTileset.tsx"/>
  <tileset firstgid="1025" source="collisionTileset.tsx"/>
  <layer id="1" name="Ocean" width="70" height="40">
@@ -67,11 +64,6 @@
   </data>
   </layer>
  </group>
- <layer id="20" name="Collisions" width="70" height="40" visible="0" opacity="0.3">
-  <data encoding="base64" compression="zlib">
-   eJztl9kOxCAIRTvJ/P8398mEaVisooBzT+JLBYFb1+sCAAAAAAAAcHy+v41+7/HVxqzMM39ak1YbtZH0rKwNN1don+ZnjVNZl4aHLpxNT6O2mfCaLzPxPcbx5E3tWp+nLtra3sUKXd7WNZrDSqycrH2Bs5fG4GysujPqEhWrwjri/u+OnKP33+j4GlnnSzSn6jJ75p6ki6TDiD4n6uIRL3qNe54v1t2mki4Njzy4O9yIHlk0aczeVWbts+lBsfZNaU5IvlasEb/MWG/qnvfVKVpYVNxXd6GttQxvwgz8e/0AAAAA4LkBuQQDng==
-  </data>
- </layer>
  <objectgroup id="27" name="Objects">
   <object id="3" name="SpawnProtagonist" x="312" y="252">
    <point/>
@@ -85,6 +77,11 @@
  <layer id="22" name="ForegroundObjects" width="70" height="40">
   <data encoding="base64" compression="zlib">
    eJzt1ksKgzAUheFE68TaTXRQQe0mHGhf6v534+lMQiitiBH7f3AGCQQul+QSYwAAAAAAwFbcrDF3+/0+/hv3Bb946E68lM5+3gOWkCpHJVNOgWvZkkIplUq5Bq4lpEgzJ1YOSuKZP70yrF5VeGdmsVdNX7wi+uI15x1ddCbfeT/nvKNGZ9qd98X1/hs/J/9jdw0AAAAASxsBtewJtQ==
+  </data>
+ </layer>
+ <layer id="28" name="Collisions" width="70" height="40" visible="0" opacity="0.5">
+  <data encoding="base64" compression="zlib">
+   eJzt1LEJADAIBEAD2X/mLCCChY25Aysrn8cIAAAAJp1bz6+q2+XS320nl5xccv4uHVk39AUAAAAAgGkPtFUAlw==
   </data>
  </layer>
 </map>

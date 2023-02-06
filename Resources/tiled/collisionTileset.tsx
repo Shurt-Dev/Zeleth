@@ -3,7 +3,7 @@
  <image source="collision.png" width="12" height="12"/>
  <tile id="0">
   <properties>
-   <property name="Collidable" type="bool" value="true"/>
+   <property name="Collidable" type="bool" value="false"/>
   </properties>
  </tile>
 </tileset>
