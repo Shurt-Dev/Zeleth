@@ -49,8 +49,8 @@
     <ClCompile Include="..\Classes\MainCharacter.cpp">
       <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Island.cpp">
-      <Filter>Source Files\Classes\Game\Islands</Filter>
+    <ClCompile Include="..\Classes\World.cpp">
+      <Filter>Source Files\Classes\Game\World</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AudioSettings.cpp">
       <Filter>Source Files\Classes\Menu\AudioSettings</Filter>
@@ -62,7 +62,7 @@
       <Filter>Source Files\Classes\Game\ExitGame\ReturnToMenu</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TileMap.cpp">
-      <Filter>Source Files\Classes\Game\Islands\TileMap</Filter>
+      <Filter>Source Files\Classes\Game\World\TileMap</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Entities.cpp">
       <Filter>Source Files\Classes\Game\Entities</Filter>
@@ -120,8 +120,8 @@
     <ClInclude Include="..\Classes\MainCharacter.h">
       <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Island.h">
-      <Filter>Source Files\Classes\Game\Islands</Filter>
+    <ClInclude Include="..\Classes\World.h">
+      <Filter>Source Files\Classes\Game\World</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AudioSettings.h">
       <Filter>Source Files\Classes\Menu\AudioSettings</Filter>
@@ -133,7 +133,7 @@
       <Filter>Source Files\Classes\Game\ExitGame\ReturnToMenu</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TileMap.h">
-      <Filter>Source Files\Classes\Game\Islands\TileMap</Filter>
+      <Filter>Source Files\Classes\Game\World\TileMap</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Entities.h">
       <Filter>Source Files\Classes\Game\Entities</Filter>
@@ -196,12 +196,6 @@
     <Filter Include="Source Files\Classes\Game\Collectable">
       <UniqueIdentifier>{7e32fbea-3fce-4291-8aff-a3944fd88f0d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\Islands">
-      <UniqueIdentifier>{1d96d20d-a45b-4547-a6b7-4ec4d1165b35}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Islands\TileMap">
-      <UniqueIdentifier>{5a940cb0-f8b1-419b-a574-9162862317c2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Classes\Game\Entities">
       <UniqueIdentifier>{5bdc651e-e66a-47fa-ab10-5a12d6778fab}</UniqueIdentifier>
     </Filter>
@@ -219,6 +213,12 @@
     </Filter>
     <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Animations">
       <UniqueIdentifier>{57b44595-84b7-427a-8b37-7bc2c82bce89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World">
+      <UniqueIdentifier>{1d96d20d-a45b-4547-a6b7-4ec4d1165b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\World\TileMap">
+      <UniqueIdentifier>{5a940cb0-f8b1-419b-a574-9162862317c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

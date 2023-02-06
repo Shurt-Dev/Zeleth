@@ -1,6 +1,6 @@
 #include "cocos2d.h"
 
-#include "Island.h"
+#include "World.h"
 
 USING_NS_CC;
 
@@ -18,5 +18,5 @@ public:
     CREATE_FUNC(GameScene);
 
 private:
-    Island* m_island;
+    World* m_world;
 };

@@ -25,7 +25,7 @@ void GameScene::main()
 
 void GameScene::createIsland()
 {
-    m_island = Island::create();
+    m_world = World::create();
 
-    this->addChild(m_island);
+    this->addChild(m_world);
 }

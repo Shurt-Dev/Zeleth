@@ -1,6 +1,6 @@
-#include "Island.h"
+#include "World.h"
 
-bool Island::init()
+bool World::init()
 {
     if (!Node::init())
     {
@@ -14,7 +14,7 @@ bool Island::init()
     return true;
 }
 
-void Island::createEuphoriaTileMap()
+void World::createEuphoriaTileMap()
 {
     // Euphoria Map
     tileMap.loadEuphoriaTileMap();
@@ -22,18 +22,18 @@ void Island::createEuphoriaTileMap()
     this->addChild(tileMap.getEuphoriaMap());
 }
 
-void Island::createProtagonist()
+void World::createProtagonist()
 {
     // Create Protagonist
     entities.createProtagonist();
 
     // set protagonist spawn
     tileMap.setSpawnProtagonist();
-
+        
     this->addChild(entities.setProtagonist());
 }
 
-void Island::createCamera()
+void World::createCamera()
 {
     m_follow = Follow::create(entities.setProtagonist());
 

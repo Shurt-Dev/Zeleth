@@ -11,7 +11,8 @@ public:
 
     TMXTiledMap* getEuphoriaMap();
 
-    void getObjects();
+    void setObjects();
+
     void setSpawnProtagonist();
 
     CREATE_FUNC(TileMap);

@@ -5,7 +5,7 @@
 
 USING_NS_CC;
 
-class Island : public Node
+class World : public Node
 {
 public:
 	virtual bool init();
@@ -15,7 +15,7 @@ public:
 
 	void createCamera();
 
-	CREATE_FUNC(Island);
+	CREATE_FUNC(World);
 	
 private:
 	Follow* m_follow;
