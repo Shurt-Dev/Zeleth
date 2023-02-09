@@ -70,6 +70,9 @@
     <ClCompile Include="..\Classes\AnimationsProtagonist.cpp">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\GameSettings.cpp">
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
@@ -140,6 +143,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\AnimationsProtagonist.h">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameSettings.h">
+      <Filter>Source Files\Classes\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
