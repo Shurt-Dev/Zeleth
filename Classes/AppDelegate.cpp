@@ -65,7 +65,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.75f);
 
     // Starting Scene Game
-    auto introScene = GameScene::createScene();
+    auto introScene = IntroScene::createScene();
 
     // run
     director->runWithScene(introScene);
