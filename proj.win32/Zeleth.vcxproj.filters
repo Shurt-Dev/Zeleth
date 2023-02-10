@@ -71,7 +71,7 @@
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\GameSettings.cpp">
-      <Filter>Source Files\Classes\Game</Filter>
+      <Filter>Source Files\Classes\Game\UI and Settings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -145,7 +145,7 @@
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\GameSettings.h">
-      <Filter>Source Files\Classes\Game</Filter>
+      <Filter>Source Files\Classes\Game\UI and Settings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +225,9 @@
     </Filter>
     <Filter Include="Source Files\Classes\Game\World\TileMap">
       <UniqueIdentifier>{5a940cb0-f8b1-419b-a574-9162862317c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\UI and Settings">
+      <UniqueIdentifier>{90d5c84b-f7fe-487c-b095-c3011a43ea0c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
