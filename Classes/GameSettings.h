@@ -14,12 +14,24 @@ public:
 
 	void setupKeyboardInput();
 
-	void Quit();
+	void quit();
 
-	void Menu();
+	void goToMenu();
 
 	void onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event);
 
 	CREATE_FUNC(GameSettings);
+
+private:
+	EventListenerKeyboard* listener;
+	Label* label;
+	Scene* menuScene;
+	Menu* menu;
+
+	Size visibleSize;
+	Vec2 origin;
+	Vec2 center;
+	Vec2 bottomRight;
+
 };
 

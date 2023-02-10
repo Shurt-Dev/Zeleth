@@ -1,5 +1,4 @@
 #include "GameSettings.h"
-
 #include "MenuScene.h"
 
 bool GameSettings::init()
@@ -17,12 +16,10 @@ bool GameSettings::init()
 void GameSettings::setupKeyboardInput()
 {
     // keys
-    auto listener = EventListenerKeyboard::create();
+    listener = EventListenerKeyboard::create();
     listener->onKeyPressed = CC_CALLBACK_2(GameSettings::onKeyPressed, this);
 
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-
-    //this->scheduleUpdate();
 }
 
 void GameSettings::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
@@ -37,32 +34,33 @@ void GameSettings::pauseCallback()
 {
     this->pause();
 
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    Vec2 center = Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2);
-    Vec2 bottomRight = origin + Vec2(visibleSize.width, 0);
+    visibleSize = Director::getInstance()->getVisibleSize();
+    origin = Director::getInstance()->getVisibleOrigin();
+    center = Vec2(visibleSize.width / 2, visibleSize.height / 2);
+    bottomRight = origin + Vec2(visibleSize.width, 0);
 
-    Label* label = cocos2d::Label::createWithSystemFont("Paused", "Arial", 24);
+    label = Label::createWithSystemFont("Paused", "Arial", 24);
     label->setPosition(Vec2(center.x, center.y + 100));
 
-    MenuItemFont* menuItem = cocos2d::MenuItemFont::create("Resume", CC_CALLBACK_0(GameSettings::resumeCallback, this));
+    MenuItemFont* menuItem = MenuItemFont::create("Resume", CC_CALLBACK_0(GameSettings::resumeCallback, this));
     menuItem->setPosition(Vec2(center.x, center.y + 50));
 
-    MenuItemFont* menuItem1 = cocos2d::MenuItemFont::create("Menu", CC_CALLBACK_0(GameSettings::Menu, this));
+    MenuItemFont* menuItem1 = MenuItemFont::create("Menu", CC_CALLBACK_0(GameSettings::goToMenu, this));
     menuItem1->setPosition(center);
 
-    MenuItemFont* menuItem2 = cocos2d::MenuItemFont::create("Quit", CC_CALLBACK_0(GameSettings::Quit, this));
+    MenuItemFont* menuItem2 = MenuItemFont::create("Quit", CC_CALLBACK_0(GameSettings::quit, this));
     menuItem2->setPosition(Vec2(center.x, center.y - 50));
 
     Sprite* menuBackground = Sprite::create("sprites/ui/menu/blue-square.jpg", Rect(0, 0, 150, 200));
     menuBackground->setPosition(Vec2(center.x, center.y+20));
 
-    cocos2d::Menu* menu = cocos2d::Menu::create(menuItem, menuItem1, menuItem2, nullptr);
-    menu->setPosition(cocos2d::Vec2::ZERO);
-    menu->setContentSize(cocos2d::Size(480, 320));
+    menu = Menu::create(menuItem, menuItem1, menuItem2, nullptr);
+    menu->setPosition(Vec2::ZERO);
+    menu->setContentSize(Size(480, 320));
+    this->addChild(menuBackground);
     this->addChild(menu,1);
     this->addChild(label,1);
-    this->addChild(menuBackground,0);
+
     return;
 }
 
@@ -72,14 +70,14 @@ void GameSettings::resumeCallback()
     this->removeAllChildren();
 }
 
-void GameSettings::Quit()
+void GameSettings::quit()
 {
     exit(0);
 }
 
-void GameSettings::Menu()
+void GameSettings::goToMenu()
 {
-    auto menu = MenuScene::createScene();
+    menuScene = MenuScene::createScene();
 
-    Director::getInstance()->replaceScene(menu);
+    Director::getInstance()->replaceScene(menuScene);
 }
