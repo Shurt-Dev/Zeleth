@@ -14,6 +14,10 @@ bool GameScene::init()
 
     main();
 
+    _settings = GameSettings::create();
+
+    this->addChild(_settings);
+
     return true;
 }
 

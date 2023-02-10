@@ -2,6 +2,8 @@
 
 #include "World.h"
 
+#include "GameSettings.h"
+
 USING_NS_CC;
 
 class GameScene : public Scene
@@ -19,4 +21,6 @@ public:
 
 private:
     World* m_world;
+
+    GameSettings* _settings;
 };

@@ -814,6 +814,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\Collectable.h" />
     <ClInclude Include="..\Classes\Collisions.h" />
     <ClInclude Include="..\Classes\Entities.h" />
+    <ClInclude Include="..\Classes\GameSettings.h" />
     <ClInclude Include="..\Classes\IntroScene.h" />
     <ClInclude Include="..\Classes\MainCharacter.h" />
     <ClInclude Include="..\Classes\ExitGame.h" />
@@ -837,6 +838,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\Classes\Collectable.cpp" />
     <ClCompile Include="..\Classes\Collisions.cpp" />
     <ClCompile Include="..\Classes\Entities.cpp" />
+    <ClCompile Include="..\Classes\GameSettings.cpp" />
     <ClCompile Include="..\Classes\IntroScene.cpp" />
     <ClCompile Include="..\Classes\MainCharacter.cpp" />
     <ClCompile Include="..\Classes\ExitGame.cpp" />
