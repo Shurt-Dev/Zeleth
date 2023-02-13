@@ -79,6 +79,27 @@
     <ClCompile Include="..\Classes\ActionBar.cpp">
       <Filter>Source Files\Classes\Fight\ActionBar</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\SelectAction.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\SelectAction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Actions.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\History.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\History</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Bag.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Bag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Run.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Attack.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Infos.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Infos</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
@@ -158,6 +179,27 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ActionBar.h">
       <Filter>Source Files\Classes\Fight\ActionBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SelectAction.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\SelectAction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Actions.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\History.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\History</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Bag.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Bag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Run.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Attack.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Infos.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Infos</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +288,27 @@
     </Filter>
     <Filter Include="Source Files\Classes\Fight\Background">
       <UniqueIdentifier>{16c92797-3a4e-4258-a10f-7ea85c340676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\History">
+      <UniqueIdentifier>{4c560ae4-c72e-4c41-9fc3-6adc1098b34d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions">
+      <UniqueIdentifier>{8cf8250e-e4b6-42e4-91e1-4891d7766f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\SelectAction">
+      <UniqueIdentifier>{8c8c60a9-6f0e-4236-93c6-6a8fa3abd903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Bag">
+      <UniqueIdentifier>{427593bd-8b94-4883-b8a6-183cb8c88404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Run">
+      <UniqueIdentifier>{c69a8213-02db-4e9b-97e2-49ee9ae96634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Attack">
+      <UniqueIdentifier>{1f0b844a-5c38-453e-beaa-17a51b2295d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Infos">
+      <UniqueIdentifier>{e03847d8-930a-4ef6-bc02-d952885fe346}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

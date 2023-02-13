@@ -30,18 +30,18 @@ void FightScene::dataScreenPosition()
     actionBarPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2 - 440);
 }
 
-void FightScene::createBackground()
+void FightScene::addBackground()
 {
-    m_battleZoneBackground.createBackgroundEuphoria();
+    battleZoneBackground.createBackgroundEuphoria();
 
-    m_battleZoneBackground.getBackgroundEuphoria()->setPosition(backgroundPosition);
+    battleZoneBackground.getBackgroundEuphoria()->setPosition(backgroundPosition);
 
-    this->addChild(m_battleZoneBackground.getBackgroundEuphoria());
+    this->addChild(battleZoneBackground.getBackgroundEuphoria());
 }
 
-void FightScene::createActionBar()
+void FightScene::addActionBar()
 {
-    auto actionBar = Sprite::create("sprites/background/action_bar-test.jpg");
+    actionBar = ActionBar::create();
 
     actionBar->setPosition(actionBarPosition);
 
@@ -50,6 +50,6 @@ void FightScene::createActionBar()
 
 void FightScene::gameLoop()
 {
-    createBackground();
-    createActionBar();
+    addBackground();
+    addActionBar();
 }
