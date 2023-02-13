@@ -70,6 +70,15 @@
     <ClCompile Include="..\Classes\AnimationsProtagonist.cpp">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\FightScene.cpp">
+      <Filter>Source Files\Classes\Fight</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BattleZoneBackground.cpp">
+      <Filter>Source Files\Classes\Fight\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ActionBar.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
@@ -140,6 +149,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\AnimationsProtagonist.h">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\FightScene.h">
+      <Filter>Source Files\Classes\Fight</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BattleZoneBackground.h">
+      <Filter>Source Files\Classes\Fight\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ActionBar.h">
+      <Filter>Source Files\Classes\Fight\ActionBar</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +237,15 @@
     </Filter>
     <Filter Include="Source Files\Classes\Game\World\TileMap">
       <UniqueIdentifier>{5a940cb0-f8b1-419b-a574-9162862317c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight">
+      <UniqueIdentifier>{68ef6ae3-77c3-4c8a-8b73-c161fb58a7da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar">
+      <UniqueIdentifier>{ffe91a8c-bc45-41e0-a66d-346e606a6153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\Background">
+      <UniqueIdentifier>{16c92797-3a4e-4258-a10f-7ea85c340676}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -809,11 +809,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\ActionBar.h" />
     <ClInclude Include="..\Classes\AnimationsProtagonist.h" />
     <ClInclude Include="..\Classes\AudioSettings.h" />
+    <ClInclude Include="..\Classes\BattleZoneBackground.h" />
     <ClInclude Include="..\Classes\Collectable.h" />
     <ClInclude Include="..\Classes\Collisions.h" />
     <ClInclude Include="..\Classes\Entities.h" />
+    <ClInclude Include="..\Classes\FightScene.h" />
     <ClInclude Include="..\Classes\IntroScene.h" />
     <ClInclude Include="..\Classes\MainCharacter.h" />
     <ClInclude Include="..\Classes\ExitGame.h" />
@@ -832,11 +835,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\GameScene.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h" />
+    <ClCompile Include="..\Classes\ActionBar.cpp" />
     <ClCompile Include="..\Classes\AnimationsProtagonist.cpp" />
     <ClCompile Include="..\Classes\AudioSettings.cpp" />
+    <ClCompile Include="..\Classes\BattleZoneBackground.cpp" />
     <ClCompile Include="..\Classes\Collectable.cpp" />
     <ClCompile Include="..\Classes\Collisions.cpp" />
     <ClCompile Include="..\Classes\Entities.cpp" />
+    <ClCompile Include="..\Classes\FightScene.cpp" />
     <ClCompile Include="..\Classes\IntroScene.cpp" />
     <ClCompile Include="..\Classes\MainCharacter.cpp" />
     <ClCompile Include="..\Classes\ExitGame.cpp" />

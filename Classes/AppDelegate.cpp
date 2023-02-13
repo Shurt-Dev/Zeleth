@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "IntroScene.h"
+#include "FightScene.h"
 
 #if USE_AUDIO_ENGINE
 #include "audio/include/AudioEngine.h"
@@ -65,7 +66,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.75f);
 
     // Starting Scene Game
-    auto introScene = GameScene::createScene();
+    auto introScene = FightScene::createScene();
 
     // run
     director->runWithScene(introScene);
