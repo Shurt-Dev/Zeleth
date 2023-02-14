@@ -26,7 +26,7 @@ bool FightScene::init()
 void FightScene::dataScreenPosition()
 {
     visibleSize = Director::getInstance()->getVisibleSize();
-    backgroundPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2 + 100);
+    backgroundPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2);
     actionBarPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2 - 440);
 }
 
