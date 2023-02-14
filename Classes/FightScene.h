@@ -15,15 +15,17 @@ public:
 
     void dataScreenPosition();
 
-    void createBackground();
-    void createActionBar();
+    void addBackground();
+    void addActionBar();
 
     void gameLoop();
 
     CREATE_FUNC(FightScene);
 
 private:
-    BattleZoneBackground m_battleZoneBackground;
+    ActionBar* actionBar;
+
+    BattleZoneBackground battleZoneBackground;
 
     Size visibleSize;
     Vec2 backgroundPosition;
