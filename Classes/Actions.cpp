@@ -12,7 +12,7 @@ bool Actions::init()
 
 void Actions::createActions()
 {
-    actions = Sprite::create("sprites/background/actions.jpg");
+    actions = Sprite::create("sprites/background/attack_zone.png");
 }
 
 Sprite* Actions::getActions()

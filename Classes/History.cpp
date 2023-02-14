@@ -12,7 +12,7 @@ bool History::init()
 
 void History::createHistory()
 {
-    history = Sprite::create("sprites/background/history.jpg");
+    history = Sprite::create("sprites/background/history.png");
 }
 
 Sprite* History::getHistory()
