@@ -12,10 +12,36 @@ bool SelectAction::init()
 
 void SelectAction::createSelectAction()
 {
-    selectAction = Sprite::create("sprites/background/select_action.jpg");
+    this->addChild(attackButton);
+    this->addChild(bagButton);
+    this->addChild(infosButton);
+    this->addChild(runButton);
 }
 
-Sprite* SelectAction::getSelectAction()
+void SelectAction::createAttackButton()
 {
-    return selectAction;
+    attackButton = Button::create("normal.png", "pressed.png", "disabled.png");
+
+    attackButton->setPosition(Vec2());
+}
+
+void SelectAction::createBagButton()
+{
+    bagButton = Button::create("normal.png", "pressed.png", "disabled.png");
+
+    bagButton->setPosition(Vec2());
+}
+
+void SelectAction::createInfosButton()
+{
+    infosButton = Button::create("normal.png", "pressed.png", "disabled.png");
+
+    infosButton->setPosition(Vec2());
+}
+
+void SelectAction::createRunButton()
+{
+    runButton = Button::create("normal.png", "pressed.png", "disabled.png");
+
+    runButton->setPosition(Vec2());
 }
