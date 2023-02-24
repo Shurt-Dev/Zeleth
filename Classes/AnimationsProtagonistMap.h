@@ -13,7 +13,7 @@ enum class AnimationState {
     IdleDown = 8
 };
 
-class AnimationsProtagonist : public Sprite
+class AnimationsProtagonistMap : public Sprite
 {
 public:
 	virtual bool init();
@@ -35,7 +35,7 @@ public:
     void setAnimation(AnimationState state);
 
     // Création de l'objet
-    CREATE_FUNC(AnimationsProtagonist);
+    CREATE_FUNC(AnimationsProtagonistMap);
 
 private:
     SpriteFrameCache* spritecache;

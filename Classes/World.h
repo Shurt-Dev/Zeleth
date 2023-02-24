@@ -1,7 +1,7 @@
 #include "cocos2d.h"
 
 #include "TileMap.h"
-#include "Entities.h"
+#include "EntitiesMap.h"
 
 USING_NS_CC;
 
@@ -20,6 +20,6 @@ public:
 private:
 	Follow* m_follow;
 
-	Entities entities;
+	EntitiesMap entities;
 	TileMap tileMap;
 };

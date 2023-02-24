@@ -1,8 +1,8 @@
-#include "cocos2d.h"*
+#include "cocos2d.h"
 
 USING_NS_CC;
 
-class Monsters : public Sprite
+class MonstersMap : public Sprite
 {
 public:
 	virtual bool init();

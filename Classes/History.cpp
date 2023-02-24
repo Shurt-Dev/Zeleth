@@ -7,15 +7,14 @@ bool History::init()
         return false;
     }
 
+    createHistory();
+
     return true;
 }
 
 void History::createHistory()
 {
     history = Sprite::create("sprites/background/history.png");
-}
 
-Sprite* History::getHistory()
-{
-    return history;
+    this->addChild(history);
 }

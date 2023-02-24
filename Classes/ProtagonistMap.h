@@ -1,10 +1,10 @@
 #include "cocos2d.h"
 
-#include "AnimationsProtagonist.h"
+#include "AnimationsProtagonistMap.h"
 
 USING_NS_CC;
 
-class Protagonist : public Sprite
+class ProtagonistMap : public Sprite
 {
 public:
 	virtual bool init();
@@ -20,11 +20,11 @@ public:
 
 	void update(float delta);
 
-	CREATE_FUNC(Protagonist);
+	CREATE_FUNC(ProtagonistMap);
 
 private:
 	EventListenerKeyboard* listener;
-	AnimationsProtagonist* m_animation;
+	AnimationsProtagonistMap* m_animation;
 
 	Size visibleSize;
 	Vec2 origin;

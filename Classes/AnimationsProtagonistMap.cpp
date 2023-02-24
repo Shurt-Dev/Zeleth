@@ -1,19 +1,16 @@
-#include "MainCharacter.h"
+#include "AnimationsProtagonistMap.h"
 
-bool MainCharacter::init()
+bool AnimationsProtagonistMap::init()
 {
-    // appeler la méthode init de la superclasse
     if (!Sprite::init())
     {
         return false;
     }
 
-    startingRotation();
-
     return true;
 }
 
-void MainCharacter::startingRotation()
+void AnimationsProtagonistMap::loadAnimations()
 {
     // Load the sprite sheet that contains the frames for the main character animation
     this->spritecache = SpriteFrameCache::getInstance();
@@ -21,11 +18,14 @@ void MainCharacter::startingRotation()
     this->spritecache->addSpriteFramesWithFile("sprites/characters/main/up/mainCharacter-up.plist");
     this->spritecache->addSpriteFramesWithFile("sprites/characters/main/left/mainCharacter-left.plist");
     this->spritecache->addSpriteFramesWithFile("sprites/characters/main/right/mainCharacter-right.plist");
+}
 
+void AnimationsProtagonistMap::getStartRotation()
+{
     this->setSpriteFrame("mainCharacter-down-1.png");
 }
 
-void MainCharacter::getLeftWalkAnimation()
+void AnimationsProtagonistMap::getLeftWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -40,7 +40,7 @@ void MainCharacter::getLeftWalkAnimation()
     this->runAction(RepeatForever::create(mainCharacterLeftAnimate));
 }
 
-void MainCharacter::getRightWalkAnimation()
+void AnimationsProtagonistMap::getRightWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -56,7 +56,7 @@ void MainCharacter::getRightWalkAnimation()
     this->runAction(RepeatForever::create(mainCharacterRightAnimate));
 }
 
-void MainCharacter::getDownWalkAnimation()
+void AnimationsProtagonistMap::getDownWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -72,7 +72,7 @@ void MainCharacter::getDownWalkAnimation()
     this->runAction(RepeatForever::create(mainCharacterDownAnimate));
 }
 
-void MainCharacter::getUpWalkAnimation()
+void AnimationsProtagonistMap::getUpWalkAnimation()
 {
     // Create an animation using the frames from the sprite sheet
     Vector<SpriteFrame*> frames;
@@ -88,36 +88,36 @@ void MainCharacter::getUpWalkAnimation()
     this->runAction(RepeatForever::create(mainCharacterUpAnimate));
 }
 
-void MainCharacter::getIdleLeft()
+void AnimationsProtagonistMap::getIdleLeft()
 {
     this->stopAllActions();
     this->setSpriteFrame("mainCharacter-left-1.png");
 }
 
-void MainCharacter::getIdleRight()
+void AnimationsProtagonistMap::getIdleRight()
 {
     this->stopAllActions();
     this->setSpriteFrame("mainCharacter-right-1.png");
 }
 
-void MainCharacter::getIdleUp()
+void AnimationsProtagonistMap::getIdleUp()
 {
     this->stopAllActions();
     this->setSpriteFrame("mainCharacter-up-1.png");
 }
 
-void MainCharacter::getIdleDown()
+void AnimationsProtagonistMap::getIdleDown()
 {
     this->stopAllActions();
     this->setSpriteFrame("mainCharacter-down-1.png");
 }
 
-void MainCharacter::setAnimationState(AnimationState state)
+void AnimationsProtagonistMap::setAnimationState(AnimationState state)
 {
     _animationState = state;
 }
 
-void MainCharacter::setAnimation(AnimationState state)
+void AnimationsProtagonistMap::setAnimation(AnimationState state)
 {
     // Si l'animation en cours d'exécution est la même que celle demandée, ne rien faire
     if (_animationState == state) return;
