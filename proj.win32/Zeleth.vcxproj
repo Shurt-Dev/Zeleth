@@ -810,7 +810,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\ActionBar.h" />
-    <ClInclude Include="..\Classes\Actions.h" />
     <ClInclude Include="..\Classes\AnimationsProtagonist.h" />
     <ClInclude Include="..\Classes\Attack.h" />
     <ClInclude Include="..\Classes\AudioSettings.h" />
@@ -843,7 +842,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="X:\Zeleth\proj.win32\main.h" />
     <ClInclude Include="X:\Zeleth\proj.win32\resource.h" />
     <ClCompile Include="..\Classes\ActionBar.cpp" />
-    <ClCompile Include="..\Classes\Actions.cpp" />
     <ClCompile Include="..\Classes\AnimationsProtagonist.cpp" />
     <ClCompile Include="..\Classes\Attack.cpp" />
     <ClCompile Include="..\Classes\AudioSettings.cpp" />

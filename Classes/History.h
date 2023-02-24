@@ -9,8 +9,6 @@ public:
 
 	void createHistory();
 
-	Sprite* getHistory();
-
 	CREATE_FUNC(History);
 private:
 	Sprite* history;

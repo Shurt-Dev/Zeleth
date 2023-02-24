@@ -9,18 +9,22 @@ class SelectAction : public Node
 public:
 	virtual bool init();
 
-	void createSelectAction();
-
 	void createAttackButton();
 	void createBagButton();
 	void createInfosButton();
 	void createRunButton();
 
+	Button* getAttackButton();
+	Button* getBagButton();
+	Button* getInfosButton();
+	Button* getRunButton();
+
 	CREATE_FUNC(SelectAction);
+
 private:
-	Sprite* selectAction;
-	Button* attackButton;
-	Button* bagButton;
-	Button* infosButton;
-	Button* runButton;
+	Button* m_attackButton;
+	Button* m_bagButton;
+	Button* m_infosButton;
+	Button* m_runButton;
+	Button* m_buttonEvent;
 };

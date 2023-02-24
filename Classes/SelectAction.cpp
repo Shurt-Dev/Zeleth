@@ -7,41 +7,66 @@ bool SelectAction::init()
         return false;
     }
 
-    return true;
-}
+    createAttackButton();
+    createBagButton();
+    createInfosButton();
+    createRunButton();
 
-void SelectAction::createSelectAction()
-{
-    this->addChild(attackButton);
-    this->addChild(bagButton);
-    this->addChild(infosButton);
-    this->addChild(runButton);
+    return true;
 }
 
 void SelectAction::createAttackButton()
 {
-    attackButton = Button::create("normal.png", "pressed.png", "disabled.png");
+    m_attackButton = Button::create("sprites/background/button_attack.png", "", "");
 
-    attackButton->setPosition(Vec2());
+    m_attackButton->setPosition(Vec2(-100, 50));
+
+    this->addChild(m_attackButton);
 }
 
 void SelectAction::createBagButton()
 {
-    bagButton = Button::create("normal.png", "pressed.png", "disabled.png");
+    m_bagButton = Button::create("sprites/background/button_bag.png", "", "");
 
-    bagButton->setPosition(Vec2());
+    m_bagButton->setPosition(Vec2(100, 50));
+
+    this->addChild(m_bagButton);
 }
 
 void SelectAction::createInfosButton()
 {
-    infosButton = Button::create("normal.png", "pressed.png", "disabled.png");
+    m_infosButton = Button::create("sprites/background/button_infos.png", "", "");
 
-    infosButton->setPosition(Vec2());
+    m_infosButton->setPosition(Vec2(-100, -50));
+    
+    this->addChild(m_infosButton);
 }
 
 void SelectAction::createRunButton()
 {
-    runButton = Button::create("normal.png", "pressed.png", "disabled.png");
+    m_runButton = Button::create("sprites/background/button_run.png", "", "");
 
-    runButton->setPosition(Vec2());
+    m_runButton->setPosition(Vec2(100, -50));
+    
+    this->addChild(m_runButton);
+}
+
+Button* SelectAction::getAttackButton()
+{
+    return m_attackButton;
+}
+
+Button* SelectAction::getBagButton()
+{
+    return m_bagButton;
+}
+
+Button* SelectAction::getInfosButton()
+{
+    return m_infosButton;
+}
+
+Button* SelectAction::getRunButton()
+{
+    return m_runButton;
 }
