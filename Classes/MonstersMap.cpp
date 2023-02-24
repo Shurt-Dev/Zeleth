@@ -1,6 +1,6 @@
-#include "Monsters.h"
+#include "MonstersMap.h"
 
-bool Monsters::init()
+bool MonstersMap::init()
 {
     if (!Sprite::init())
     {

@@ -1,6 +1,6 @@
-#include "Protagonist.h"
+#include "ProtagonistMap.h"
 
-bool Protagonist::init()
+bool ProtagonistMap::init()
 {
     if (!Sprite::init())
     {
@@ -23,9 +23,9 @@ bool Protagonist::init()
     return true;
 }
 
-void Protagonist::createAnimations()
+void ProtagonistMap::createAnimations()
 {
-    m_animation = AnimationsProtagonist::create();
+    m_animation = AnimationsProtagonistMap::create();
 
     m_animation->loadAnimations();
     m_animation->getStartRotation();
@@ -33,7 +33,7 @@ void Protagonist::createAnimations()
     this->addChild(m_animation);
 }
 
-void Protagonist::setScreenPosition()
+void ProtagonistMap::setScreenPosition()
 {
     visibleSize = Director::getInstance()->getVisibleSize();
     origin = Director::getInstance()->getVisibleOrigin();
@@ -42,19 +42,19 @@ void Protagonist::setScreenPosition()
     this->setPosition(center);
 }
 
-void Protagonist::setKeyboardInput()
+void ProtagonistMap::setKeyboardInput()
 {
     listener = EventListenerKeyboard::create();
 
-    listener->onKeyPressed = CC_CALLBACK_2(Protagonist::onKeyPressed, this);
-    listener->onKeyReleased = CC_CALLBACK_2(Protagonist::onKeyReleased, this);
+    listener->onKeyPressed = CC_CALLBACK_2(ProtagonistMap::onKeyPressed, this);
+    listener->onKeyReleased = CC_CALLBACK_2(ProtagonistMap::onKeyReleased, this);
 
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
 
     this->scheduleUpdate();
 }
 
-void Protagonist::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
+void ProtagonistMap::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
 {
     switch (keyCode)
     {
@@ -80,7 +80,7 @@ void Protagonist::onKeyPressed(EventKeyboard::KeyCode keyCode, Event* event)
     }
 }
 
-void Protagonist::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
+void ProtagonistMap::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
 {
     switch (keyCode)
     {
@@ -101,7 +101,7 @@ void Protagonist::onKeyReleased(EventKeyboard::KeyCode keyCode, Event* event)
     }
 }
 
-void Protagonist::update(float delta)
+void ProtagonistMap::update(float delta)
 {
     // MOVEMENTS
 

@@ -34,10 +34,10 @@
     <ClCompile Include="..\Classes\Puzzle.cpp">
       <Filter>Source Files\Classes\Game\Puzzle</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Protagonist.cpp">
+    <ClCompile Include="..\Classes\ProtagonistMap.cpp">
       <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Monsters.cpp">
+    <ClCompile Include="..\Classes\MonstersMap.cpp">
       <Filter>Source Files\Classes\Game\Entities\Monsters</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Pnj.cpp">
@@ -45,9 +45,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Collisions.cpp">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Collisions</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\MainCharacter.cpp">
-      <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\World.cpp">
       <Filter>Source Files\Classes\Game\World</Filter>
@@ -64,10 +61,10 @@
     <ClCompile Include="..\Classes\TileMap.cpp">
       <Filter>Source Files\Classes\Game\World\TileMap</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Entities.cpp">
+    <ClCompile Include="..\Classes\EntitiesMap.cpp">
       <Filter>Source Files\Classes\Game\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AnimationsProtagonist.cpp">
+    <ClCompile Include="..\Classes\AnimationsProtagonistMap.cpp">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\FightScene.cpp">
@@ -96,6 +93,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Infos.cpp">
       <Filter>Source Files\Classes\Fight\ActionBar\Actions\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ProtagonistFight.cpp">
+      <Filter>Source Files\Classes\Fight\Entities\Protagonist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EntitiesFight.cpp">
+      <Filter>Source Files\Classes\Fight\Entities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -132,10 +135,10 @@
     <ClInclude Include="..\Classes\Puzzle.h">
       <Filter>Source Files\Classes\Game\Puzzle</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Protagonist.h">
+    <ClInclude Include="..\Classes\ProtagonistMap.h">
       <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Monsters.h">
+    <ClInclude Include="..\Classes\MonstersMap.h">
       <Filter>Source Files\Classes\Game\Entities\Monsters</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Pnj.h">
@@ -143,9 +146,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Collisions.h">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Collisions</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MainCharacter.h">
-      <Filter>Source Files\Classes\Game\Entities\Protagonist</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\World.h">
       <Filter>Source Files\Classes\Game\World</Filter>
@@ -162,10 +162,10 @@
     <ClInclude Include="..\Classes\TileMap.h">
       <Filter>Source Files\Classes\Game\World\TileMap</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Entities.h">
+    <ClInclude Include="..\Classes\EntitiesMap.h">
       <Filter>Source Files\Classes\Game\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AnimationsProtagonist.h">
+    <ClInclude Include="..\Classes\AnimationsProtagonistMap.h">
       <Filter>Source Files\Classes\Game\Entities\Protagonist\Animations</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\FightScene.h">
@@ -194,6 +194,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Infos.h">
       <Filter>Source Files\Classes\Fight\ActionBar\Actions\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ProtagonistFight.h">
+      <Filter>Source Files\Classes\Fight\Entities\Protagonist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EntitiesFight.h">
+      <Filter>Source Files\Classes\Fight\Entities</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -250,24 +256,6 @@
     <Filter Include="Source Files\Classes\Game\Collectable">
       <UniqueIdentifier>{7e32fbea-3fce-4291-8aff-a3944fd88f0d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities">
-      <UniqueIdentifier>{5bdc651e-e66a-47fa-ab10-5a12d6778fab}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities\Protagonist">
-      <UniqueIdentifier>{2211165e-e408-415e-a043-7aef0c5792a2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Collisions">
-      <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities\Pnj">
-      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities\Monsters">
-      <UniqueIdentifier>{3d4043a8-9071-46cb-bd74-3aa67057d686}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Animations">
-      <UniqueIdentifier>{57b44595-84b7-427a-8b37-7bc2c82bce89}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Classes\Game\World">
       <UniqueIdentifier>{1d96d20d-a45b-4547-a6b7-4ec4d1165b35}</UniqueIdentifier>
     </Filter>
@@ -303,6 +291,30 @@
     </Filter>
     <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Infos">
       <UniqueIdentifier>{e03847d8-930a-4ef6-bc02-d952885fe346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\Entities">
+      <UniqueIdentifier>{e640fa95-ff69-4f42-95ea-cba019b6c77a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities">
+      <UniqueIdentifier>{5bdc651e-e66a-47fa-ab10-5a12d6778fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist">
+      <UniqueIdentifier>{2211165e-e408-415e-a043-7aef0c5792a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Collisions">
+      <UniqueIdentifier>{0b17ed17-1840-420c-ae6d-86b461863198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Protagonist\Animations">
+      <UniqueIdentifier>{57b44595-84b7-427a-8b37-7bc2c82bce89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Pnj">
+      <UniqueIdentifier>{4fed2abe-dac0-44ef-8d79-494631078c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game\Entities\Monsters">
+      <UniqueIdentifier>{3d4043a8-9071-46cb-bd74-3aa67057d686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\Entities\Protagonist">
+      <UniqueIdentifier>{a1e702a9-771b-41e2-aee9-081ee5ad0614}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
