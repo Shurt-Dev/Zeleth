@@ -100,6 +100,9 @@
     <ClCompile Include="..\Classes\EntitiesFight.cpp">
       <Filter>Source Files\Classes\Fight\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Monster.cpp">
+      <Filter>Source Files\Classes\Fight\Entities\Monsters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
@@ -200,6 +203,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\EntitiesFight.h">
       <Filter>Source Files\Classes\Fight\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Monster.h">
+      <Filter>Source Files\Classes\Fight\Entities\Monsters</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -315,6 +321,9 @@
     </Filter>
     <Filter Include="Source Files\Classes\Fight\Entities\Protagonist">
       <UniqueIdentifier>{a1e702a9-771b-41e2-aee9-081ee5ad0614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\Entities\Monsters">
+      <UniqueIdentifier>{452d46e2-5e90-4497-b647-ed9234f50049}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
