@@ -60,4 +60,8 @@ void FightScene::gameLoop()
     addBackground();
     addEntities();
     addActionBar();
+
+    EntitiesFight monster, protagonist;
+
+    //monster.attack(protagonist);
 }

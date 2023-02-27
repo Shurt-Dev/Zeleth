@@ -4,12 +4,8 @@
 
 USING_NS_CC;
 
-class ProtagonistFight : public Node, public EntitiesFight
+class ProtagonistFight : public EntitiesFight
 {
 public:
-	virtual bool init();
-
-private:
-
+	ProtagonistFight();
 };
-
