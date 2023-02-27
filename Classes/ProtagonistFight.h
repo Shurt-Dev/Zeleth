@@ -4,8 +4,9 @@
 
 USING_NS_CC;
 
-class ProtagonistFight : public EntitiesFight
+class ProtagonistFight : public EntitiesFight, public Node
 {
 public:
 	ProtagonistFight();
+	~ProtagonistFight();
 };

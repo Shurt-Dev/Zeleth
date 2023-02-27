@@ -3,7 +3,11 @@
 
 #include "ActionBar.h"
 #include "BattleZoneBackground.h"
+
+
 #include "EntitiesFight.h"
+#include "ProtagonistFight.h"
+#include "Monster.h"
 
 USING_NS_CC;
 
@@ -18,15 +22,13 @@ public:
 
     void addBackground();
     void addActionBar();
-    void addEntities();
 
     void gameLoop();
 
     CREATE_FUNC(FightScene);
-
+        
 private:
     ActionBar* m_actionBar;
-    EntitiesFight* m_entitiesFight;
 
     BattleZoneBackground battleZoneBackground;
 

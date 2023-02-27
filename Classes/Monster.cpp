@@ -1,11 +1,9 @@
 #include "Monster.h"
 
-bool Monster::init()
+Monster::Monster()
 {
-    if (!Node::init())
-    {
-        return false;
-    }
-
-    return true;
+    life = 50.0f;
+    damage = 20.0f;
 }
+
+Monster::~Monster(){}

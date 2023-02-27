@@ -1,15 +1,11 @@
 #include "cocos2d.h"
-
 #include "EntitiesFight.h"
 
 USING_NS_CC;
 
-class Monster : public Node, public EntitiesFight
+class Monster : public EntitiesFight, public Node
 {
 public:
-	virtual bool init();
-
-private:
-
+	Monster();
+	~Monster();
 };
-

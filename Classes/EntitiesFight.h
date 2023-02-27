@@ -2,18 +2,21 @@
 #include <string>
 
 USING_NS_CC;
+
 using namespace std;
 
-class EntitiesFight : public Node
+class EntitiesFight
 {
 public:
-	virtual bool init();
-
 	void takeDamage(float nbDegats);
 	void attack(EntitiesFight cible);
 	bool isAlive();
 
-	CREATE_FUNC(EntitiesFight);
+	float Level();
+	float Life();
+	float Damage();
+	float Initiative();
+	string Name();
 
 protected:
 	string name;

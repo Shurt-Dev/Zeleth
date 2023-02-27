@@ -1,13 +1,28 @@
 #include "EntitiesFight.h"
 
-bool EntitiesFight::init()
+float EntitiesFight::Level()
 {
-    if (!Node::init())
-    {
-        return false;
-    }
+    return level;
+}
 
-    return true;
+float EntitiesFight::Life()
+{
+    return life;
+}
+
+float EntitiesFight::Damage()
+{
+    return damage;
+}
+
+float EntitiesFight::Initiative()
+{
+    return initiative;
+}
+
+string EntitiesFight::Name()
+{
+    return name;
 }
 
 void EntitiesFight::takeDamage(float nbDegats)

@@ -39,13 +39,6 @@ void FightScene::addBackground()
     this->addChild(battleZoneBackground.getBackgroundEuphoria());
 }
 
-void FightScene::addEntities()
-{
-    m_entitiesFight = EntitiesFight::create();
-
-    this->addChild(m_entitiesFight);
-}
-
 void FightScene::addActionBar()
 {
     m_actionBar = ActionBar::create();
@@ -58,10 +51,13 @@ void FightScene::addActionBar()
 void FightScene::gameLoop()
 {
     addBackground();
-    addEntities();
     addActionBar();
 
-    EntitiesFight monster, protagonist;
+    Monster m_bouftou;
+    ProtagonistFight m_iop;
 
-    //monster.attack(protagonist);
+    m_iop.attack(m_bouftou);
+    m_bouftou.attack(m_iop);
+
+    // test
 }
