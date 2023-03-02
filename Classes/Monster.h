@@ -1,9 +1,10 @@
 #include "cocos2d.h"
+
 #include "EntitiesFight.h"
 
 USING_NS_CC;
 
-class Monster : public EntitiesFight, public Node
+class Monster : public EntitiesFight
 {
 public:
 	Monster();

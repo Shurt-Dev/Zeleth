@@ -2,10 +2,6 @@
 
 Scene* FightScene::createScene()
 {
-    // Preload the background music
-   
-    // Preload click sound
-
     return FightScene::create();
 }
 
@@ -55,9 +51,4 @@ void FightScene::gameLoop()
 
     Monster m_bouftou;
     ProtagonistFight m_iop;
-
-    m_iop.attack(m_bouftou);
-    m_bouftou.attack(m_iop);
-
-    // test
 }

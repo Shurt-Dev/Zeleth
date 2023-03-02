@@ -4,8 +4,6 @@
 #include "ActionBar.h"
 #include "BattleZoneBackground.h"
 
-
-#include "EntitiesFight.h"
 #include "ProtagonistFight.h"
 #include "Monster.h"
 

@@ -4,7 +4,7 @@
 
 USING_NS_CC;
 
-class ProtagonistFight : public EntitiesFight, public Node
+class ProtagonistFight : public EntitiesFight
 {
 public:
 	ProtagonistFight();

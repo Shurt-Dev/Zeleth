@@ -2,7 +2,7 @@
 
 Monster::Monster()
 {
-    life = 50.0f;
+    life = 60.0f;
     damage = 20.0f;
 }
 

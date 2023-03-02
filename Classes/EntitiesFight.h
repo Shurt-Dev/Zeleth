@@ -8,15 +8,15 @@ using namespace std;
 class EntitiesFight
 {
 public:
-	void takeDamage(float nbDegats);
-	void attack(EntitiesFight cible);
-	bool isAlive();
+	virtual void takeDamage(float nbDegats);
+	virtual void attack(EntitiesFight cible);
+	virtual bool isAlive();
 
-	float Level();
-	float Life();
-	float Damage();
-	float Initiative();
-	string Name();
+	virtual float Level();
+	virtual float Life();
+	virtual float Damage();
+	virtual float Initiative();
+	virtual string Name();
 
 protected:
 	string name;
