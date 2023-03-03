@@ -1,3 +1,5 @@
+#pragma once
+
 #include "cocos2d.h"
 #include <string>
 
@@ -8,9 +10,9 @@ using namespace std;
 class EntitiesFight
 {
 public:
-	virtual void takeDamage(float nbDegats);
-	virtual void attack(EntitiesFight cible);
-	virtual bool isAlive();
+	void takeDamage(float nbDegats);
+	void attack(EntitiesFight& cible);
+	bool isAlive();
 
 	virtual float Level();
 	virtual float Life();

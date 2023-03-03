@@ -25,9 +25,9 @@ string EntitiesFight::Name()
     return name;
 }
 
-void EntitiesFight::takeDamage(float nbDegats)
+void EntitiesFight::takeDamage(float nbDamage)
 {
-    life -= nbDegats;
+    life -= nbDamage;
 
     if (life < 0)
     {
@@ -35,9 +35,9 @@ void EntitiesFight::takeDamage(float nbDegats)
     }
 }
 
-void EntitiesFight::attack(EntitiesFight cible)
+void EntitiesFight::attack(EntitiesFight& target)
 {
-    cible.takeDamage(damage);
+    target.takeDamage(damage);
 }
 
 bool EntitiesFight::isAlive()
