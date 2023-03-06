@@ -58,7 +58,7 @@ void FightScene::gameLoop()
     this->addChild(m_iop);
 
     m_meupette->setPosition(enemyPosition);
-    m_meupette->getAttackAnimation();
+    m_meupette->getIdleAnimation();
 
     m_iop->attack(m_meupette);
     m_meupette->attack(m_iop);
