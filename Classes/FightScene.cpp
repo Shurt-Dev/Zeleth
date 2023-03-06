@@ -2,10 +2,6 @@
 
 Scene* FightScene::createScene()
 {
-    // Preload the background music
-   
-    // Preload click sound
-
     return FightScene::create();
 }
 
@@ -28,6 +24,8 @@ void FightScene::dataScreenPosition()
     visibleSize = Director::getInstance()->getVisibleSize();
     backgroundPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2);
     actionBarPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2 - 440);
+    enemyPosition = Vec2(1300, 750);
+    ally = Vec2(0, 0);
 }
 
 void FightScene::addBackground()
@@ -37,13 +35,6 @@ void FightScene::addBackground()
     battleZoneBackground.getBackgroundEuphoria()->setPosition(backgroundPosition);
 
     this->addChild(battleZoneBackground.getBackgroundEuphoria());
-}
-
-void FightScene::addEntities()
-{
-    m_entitiesFight = EntitiesFight::create();
-
-    this->addChild(m_entitiesFight);
 }
 
 void FightScene::addActionBar()
@@ -58,6 +49,19 @@ void FightScene::addActionBar()
 void FightScene::gameLoop()
 {
     addBackground();
-    addEntities();
     addActionBar();
+
+    m_meupette = Meupette::create();
+    this->addChild(m_meupette);
+
+    m_iop = ProtagonistFight::create();
+    this->addChild(m_iop);
+
+    m_meupette->setPosition(enemyPosition);
+    m_meupette->getAttackAnimation();
+
+    m_iop->attack(m_meupette);
+    m_meupette->attack(m_iop);
+
+    /*m_meupette->getIdleAnimation();*/
 }
