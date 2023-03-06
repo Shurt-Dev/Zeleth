@@ -1,13 +1,12 @@
 #pragma once
 
-#include "SimpleAudioEngine.h"
 #include "cocos2d.h"
 
 #include "ActionBar.h"
 #include "BattleZoneBackground.h"
 
 #include "ProtagonistFight.h"
-#include "Monster.h"
+#include "Meupette.h"
 
 USING_NS_CC;
 
@@ -28,6 +27,9 @@ public:
     CREATE_FUNC(FightScene);
         
 private:
+    Meupette* m_meupette;
+    ProtagonistFight* m_iop;
+
     ActionBar* m_actionBar;
 
     BattleZoneBackground battleZoneBackground;
@@ -35,4 +37,6 @@ private:
     Size visibleSize;
     Vec2 backgroundPosition;
     Vec2 actionBarPosition;
+    Vec2 enemyPosition;
+    Vec2 ally;
 };

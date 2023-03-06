@@ -14,10 +14,10 @@ void AnimationsProtagonistMap::loadAnimations()
 {
     // Load the sprite sheet that contains the frames for the main character animation
     this->spritecache = SpriteFrameCache::getInstance();
-    this->spritecache->addSpriteFramesWithFile("sprites/characters/main/down/mainCharacter-down.plist");
-    this->spritecache->addSpriteFramesWithFile("sprites/characters/main/up/mainCharacter-up.plist");
-    this->spritecache->addSpriteFramesWithFile("sprites/characters/main/left/mainCharacter-left.plist");
-    this->spritecache->addSpriteFramesWithFile("sprites/characters/main/right/mainCharacter-right.plist");
+    this->spritecache->addSpriteFramesWithFile("sprites/entities/protagonist/down/mainCharacter-down.plist");
+    this->spritecache->addSpriteFramesWithFile("sprites/entities/protagonist/up/mainCharacter-up.plist");
+    this->spritecache->addSpriteFramesWithFile("sprites/entities/protagonist/left/mainCharacter-left.plist");
+    this->spritecache->addSpriteFramesWithFile("sprites/entities/protagonist/right/mainCharacter-right.plist");
 }
 
 void AnimationsProtagonistMap::getStartRotation()

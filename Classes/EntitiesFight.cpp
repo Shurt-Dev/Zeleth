@@ -25,6 +25,11 @@ string EntitiesFight::Name()
     return name;
 }
 
+bool EntitiesFight::IsEnemy()
+{
+    return isEnemy;
+}
+
 void EntitiesFight::takeDamage(float nbDamage)
 {
     life -= nbDamage;
@@ -35,9 +40,9 @@ void EntitiesFight::takeDamage(float nbDamage)
     }
 }
 
-void EntitiesFight::attack(EntitiesFight& target)
+void EntitiesFight::attack(EntitiesFight* target)
 {
-    target.takeDamage(damage);
+    target->takeDamage(damage);
 }
 
 bool EntitiesFight::isAlive()

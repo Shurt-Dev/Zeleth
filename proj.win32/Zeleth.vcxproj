@@ -824,7 +824,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\Infos.h" />
     <ClInclude Include="..\Classes\IntroScene.h" />
     <ClInclude Include="..\Classes\ExitGame.h" />
-    <ClInclude Include="..\Classes\Monster.h" />
+    <ClInclude Include="..\Classes\Meupette.h" />
     <ClInclude Include="..\Classes\ProtagonistFight.h" />
     <ClInclude Include="..\Classes\Run.h" />
     <ClInclude Include="..\Classes\SelectAction.h" />
@@ -858,7 +858,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\Classes\Infos.cpp" />
     <ClCompile Include="..\Classes\IntroScene.cpp" />
     <ClCompile Include="..\Classes\ExitGame.cpp" />
-    <ClCompile Include="..\Classes\Monster.cpp" />
+    <ClCompile Include="..\Classes\Meupette.cpp" />
     <ClCompile Include="..\Classes\ProtagonistFight.cpp" />
     <ClCompile Include="..\Classes\Run.cpp" />
     <ClCompile Include="..\Classes\SelectAction.cpp" />

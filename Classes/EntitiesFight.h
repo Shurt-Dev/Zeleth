@@ -1,5 +1,4 @@
 #pragma once
-
 #include "cocos2d.h"
 #include <string>
 
@@ -10,15 +9,16 @@ using namespace std;
 class EntitiesFight
 {
 public:
-	void takeDamage(float nbDegats);
-	void attack(EntitiesFight& cible);
-	bool isAlive();
-
 	virtual float Level();
 	virtual float Life();
 	virtual float Damage();
 	virtual float Initiative();
 	virtual string Name();
+	virtual bool IsEnemy();
+
+	void takeDamage(float nbDamage);
+	void attack(EntitiesFight* target);
+	bool isAlive();
 
 protected:
 	string name;
@@ -26,4 +26,5 @@ protected:
 	float life;
 	float damage;
 	float initiative;
+	bool isEnemy;
 };

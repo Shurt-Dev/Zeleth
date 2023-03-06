@@ -5,9 +5,13 @@
 
 USING_NS_CC;
 
-class ProtagonistFight : public EntitiesFight
+class ProtagonistFight : public EntitiesFight, public Sprite
 {
 public:
-	ProtagonistFight();
-	~ProtagonistFight();
+	virtual bool init();
+
+	CREATE_FUNC(ProtagonistFight);
+
+private:
+
 };

@@ -1,10 +1,15 @@
 #include "ProtagonistFight.h"
 
-ProtagonistFight::ProtagonistFight()
+bool ProtagonistFight::init()
 {
-    life = 50.0f;
+    if (!Sprite::init())
+    {
+        return false;
+    }
+
+    life = 180.0f;
     damage = 20.0f;
     name = "Iop";
-}
 
-ProtagonistFight::~ProtagonistFight(){}
+    return true;
+}

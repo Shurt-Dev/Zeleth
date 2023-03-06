@@ -24,6 +24,8 @@ void FightScene::dataScreenPosition()
     visibleSize = Director::getInstance()->getVisibleSize();
     backgroundPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2);
     actionBarPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2 - 440);
+    enemyPosition = Vec2(1300, 750);
+    ally = Vec2(0, 0);
 }
 
 void FightScene::addBackground()
@@ -49,9 +51,17 @@ void FightScene::gameLoop()
     addBackground();
     addActionBar();
 
-    Monster m_bouftou;
-    ProtagonistFight m_iop;
+    m_meupette = Meupette::create();
+    this->addChild(m_meupette);
 
-    m_iop.attack(m_bouftou);
-    m_bouftou.attack(m_iop);
+    m_iop = ProtagonistFight::create();
+    this->addChild(m_iop);
+
+    m_meupette->setPosition(enemyPosition);
+    m_meupette->getAttackAnimation();
+
+    m_iop->attack(m_meupette);
+    m_meupette->attack(m_iop);
+
+    /*m_meupette->getIdleAnimation();*/
 }

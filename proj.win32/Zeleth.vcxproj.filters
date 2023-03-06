@@ -100,7 +100,7 @@
     <ClCompile Include="..\Classes\EntitiesFight.cpp">
       <Filter>Source Files\Classes\Fight\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Monster.cpp">
+    <ClCompile Include="..\Classes\Meupette.cpp">
       <Filter>Source Files\Classes\Fight\Entities\Monsters</Filter>
     </ClCompile>
   </ItemGroup>
@@ -204,7 +204,7 @@
     <ClInclude Include="..\Classes\EntitiesFight.h">
       <Filter>Source Files\Classes\Fight\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Monster.h">
+    <ClInclude Include="..\Classes\Meupette.h">
       <Filter>Source Files\Classes\Fight\Entities\Monsters</Filter>
     </ClInclude>
   </ItemGroup>
