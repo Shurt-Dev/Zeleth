@@ -43,7 +43,6 @@ void EntitiesFight::takeDamage(float nbDamage)
 void EntitiesFight::attack(EntitiesFight* target)
 {
     target->takeDamage(damage);
-    getAttackAnimation();
 }
 
 bool EntitiesFight::isAlive()

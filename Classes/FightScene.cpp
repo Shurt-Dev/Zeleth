@@ -64,5 +64,5 @@ void FightScene::gameLoop()
     m_iop->attack(m_meupette);
     m_meupette->attack(m_iop);
 
-    /*m_meupette->getIdleAnimation();*/
+    m_meupette->getIdleAnimation();
 }
