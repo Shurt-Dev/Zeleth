@@ -10,11 +10,17 @@ public:
 	virtual bool init();
 
 	void loadAnimation();
-	Action* getIdleAnimation();
-	Action* getAttackAnimation();
+
+	void getIdleAnimation();
+	void getAttackAnimation();
 
 	CREATE_FUNC(Meupette);
 
 private:
+
 	SpriteFrameCache* spritecache;
+
+	Animation* attackAnimation;
+	Animate* attackAnimate;
+
 };

@@ -1,3 +1,4 @@
+#pragma once
 #include "FightScene.h"
 
 Scene* FightScene::createScene()
@@ -57,8 +58,8 @@ void FightScene::gameLoop()
     m_iop = ProtagonistFight::create();
     this->addChild(m_iop);
 
+    // set position
     m_meupette->setPosition(enemyPosition);
-    m_meupette->getIdleAnimation();
 
     m_iop->attack(m_meupette);
     m_meupette->attack(m_iop);
