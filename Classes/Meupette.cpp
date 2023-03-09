@@ -9,6 +9,7 @@ bool Meupette::init()
 
     life = 60.0f;
     damage = 10.0f;
+    initiative = 50.0f;
     name = "Meupette";
 
     loadAnimation();
@@ -26,7 +27,7 @@ void Meupette::loadAnimation()
     this->spritecache->addSpriteFramesWithFile("sprites/entities/monsters/meupette/attack/meupette_attack.plist");
 }
 
-void Meupette::getIdleAnimation()
+Action* Meupette::getIdleAnimation()
 {
     Vector<SpriteFrame*> frames;
     for (int i = 0; i <= 12; i++)
@@ -35,15 +36,13 @@ void Meupette::getIdleAnimation()
         frames.pushBack(frame);
     }
 
-    Animation* idleAnimation = Animation::createWithSpriteFrames(frames, 0.06f);
-    Animate* idleAnimate = Animate::create(idleAnimation);
+    idleAnimation = Animation::createWithSpriteFrames(frames, 0.06f);
+    idleAnimate = Animate::create(idleAnimation);
 
-    RepeatForever::create(idleAnimate);
-
-    this->runAction(RepeatForever::create(idleAnimate));
+    return RepeatForever::create(idleAnimate);
 }
 
-void Meupette::getAttackAnimation()
+Action* Meupette::getAttackAnimation()
 {
     Vector<SpriteFrame*> frames;
     for (int i = 0; i <= 28; i++)
@@ -55,5 +54,5 @@ void Meupette::getAttackAnimation()
     attackAnimation = Animation::createWithSpriteFrames(frames, 0.06f);
     attackAnimate = Animate::create(attackAnimation);
 
-    this->runAction(attackAnimate);
+    return attackAnimate;
 }

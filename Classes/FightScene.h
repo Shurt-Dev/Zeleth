@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 #include "cocos2d.h"
 
 #include "ActionBar.h"
@@ -22,7 +26,9 @@ public:
     void addBackground();
     void addActionBar();
 
-    void gameLoop();
+    void fightLoop();
+
+    void getInitiator();
 
     CREATE_FUNC(FightScene);
         
@@ -38,5 +44,12 @@ private:
     Vec2 backgroundPosition;
     Vec2 actionBarPosition;
     Vec2 enemyPosition;
-    Vec2 ally;
+    Vec2 allyPosition;
+
+    int turn;
+    bool playerInitiator;
+
+
+    // debug
+    Action* idleActionEnemy;
 };

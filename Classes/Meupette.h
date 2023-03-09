@@ -1,4 +1,5 @@
 #pragma once
+
 #include "cocos2d.h"
 #include "EntitiesFight.h"
 
@@ -11,8 +12,8 @@ public:
 
 	void loadAnimation();
 
-	void getIdleAnimation();
-	void getAttackAnimation();
+	Action* getIdleAnimation();
+	Action* getAttackAnimation();
 
 	CREATE_FUNC(Meupette);
 
@@ -22,5 +23,8 @@ private:
 
 	Animation* attackAnimation;
 	Animate* attackAnimate;
+
+	Animation* idleAnimation;
+	Animate* idleAnimate;
 
 };

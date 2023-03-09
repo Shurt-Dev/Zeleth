@@ -49,9 +49,3 @@ bool EntitiesFight::isAlive()
 {
     return life > 0;
 }
-
-void EntitiesFight::getAttackAnimation()
-{
-    //this->attackAnimate;
-    //this->runAction(attackAnimate);
-}

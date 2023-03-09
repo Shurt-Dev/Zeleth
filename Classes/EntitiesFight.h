@@ -16,8 +16,6 @@ public:
 	virtual string Name();
 	virtual bool IsEnemy();
 
-	void getAttackAnimation();
-
 	void takeDamage(float nbDamage);
 	void attack(EntitiesFight* target);
 	bool isAlive();
