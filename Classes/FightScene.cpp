@@ -129,10 +129,10 @@ void FightScene::getInitiator()
         // Initialisation de la graine pour la fonction rand()
         std::srand(std::time(nullptr));
 
-        // Génération d'un nombre aléatoire entre 0 et 1
+        // Gï¿½nï¿½ration d'un nombre alï¿½atoire entre 0 et 1
         bool choix = std::rand() % 2 == 0;
 
-        // Affichage du choix aléatoire
+        // Affichage du choix alï¿½atoire
         if (choix) {
             playerInitiator = false;
         }
