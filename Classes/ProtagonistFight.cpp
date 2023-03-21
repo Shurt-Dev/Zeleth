@@ -9,7 +9,8 @@ bool ProtagonistFight::init()
 
     life = 180.0f;
     damage = 20.0f;
-    name = "Iop";
+    initiative = 80.0f;
+    name = "Oskar Khas";
 
     return true;
 }

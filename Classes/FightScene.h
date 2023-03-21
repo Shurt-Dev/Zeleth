@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 #include "cocos2d.h"
 
 #include "ActionBar.h"
@@ -22,13 +26,15 @@ public:
     void addBackground();
     void addActionBar();
 
-    void gameLoop();
+    void fightLoop();
+
+    void getInitiator();
 
     CREATE_FUNC(FightScene);
         
 private:
     Meupette* m_meupette;
-    ProtagonistFight* m_iop;
+    ProtagonistFight* m_oskar_khas;
 
     ActionBar* m_actionBar;
 
@@ -38,5 +44,17 @@ private:
     Vec2 backgroundPosition;
     Vec2 actionBarPosition;
     Vec2 enemyPosition;
-    Vec2 ally;
+    Vec2 allyPosition;
+
+    int turn;
+    bool playerInitiator;
+
+
+    // debug
+    Action* idleActionEnemy;
+    Action* attackActionEnemy;
+
+
+    Attack* attack;
+    Button* attackButton;
 };

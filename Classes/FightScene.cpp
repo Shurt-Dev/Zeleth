@@ -1,3 +1,4 @@
+#pragma once
 #include "FightScene.h"
 
 Scene* FightScene::createScene()
@@ -14,7 +15,7 @@ bool FightScene::init()
 
     dataScreenPosition();
 
-    gameLoop();
+    fightLoop();
 
     return true;
 }
@@ -25,7 +26,7 @@ void FightScene::dataScreenPosition()
     backgroundPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2);
     actionBarPosition = Vec2(visibleSize.width / 2, visibleSize.height / 2 - 440);
     enemyPosition = Vec2(1300, 750);
-    ally = Vec2(0, 0);
+    allyPosition = Vec2(0, 0);
 }
 
 void FightScene::addBackground()
@@ -46,22 +47,97 @@ void FightScene::addActionBar()
     this->addChild(m_actionBar);
 }
 
-void FightScene::gameLoop()
+void FightScene::fightLoop()
 {
     addBackground();
     addActionBar();
 
+    m_oskar_khas = ProtagonistFight::create();
     m_meupette = Meupette::create();
-    this->addChild(m_meupette);
 
-    m_iop = ProtagonistFight::create();
-    this->addChild(m_iop);
-
+    // set position
+    //m_oskar_khas->setPosition(allyPosition);
     m_meupette->setPosition(enemyPosition);
-    m_meupette->getIdleAnimation();
 
-    m_iop->attack(m_meupette);
-    m_meupette->attack(m_iop);
+    this->addChild(m_meupette);
+    this->addChild(m_oskar_khas);
 
-    /*m_meupette->getIdleAnimation();*/
+    getInitiator();
+
+    //m_iop-> idle anim
+    idleActionEnemy = m_meupette->runAction(m_meupette->getIdleAnimation());
+
+    turn = 0;
+
+    while (m_oskar_khas->isAlive() && m_meupette->isAlive())
+    {
+        switch (turn)
+        {
+        // Who start
+        case 0:
+            if (playerInitiator)
+            {
+                turn = 1;
+            }
+            if (!playerInitiator)
+            {
+                turn = 2;
+            }
+            break;
+
+        // tour joueur
+        case 1:
+
+            //m_oskar_khas->attack(m_meupette);
+
+            turn = 2;
+            break;
+
+        // tour IA
+        case 2:
+            // animation
+            //m_meupette->stopAction(idleActionEnemy);
+            m_meupette->runAction(m_meupette->getIdleAnimation());
+            //m_meupette->stopAction(idleActionEnemy);
+            //m_meupette->runAction(m_meupette->getAttackAnimation());
+
+            // txt
+            m_meupette->attack(m_oskar_khas);
+
+            turn = 1;
+            break;
+        }
+    }
+
+    m_meupette->stopAction(idleActionEnemy);
+}
+
+void FightScene::getInitiator()
+{
+    playerInitiator = false;
+
+    if (m_meupette->Initiative() < m_oskar_khas->Initiative())
+    {
+        playerInitiator = true;
+    }
+    else if (m_meupette->Initiative() > m_oskar_khas->Initiative())
+    {
+        playerInitiator = false;
+    }
+    else
+    {
+        // Initialisation de la graine pour la fonction rand()
+        std::srand(std::time(nullptr));
+
+        // G�n�ration d'un nombre al�atoire entre 0 et 1
+        bool choix = std::rand() % 2 == 0;
+
+        // Affichage du choix al�atoire
+        if (choix) {
+            playerInitiator = false;
+        }
+        else {
+            playerInitiator = true;
+        }
+    }
 }

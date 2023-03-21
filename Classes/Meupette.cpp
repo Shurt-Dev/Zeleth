@@ -9,6 +9,7 @@ bool Meupette::init()
 
     life = 60.0f;
     damage = 10.0f;
+    initiative = 50.0f;
     name = "Meupette";
 
     loadAnimation();
@@ -35,10 +36,10 @@ Action* Meupette::getIdleAnimation()
         frames.pushBack(frame);
     }
 
-    Animation* animation = Animation::createWithSpriteFrames(frames, 0.06f);
-    Animate* animate = Animate::create(animation);
+    idleAnimation = Animation::createWithSpriteFrames(frames, 0.06f);
+    idleAnimate = Animate::create(idleAnimation);
 
-    return runAction(RepeatForever::create(animate));
+    return RepeatForever::create(idleAnimate);
 }
 
 Action* Meupette::getAttackAnimation()
@@ -50,8 +51,8 @@ Action* Meupette::getAttackAnimation()
         frames.pushBack(frame);
     }
 
-    Animation* animation = Animation::createWithSpriteFrames(frames, 0.06f);
-    Animate* animate = Animate::create(animation);
+    attackAnimation = Animation::createWithSpriteFrames(frames, 0.06f);
+    attackAnimate = Animate::create(attackAnimation);
 
-    return runAction(animate);
+    return attackAnimate;
 }

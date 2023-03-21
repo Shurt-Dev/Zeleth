@@ -1,4 +1,5 @@
 #pragma once
+
 #include "cocos2d.h"
 #include "EntitiesFight.h"
 
@@ -10,11 +11,20 @@ public:
 	virtual bool init();
 
 	void loadAnimation();
+
 	Action* getIdleAnimation();
 	Action* getAttackAnimation();
 
 	CREATE_FUNC(Meupette);
 
 private:
+
 	SpriteFrameCache* spritecache;
+
+	Animation* attackAnimation;
+	Animate* attackAnimate;
+
+	Animation* idleAnimation;
+	Animate* idleAnimate;
+
 };

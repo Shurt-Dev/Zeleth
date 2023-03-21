@@ -103,6 +103,12 @@
     <ClCompile Include="..\Classes\Meupette.cpp">
       <Filter>Source Files\Classes\Fight\Entities\Monsters</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\BloodForm.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Attack\Blood form</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CelestialForm.cpp">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Attack\Celestial form</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="X:\Zeleth\Classes\AppDelegate.h">
@@ -206,6 +212,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Meupette.h">
       <Filter>Source Files\Classes\Fight\Entities\Monsters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BloodForm.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Attack\Blood form</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CelestialForm.h">
+      <Filter>Source Files\Classes\Fight\ActionBar\Actions\Attack\Celestial form</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +336,12 @@
     </Filter>
     <Filter Include="Source Files\Classes\Fight\Entities\Monsters">
       <UniqueIdentifier>{452d46e2-5e90-4497-b647-ed9234f50049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Attack\Blood form">
+      <UniqueIdentifier>{4004c454-ad51-41d6-b117-6ba262eb14c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Attack\Celestial form">
+      <UniqueIdentifier>{b87655c2-5011-4508-a0e3-027a95b4cb34}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
