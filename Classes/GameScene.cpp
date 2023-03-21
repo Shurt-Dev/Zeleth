@@ -14,9 +14,9 @@ bool GameScene::init()
 
     main();
 
-    _settings = GameSettings::create();
+    //_settings = GameSettings::create();
 
-    this->addChild(_settings);
+    //this->addChild(_settings);
 
     return true;
 }
