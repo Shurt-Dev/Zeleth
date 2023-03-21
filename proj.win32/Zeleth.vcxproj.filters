@@ -343,5 +343,8 @@
     <Filter Include="Source Files\Classes\Fight\ActionBar\Actions\Attack\Celestial form">
       <UniqueIdentifier>{b87655c2-5011-4508-a0e3-027a95b4cb34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Classes\Game\UI and Settings">
+      <UniqueIdentifier>{90d5c84b-f7fe-487c-b095-c3011a43ea0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

@@ -59,14 +59,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set 60 FPS
     director->setAnimationInterval(1.0f / 60.0f);
 
-    // Mettre le volume de la musique de fond à 75%
+    // Mettre le volume de la musique de fond Ã  75%
     CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0.75f);
 
-    // Mettre le volume des effets sonores à 75%
+    // Mettre le volume des effets sonores Ã  75%
     CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(0.75f);
 
     // Starting Scene Game
-    auto introScene = FightScene::createScene();
+    auto introScene = IntroScene::createScene();
 
     // run
     director->runWithScene(introScene);
