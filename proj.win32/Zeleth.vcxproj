@@ -815,6 +815,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="..\Classes\AudioSettings.h" />
     <ClInclude Include="..\Classes\Bag.h" />
     <ClInclude Include="..\Classes\BattleZoneBackground.h" />
+    <ClInclude Include="..\Classes\BloodForm.h" />
+    <ClInclude Include="..\Classes\CelestialForm.h" />
     <ClInclude Include="..\Classes\Collectable.h" />
     <ClInclude Include="..\Classes\Collisions.h" />
     <ClInclude Include="..\Classes\EntitiesFight.h" />
@@ -849,6 +851,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\Classes\AudioSettings.cpp" />
     <ClCompile Include="..\Classes\Bag.cpp" />
     <ClCompile Include="..\Classes\BattleZoneBackground.cpp" />
+    <ClCompile Include="..\Classes\BloodForm.cpp" />
+    <ClCompile Include="..\Classes\CelestialForm.cpp" />
     <ClCompile Include="..\Classes\Collectable.cpp" />
     <ClCompile Include="..\Classes\Collisions.cpp" />
     <ClCompile Include="..\Classes\EntitiesFight.cpp" />

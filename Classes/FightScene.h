@@ -34,7 +34,7 @@ public:
         
 private:
     Meupette* m_meupette;
-    ProtagonistFight* m_iop;
+    ProtagonistFight* m_oskar_khas;
 
     ActionBar* m_actionBar;
 
@@ -52,4 +52,9 @@ private:
 
     // debug
     Action* idleActionEnemy;
+    Action* attackActionEnemy;
+
+
+    Attack* attack;
+    Button* attackButton;
 };

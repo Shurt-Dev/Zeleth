@@ -52,24 +52,24 @@ void FightScene::fightLoop()
     addBackground();
     addActionBar();
 
-    m_iop = ProtagonistFight::create();
+    m_oskar_khas = ProtagonistFight::create();
     m_meupette = Meupette::create();
 
     // set position
-    //m_iop->setPosition(allyPosition);
+    //m_oskar_khas->setPosition(allyPosition);
     m_meupette->setPosition(enemyPosition);
 
     this->addChild(m_meupette);
-    this->addChild(m_iop);
+    this->addChild(m_oskar_khas);
+
+    getInitiator();
 
     //m_iop-> idle anim
     idleActionEnemy = m_meupette->runAction(m_meupette->getIdleAnimation());
 
-    getInitiator();
-
     turn = 0;
 
-    while (m_iop->isAlive() && m_meupette->isAlive())
+    while (m_oskar_khas->isAlive() && m_meupette->isAlive())
     {
         switch (turn)
         {
@@ -87,42 +87,40 @@ void FightScene::fightLoop()
 
         // tour joueur
         case 1:
-            // txt
-            m_iop->attack(m_meupette);
 
-            // animation
-
-            // txt
-            m_iop->attack(m_meupette);
+            //m_oskar_khas->attack(m_meupette);
 
             turn = 2;
             break;
 
         // tour IA
         case 2:
-
             // animation
+            //m_meupette->stopAction(idleActionEnemy);
+            m_meupette->runAction(m_meupette->getIdleAnimation());
             //m_meupette->stopAction(idleActionEnemy);
             //m_meupette->runAction(m_meupette->getAttackAnimation());
 
             // txt
-            m_meupette->attack(m_iop);
+            m_meupette->attack(m_oskar_khas);
 
             turn = 1;
             break;
         }
     }
+
+    m_meupette->stopAction(idleActionEnemy);
 }
 
 void FightScene::getInitiator()
 {
     playerInitiator = false;
 
-    if (m_meupette->Initiative() < m_iop->Initiative())
+    if (m_meupette->Initiative() < m_oskar_khas->Initiative())
     {
         playerInitiator = true;
     }
-    else if (m_meupette->Initiative() > m_iop->Initiative())
+    else if (m_meupette->Initiative() > m_oskar_khas->Initiative())
     {
         playerInitiator = false;
     }
