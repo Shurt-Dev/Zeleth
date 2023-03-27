@@ -15,7 +15,11 @@ public:
 
     void setSpawnProtagonist();
 
+    void setCollisions();
+
     CREATE_FUNC(TileMap);
+
+    TMXLayer* collisionLayer;
 
 private:
     TMXTiledMap* m_euphoriaTileMap;

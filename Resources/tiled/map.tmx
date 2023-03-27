@@ -74,14 +74,14 @@
    eJzt0EEKACAIRUGD7n/mlka0LFCYgb8VeREAAAAAAEAlY+ZIutx17rL/fu7l7W5+dgEAAABqWPxgAIM=
   </data>
  </layer>
- <layer id="22" name="ForegroundObjects" width="70" height="40">
+ <layer id="22" name="ForegroundObjects" width="70" height="40" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt1ksKgzAUheFE68TaTXRQQe0mHGhf6v534+lMQiitiBH7f3AGCQQul+QSYwAAAAAAwFbcrDF3+/0+/hv3Bb946E68lM5+3gOWkCpHJVNOgWvZkkIplUq5Bq4lpEgzJ1YOSuKZP70yrF5VeGdmsVdNX7wi+uI15x1ddCbfeT/nvKNGZ9qd98X1/hs/J/9jdw0AAAAASxsBtewJtQ==
   </data>
  </layer>
  <layer id="28" name="Collisions" width="70" height="40" visible="0" opacity="0.5">
   <data encoding="base64" compression="zlib">
-   eJzt1LEJADAIBEAD2X/mLCCChY25Aysrn8cIAAAAJp1bz6+q2+XS320nl5xccv4uHVk39AUAAAAAgGkPtFUAlw==
+   eJztl1kOwyAMBVOp9z9zv5AoAi9AMdAZKcoC4ZmXxCbPAwAAAAAAGq/393F+Xuurtd9Amkc539r8NP/ysU6nNX9pa/WVxjwN7b3Q2np8zX3UvssIWjGN+uLRnzHOTHpzJ77Y2ry5qLzPorkSSy325t0yZ0h55ERfZutYcusJvrRq769rxw61KVpfIjI2fFmvbcnXUbGt1i5rz4he9Ls8U/8mX2bGIPni+Y528CQx+nxTf2ld1xtHNJZ1q2ddb9XruXdHat7l1z3j5Psb6fmXvNmPHE8++RdPAAAAAGCMDztcA6M=
   </data>
  </layer>
 </map>

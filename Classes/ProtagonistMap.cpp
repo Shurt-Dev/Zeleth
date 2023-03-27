@@ -13,7 +13,7 @@ bool ProtagonistMap::init()
 
     setKeyboardInput();
 
-    _movementSpeed = 3;
+    _movementSpeed = 6;
 
     _isKeyUpPressed = false;
     _isKeyRightPressed = false;

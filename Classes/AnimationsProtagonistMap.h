@@ -37,8 +37,9 @@ public:
     // Création de l'objet
     CREATE_FUNC(AnimationsProtagonistMap);
 
+    Sprite* playerSprite;
+
 private:
     SpriteFrameCache* spritecache;
-
     AnimationState _animationState;
 };
